@@ -20,6 +20,7 @@
     "@babel/preset-env": "^7.11.0",
     "@barba/core": "^2.9.7",
     "autoprefixer": "^9.8.6",
+    "axios": ">=0.21.1",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.12",
     "browser-sync-webpack-plugin": "^2.2.2",
