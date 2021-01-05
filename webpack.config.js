@@ -11,7 +11,7 @@ const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const dir = {
   src: "./src",
   public: "./htdocs",
-  dist: "./htdocs/special/2020finalcrown"
+  dist: "./htdocs"
 };
 
 const convertExtensions = {
