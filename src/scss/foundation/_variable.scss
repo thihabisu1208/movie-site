@@ -1,0 +1,27 @@
+$mq-breakpoints: (
+  "min": 320px,
+  "xxsmall": 375px,
+  "xsmall": 560px,
+  "small": 760px,
+  "medium": 960px,
+  "large": 1200px,
+  "xlarge": 1450px,
+  "xxlarge": 1600px,
+  "max": 1920px,
+);
+
+$path: "/special/2020finalcrown/assets/";
+
+// color
+$color-txt: #262626;
+
+// font
+$font-yuGothic: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans", sans-serif;
+$font-yuMincho: "YuMincho", "Yu Mincho", "Hiragino Mincho ProN",
+  "Hiragino Serif", "Noto Serif JP", serif;
+$font-notoSans: "Noto Sans", sans-serif;
+$font-openSans: "Open Sans", sans-serif;
+
+// ease
+$ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
