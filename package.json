@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "deploy": "push-dir --dir=docs --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=docs --branch=master --cleanup"
   },
   "repository": {
     "type": "git",
