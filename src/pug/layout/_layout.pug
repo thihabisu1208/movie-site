@@ -1,0 +1,29 @@
+
+html(lang="ja")
+  head
+    block meta
+    include ./_meta
+    +meta(meta)
+    
+    link(rel="stylesheet" href="/assets/css/bundle.css")
+    script(src="/assets/js/bundle.js" defer)
+  body
+    .loading
+      img(src=`${path}/assets/img/loading.gif`, alt="loading")
+
+    // header
+    include ../inc/header
+    // /header
+
+    .wrapper
+      block name
+      .barba_wrapper(data-barba="wrapper")
+        .barba_container(data-barba="container" data-barba-namespace=`${name}`)
+          // main
+          main(class=`${name}`)
+            block contents
+          // /main
+
+    // footer
+    include ../inc/footer
+    // /footer

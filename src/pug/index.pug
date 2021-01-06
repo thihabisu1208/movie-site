@@ -1,8 +1,16 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
-  body
-    p master push test
+extends  ./layout/_layout
+
+block meta
+  -
+    const meta = {
+      title: "ジャパンカップ美術館｜JRA",
+      description: "競馬トップカメラマンの作品とともにジャパンカップ39年を振り返ります。",
+      url: "https://jra.jp/special/2020jcmuseum/",
+      keywords: "JRA,競馬,KEIBA,けいば,ジェイアールエー,馬,ジャパンカップ,ジャパン・オータムインターナショナル,ロンジン賞,G1,国際招待,岡部幸雄,鈴木淑子"
+    }
+
+block name
+  - const name = "home"
+
+block contents
+  .u-font-dinPro 2019

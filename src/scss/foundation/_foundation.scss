@@ -15,12 +15,29 @@
   src: local(Yu Gothic Bold);
   font-weight: 700;
 }
+@font-face {
+  font-family: "DIN-Pro-Bold";
+  src: url("./../DIN-Pro-Bold-700.woff") format("woff");
+}
+
+.u-font-yuGothic {
+  font-family: $font-yuGothic;
+}
+
+.u-font-dinPro {
+  font-family: $font-dinPro;
+  font-weight: 700;
+}
+
+.u-font-azoSans {
+  font-family: $font-azoSans;
+}
 
 html {
   overflow-x: hidden;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
   -webkit-font-smoothing: antialiased;
-  font-family: $font-yuMincho;
+  font-family: $font-yuGothic;
 }
 
 body {
@@ -43,15 +60,15 @@ img {
 
 .wrapper {
   overflow: hidden;
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 
 .container { 
   width: 100%;
   padding: 0 20px;
   @include mq(small) {
-    width: calc(100% - 100px);
-    max-width: 1100px;
+    width: calc(100% - 60px);
+    max-width: 900px;
     margin: 0 auto;
     padding: 0;
   }
