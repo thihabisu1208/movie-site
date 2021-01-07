@@ -3,14 +3,42 @@ extends  ./layout/_layout
 block meta
   -
     const meta = {
-      title: "ジャパンカップ美術館｜JRA",
-      description: "競馬トップカメラマンの作品とともにジャパンカップ39年を振り返ります。",
-      url: "https://jra.jp/special/2020jcmuseum/",
-      keywords: "JRA,競馬,KEIBA,けいば,ジェイアールエー,馬,ジャパンカップ,ジャパン・オータムインターナショナル,ロンジン賞,G1,国際招待,岡部幸雄,鈴木淑子"
+      title: "株式会社 ジャンゴフィルム",
+      description: "100年",
+      url: "https://django-film.jp/"
     }
 
 block name
   - const name = "home"
 
 block contents
-  .u-font-dinPro 2019
+  include ./object/_o-mainSlider
+  .home_about
+    .common_bg
+    .homeAbout_bg
+    .container
+      .homeAbout_ttl.common_ttl.-white
+        span.commonTtl_en.u-font-azoSans ABOUT US
+        span.commonTtl_jp 私たちについて
+        span.commonTtl_line
+      .homeAbout_catch
+        img(src="/assets/img/top/ttl_catch.svg", alt="")
+      .homeAbout_details
+        .homeAboutDetails_img
+          img(src="/assets/img/top/img_about.png", alt="")
+        .homeAboutDetails_txt
+          p 株式会社ジャンゴフィルムは東京東京都調布市にある映画製作会社。
+          | 映画製作だけではなく、総合的な映像事業を提供している。
+          | 映画製作に興味がある若者や新人若手監督に向けて、
+          | 2007年から現在にかけて、無数な作品を作成した。
+          | ジャンゴフィルムの総合力は、映画、映像制作のスペシャリストの集まりであり、
+          | 映画制作のことなら何でもできる、という力です。
+          | 私たちは様々な作品を作りたい、挑戦したい、
+          |今まで色々な困難を越えて、この世界へ。
+  
+  .home_numbers
+    .container
+      .homeNumbers_ttl.common_ttl.-black
+        span.commonTtl_en.u-font-azoSans IN NUMBERS
+        span.commonTtl_jp 数字で見るジャンゴフィルム
+        span.commonTtl_line

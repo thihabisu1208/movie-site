@@ -42,7 +42,7 @@ html {
 
 body {
   width: 100%;
-  position: fixed;
+  // position: fixed;
 }
 
 li {
@@ -73,6 +73,55 @@ img {
     padding: 0;
   }
   @include mq(xlarge) {
-    max-width: 1600px;
+    max-width: 1100px;
+  }
+}
+
+.common_bg {
+  position: absolute;
+  right: 0;
+  bottom: -12px;
+  width: 100%;
+  max-width: 832px;
+  height: 12px;
+  background: linear-gradient(to top right, #FF0007, #FF9300, #FF0007);
+}
+
+.common_ttl {
+  text-align: center;
+  line-height: 1;
+  span {
+    display: block;
+  }
+  .commonTtl_en {
+    font-size: 18px;
+    font-weight: medium;
+    color: #FFB100;
+  }
+  .commonTtl_jp {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  .commonTtl_line {
+    margin: 20px auto 0;
+    width: 30px;
+    height: 1px;
+  }
+  &.-white {
+    .commonTtl_jp {
+      color: #fff;
+    }
+    .commonTtl_line {
+      background: #fff;
+    }
+  }
+  &.-black {
+    .commonTtl_jp {
+      color: #000;
+    }
+    .commonTtl_line {
+      background: #000;
+    }
   }
 }

@@ -1,0 +1,53 @@
+.home_about {
+  padding-bottom: 44px;
+  margin-bottom: 50px;
+  background: #000;
+  position: relative;
+
+  .homeAbout_bg {
+    @include linear-bg();
+    opacity: 0.5;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .homeAbout_ttl {
+    padding-top: 95px;
+  }
+
+  .homeAbout_catch {
+    width: 492px;
+    margin: 90px auto 0;
+    img {
+      width: 100%;
+    }
+  }
+
+  .homeAbout_details {
+    margin-top: 70px;
+    margin-left: 68px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .homeAboutDetails_img {
+      width: 295px;
+      img {
+        width: 100%;
+      }
+    }
+    .homeAboutDetails_txt {
+      width: calc(100% - 335px);
+      font-size: 15px;
+      font-weight: medium;
+      color: #fff;
+      line-height: 2.4;
+    }
+  }
+}
+
+.home_numbers {
+  margin-bottom: 50px;
+}

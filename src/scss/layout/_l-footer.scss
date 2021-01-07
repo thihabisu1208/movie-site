@@ -4,14 +4,8 @@
   height: 320px;
 
   .l-footer_bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top, #000000, #151515, #3B3B3B, #717171);
+    @include linear-bg(linear-gradient(to top, #000000, #151515, #3B3B3B, #717171));
     opacity: 0.5;
-    z-index: 1;
     height: 100%;
   }
 
@@ -26,6 +20,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
     .l-footer_nav-item {
+      text-align: center;
+      position: relative;
+      padding-bottom: 8px;
+      &.is-active::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to top right, #FF0007, #FF9300);
+      }
       a {
         color: #fff;
       }

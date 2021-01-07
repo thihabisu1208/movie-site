@@ -1,0 +1,17 @@
+.o-mainSlider {
+  .o-mainSlider_pagination {
+    background: #2D2D2D;
+    position: static;
+    padding-top: 18px;
+    .swiper-pagination-bullet {
+      background: #C9C8C8;
+      opacity: 1;
+      width: 7px;
+      height: 7px;
+      margin: 0 5px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #FFB100;
+    }
+  }
+}

@@ -191,3 +191,15 @@
     }
   }
 }
+
+// グラデーション背景
+@mixin linear-bg($bg: linear-gradient(to top, #000000, #151515, #222222, #5A5A5A)) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 1;
+  background: $bg;
+}
