@@ -1,6 +1,6 @@
 .home_about {
-  padding-bottom: 44px;
-  margin-bottom: 50px;
+  padding-bottom: 105px;
+  margin-bottom: 90px;
   background: #000;
   position: relative;
 
@@ -25,29 +25,282 @@
       width: 100%;
     }
   }
+}
 
-  .homeAbout_details {
-    margin-top: 70px;
-    margin-left: 68px;
+.home_numbers {
+  margin-bottom: 90px;
+  .homeNumbers_years {
+    margin-top: 65px;
+    text-align: center;
+    * {
+      display: inline;
+    }
+    .homeNumbersYears_fromTo {
+      font-size: 77px;
+      line-height: 1;
+      font-weight: bolder;
+    }
+    .homeNumbersYears_year {
+      font-size: 17px;
+      color: #F47424;
+    }
+    .homeNumbersYears_now {
+      font-size: 12px;
+      color: #969696;
+    }
+  }
+
+  .homeNumbers_list {
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    .homeAboutDetails_img {
-      width: 295px;
-      img {
-        width: 100%;
+    border-top: 1px solid rgba(#FF0000, 0.3);
+    @include flex-align-left($width: 25%);
+
+    .homeNumbers_item {
+      width: 25%;
+      padding: 25px 12px 40px;
+      border-left: 1px solid rgba(#FF0000, 0.3);
+      border-right: 1px solid rgba(#FF0000, 0.3);
+      border-bottom: 1px solid rgba(#FF0000, 0.3);
+      &:nth-of-type(1n+1) {
+        border-left: none;
       }
-    }
-    .homeAboutDetails_txt {
-      width: calc(100% - 335px);
-      font-size: 15px;
-      font-weight: medium;
-      color: #fff;
-      line-height: 2.4;
+
+      &:nth-of-type(4n+4) {
+        border-right: none;
+      }
+
+      &:last-child {
+        border-right: none;
+        border-bottom: none;
+      }
+
+      &.-build {
+        .homeNumbersItem_img {
+          width: 48px;
+        }
+      }
+      &.-staff {
+        .homeNumbersItem_img {
+          width: 31px;
+        }
+      }
+      &.-age {
+        .homeNumbersItem_img {
+          width: 37px;
+        }
+      }
+      &.-gender {
+        .homeNumbersItem_img {
+          width: 21px;
+        }
+      }
+      &.-role {
+        .homeNumbersItem_img {
+          width: 46px;
+        }
+      }
+      &.-works {
+        .homeNumbersItem_img {
+          width: 40px;
+        }
+      }
+
+      .homeNumbersItem_txt {
+        text-align: center;
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .homeNumbersItem_pic {
+        margin-top: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .homeNumbersItem_details {
+          padding-left: 22px;
+          display: flex;
+          align-items: flex-end;
+          line-height: 1;
+        }
+
+        .homeNumbersItemDetails_num {
+          font-size: 77px;
+          font-weight: bolder;
+        }
+
+        .homeNumbersItemDetails_txt {
+          font-size: 17px;
+          color: #F47424;
+        }
+      }
     }
   }
 }
 
-.home_numbers {
-  margin-bottom: 50px;
+.home_vision {
+  padding-bottom: 105px;
+  margin-bottom: 90px;
+  background: #000;
+  position: relative;
+
+  .homeVision_bg {
+    @include linear-bg();
+    opacity: 0.5;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .homeVision_ttl {
+    padding-top: 95px;
+  }
+}
+
+.home_service {
+  margin-bottom: 90px;
+  .homeService_txt {
+    margin-top: 45px;
+    margin-bottom: 24px;
+    text-align: center;
+    line-height: 2.2;
+    font-size: 15px;
+  }
+
+  .homeService_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include flex-align-left($width: calc(50% - 15px));
+
+    .homeService_item {
+      width: calc(50% - 15px);
+      margin: 20px 0;
+      position: relative;
+      border: 1px solid #707070;
+      display: flex;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+      }
+
+      &.-movie {
+        .homeServiceItem_img {
+          width: 49px;
+        }
+      }
+
+      &.-drama {
+        .homeServiceItem_img {
+          width: 42px;
+        }
+      }
+
+      &.-drone {
+        .homeServiceItem_img {
+          width: 48px;
+        }
+      }
+
+      &.-location {
+        .homeServiceItem_img {
+          width: 50px;
+        }
+      }
+
+      &.-music {
+        .homeServiceItem_img {
+          width: 61px;
+        }
+      }
+
+      .homeServiceItem_bg {
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: 0.4s $ease-out;
+        img {
+          width: 100%;
+          height: 100%;
+          transform-origin: center;
+          opacity: 0;
+          transform: scale(1);
+          transition: opacity 0.4s $ease-out, transform 2s $ease-out;
+        }
+      }
+
+      &:hover .homeServiceItem_bg {
+        opacity: 1;
+        img{
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+
+      .homeServiceItem_inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        width: 100%;
+        .homeServiceItem_pic {
+          width: calc(100% - 234px);
+          .homeServiceItem_img {
+            margin: 0 auto;
+          }
+          .homeServiceItem_txt {
+            text-align: center;
+            padding-top: 10px;
+            font-size: 23px;
+            font-weight: bold;
+            line-height: 1.2;
+            span {
+              display: block;
+              font-size: 16px;
+            }
+          }
+        }
+        .homeServiceItem_details {
+          width: 224px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.home_news {
+  padding-bottom: 105px;
+  background: #F5F5F5;
+  .homeNews_ttl {
+    padding-top: 90px;
+  }
+  .homeNews_item {
+    padding: 20px 0;
+    border-bottom: 1px solid #D6D6D6;
+    * {
+      display: inline;
+    }
+    .homeNewsItem_date {
+      font-size: 15px;
+      color: #969696;
+    }
+    .homeNewsItem_txt {
+      font-size: 17px;
+      padding-left: 35px;
+      color: #000;
+    }
+  }
 }

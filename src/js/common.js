@@ -1,3 +1,5 @@
+
+import Loading from "./common/_Loading";
 import LazyLoad from "./common/_LazyLoad";
 import GuardImg from "./common/_GuardImg";
 import SetModal from "./common/_SetModal";
@@ -10,6 +12,9 @@ import Share from "./modules/_Share";
 import Top from "./pages/_Top";
 
 $(() => {
+  const loading = new Loading();
+  loading.init();
+
   const lazyLoad = new LazyLoad();
   lazyLoad.init();
 

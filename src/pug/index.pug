@@ -23,18 +23,25 @@ block contents
         span.commonTtl_line
       .homeAbout_catch
         img(src="assets/img/top/ttl_catch.svg", alt="")
-      .homeAbout_details
-        .homeAboutDetails_img
+      .homeAbout_details.common_details
+        .commonDetails_img
           img(src="assets/img/top/img_about.png", alt="")
-        .homeAboutDetails_txt
+        .commonDetails_txt
           p 株式会社ジャンゴフィルムは東京東京都調布市にある映画製作会社。
-          | 映画製作だけではなく、総合的な映像事業を提供している。
-          | 映画製作に興味がある若者や新人若手監督に向けて、
-          | 2007年から現在にかけて、無数な作品を作成した。
-          | ジャンゴフィルムの総合力は、映画、映像制作のスペシャリストの集まりであり、
-          | 映画制作のことなら何でもできる、という力です。
-          | 私たちは様々な作品を作りたい、挑戦したい、
-          |今まで色々な困難を越えて、この世界へ。
+            br
+            | 映画製作だけではなく、総合的な映像事業を提供している。
+            br
+            | 映画製作に興味がある若者や新人若手監督に向けて、
+            br
+            | 2007年から現在にかけて、無数な作品を作成した。
+            br
+            | ジャンゴフィルムの総合力は、映画、映像制作のスペシャリストの集まりであり、
+            br
+            | 映画制作のことなら何でもできる、という力です。
+            br
+            | 私たちは様々な作品を作りたい、挑戦したい、
+            br
+            |今まで色々な困難を越えて、この世界へ。
   
   .home_numbers
     .container
@@ -42,3 +49,176 @@ block contents
         span.commonTtl_en.u-font-azoSans IN NUMBERS
         span.commonTtl_jp 数字で見るジャンゴフィルム
         span.commonTtl_line
+      .homeNumbers_years
+        .homeNumbersYears_fromTo.common_txtGradient 2007 - 
+          span.js-animateText(data-num = 2020 data-duration = 500) 2007
+          //- span.js-animateText(data-num = 2020 data-duration = 1000) 2007
+        .homeNumbersYears_year 年
+        .homeNumbersYears_now 2020年12月時点
+      ul.homeNumbers_list
+        li.homeNumbers_item.-build
+          .homeNumbersItem_txt 成立年数
+          .homeNumbersItem_pic
+            .homeNumbersItem_img
+              img(src="assets/img/top/ico_build.svg", alt="")
+            .homeNumbersItem_details
+              span.homeNumbersItemDetails_num.common_txtGradient.js-animateText(data-num = 14 data-duration = 500)
+              span.homeNumbersItemDetails_txt 年
+        li.homeNumbers_item.-staff
+          .homeNumbersItem_txt 社員数
+          .homeNumbersItem_pic
+            .homeNumbersItem_img
+              img(src="assets/img/top/ico_staff.svg", alt="")
+            .homeNumbersItem_details
+              span.homeNumbersItemDetails_num.common_txtGradient.js-animateText(data-num = 19 data-duration = 600)
+              span.homeNumbersItemDetails_txt 人
+        li.homeNumbers_item.-age
+          .homeNumbersItem_txt 平均年齢
+          .homeNumbersItem_pic
+            .homeNumbersItem_img
+              img(src="assets/img/top/ico_age.svg", alt="")
+            .homeNumbersItem_details
+              span.homeNumbersItemDetails_num.common_txtGradient.js-animateText(data-num = 30 data-duration = 700)
+              span.homeNumbersItemDetails_txt 歳
+        li.homeNumbers_item.-gender
+          .homeNumbersItem_txt 男女比率
+          .homeNumbersItem_pic
+            .homeNumbersItem_img
+              img(src="assets/img/top/ico_gender.svg", alt="")
+            .homeNumbersItem_details
+              span.homeNumbersItemDetails_num.common_txtGradient
+                span.js-animateText(data-num = 7 data-duration = 800)
+                span.js-animateText(data-num = 3 data-duration = 900)
+        li.homeNumbers_item.-role
+          .homeNumbersItem_txt パート・役割数
+          .homeNumbersItem_pic
+            .homeNumbersItem_img
+              img(src="assets/img/top/ico_role.svg", alt="")
+            .homeNumbersItem_details
+              span.homeNumbersItemDetails_num.common_txtGradient.js-animateText(data-num = 124 data-duration = 1000)
+              span.homeNumbersItemDetails_txt 個
+        li.homeNumbers_item.-works
+          .homeNumbersItem_txt 成立年数
+          .homeNumbersItem_pic
+            .homeNumbersItem_img
+              img(src="assets/img/top/ico_works.svg", alt="")
+            .homeNumbersItem_details
+              span.homeNumbersItemDetails_num.common_txtGradient.js-animateText(data-num = 305 data-duration = 1100)
+              span.homeNumbersItemDetails_txt 件
+      .homeNumbers_link
+        a(href="") 会社案内
+
+  .home_vision
+    .common_bg
+    .homeVision_bg
+    .container
+      .homeVision_ttl.common_ttl.-white
+        span.commonTtl_en.u-font-azoSans VISION
+        span.commonTtl_jp 会社のビジョン
+        span.commonTtl_line
+      .homeVision_details.common_details
+        .commonDetails_img
+          img(src="assets/img/top/img_vision.png", alt="")
+        .commonDetails_txt
+          p 100 年前から映画を作ってきたのは映画監督。
+            br
+            | その 100 年間やってきた映画作りの魂をずっと大切にしていきたい。
+            br
+            | また、映像業界に入ってくる若手の監督やプロデューサーなど、
+            br
+            | 映像業界に興味があって入りたいと思っている若者を応援してあげたい。
+  
+  .home_service
+    .container
+      .homeService_ttl.common_ttl.-black
+        span.commonTtl_en.u-font-azoSans SERVICE
+        span.commonTtl_jp 業務内容
+        span.commonTtl_line
+      p.homeService_txt 映画製作だけではなく、総合的な映像事業を提供しています。
+        br
+        | 映画製作に興味がある若者や新人若手監督に向けて、
+        br
+        | ジャンゴフィルムや、2007年から現在にかけて、無数な作品を作成した。
+      ul.homeService_list
+        li.homeService_item.-movie
+          .homeServiceItem_bg
+            img(src="assets/img/top/img_service-01.png", alt="")
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src="assets/img/top/ico_movie.png", alt="")
+              .homeServiceItem_txt 映画製作
+            p.homeServiceItem_details - 弊社制作作品
+              br
+              | - プロデューサー業務請負作品
+              br
+              | - スタッフ出向作品
+        li.homeService_item.-drama
+          .homeServiceItem_bg
+            img(src="assets/img/top/img_service-02.png", alt="")
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src="assets/img/top/ico_drama.png", alt="")
+              .homeServiceItem_txt ドラマ制作
+                span TV局
+            p.homeServiceItem_details - PV
+              br
+              | - 短編映画
+              br
+              | - テレビドラマ
+        li.homeService_item.-drone
+          .homeServiceItem_bg
+            img(src="assets/img/top/img_service-03.png", alt="")
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src="assets/img/top/ico_drone.png", alt="")
+              .homeServiceItem_txt ドローン事業
+            p.homeServiceItem_details CMや映画で使われる空撮やダイナミックな表現を可能にするドローン撮影
+        li.homeService_item.-location
+          .homeServiceItem_bg
+            img(src="assets/img/top/img_service-04.png", alt="")
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src="assets/img/top/ico_location.png", alt="")
+              .homeServiceItem_txt ロケーション
+                br
+                | サービス
+            p.homeServiceItem_details 撮影時のロケーション選定
+              br
+              | 撮影の許可申請など
+        li.homeService_item.-music
+          .homeServiceItem_bg
+            img(src="assets/img/top/img_service-05.png", alt="")
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src="assets/img/top/ico_music.png", alt="")
+              .homeServiceItem_txt 音楽制作
+                br
+                | サービス
+            p.homeServiceItem_details CMや映画で使う
+              br
+              | オリジナル楽曲の制作
+
+  .home_news
+    .container
+      .homeNews_ttl.common_ttl.-black
+        span.commonTtl_en.u-font-azoSans NEWS
+        span.commonTtl_jp お知らせ
+        span.commonTtl_line
+      ul.homeNews_list
+        li.homeNews_item
+          a(href="")
+            .homeNewsItem_date 2020.12.16
+            .homeNewsItem_txt ドローン事業変更のお知らせ
+        li.homeNews_item
+          a(href="")
+            .homeNewsItem_date 2020.11.05
+            .homeNewsItem_txt 公式サイト一部URL変更のお知らせ
+        li.homeNews_item
+          a(href="")
+            .homeNewsItem_date 2020.10.24
+            .homeNewsItem_txt 期間限定！プロデューサー業務請負作品応募開始
