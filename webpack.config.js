@@ -11,7 +11,7 @@ const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const dir = {
   src: "./src",
   public: "./docs",
-  dist: "./docs"
+  dist: "./docs/movie-site"
 };
 
 const convertExtensions = {
