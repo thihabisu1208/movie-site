@@ -17,10 +17,8 @@ block contents
     .common_bg
     .homeAbout_bg
     .container
-      .homeAbout_ttl.common_ttl.-white.js-scrollAnim
-        span.commonTtl_en.u-font-azoSans ABOUT US
-        span.commonTtl_jp 私たちについて
-        span.commonTtl_line
+      include ./object/_o-ttl
+      +o-ttl("homeAbout_ttl", "about us", "私たちについて", "white")
       .homeAbout_catch.js-scrollAnim
         img(src=`${path}/assets/img/top/ttl_catch.svg`, alt="")
       .homeAbout_details.common_details.js-scrollAnim
@@ -45,10 +43,8 @@ block contents
   
   .home_numbers
     .container
-      .homeNumbers_ttl.common_ttl.-black.js-scrollAnim
-        span.commonTtl_en.u-font-azoSans IN NUMBERS
-        span.commonTtl_jp 数字で見るジャンゴフィルム
-        span.commonTtl_line
+      include ./object/_o-ttl
+      +o-ttl("homeNumbers_ttl", "in numbers", "数字で見るジャンゴフィルム", "black")
       .homeNumbers_years.js-scrollAnim
         .homeNumbersYears_fromTo.common_txtGradient 2007 - 
           span.js-animateText(data-num = 2020 data-duration = 500) 2007
@@ -106,16 +102,14 @@ block contents
               span.homeNumbersItemDetails_num.common_txtGradient.js-animateText(data-num = 305 data-duration = 1100)
               span.homeNumbersItemDetails_txt 件
       .homeNumbers_link.js-scrollAnim
-        a(href="") 会社案内
+        a(href=`${path}outline/`) 会社案内
 
   .home_vision
     .common_bg
     .homeVision_bg
     .container
-      .homeVision_ttl.common_ttl.-white.js-scrollAnim
-        span.commonTtl_en.u-font-azoSans VISION
-        span.commonTtl_jp 会社のビジョン
-        span.commonTtl_line
+      include ./object/_o-ttl
+      +o-ttl("homeVision_ttl", "vision", "会社のビジョン", "white")
       .homeVision_details.common_details.js-scrollAnim
         .commonDetails_img
           img(src=`${path}/assets/img/top/img_vision.png`, alt="")
@@ -130,10 +124,8 @@ block contents
   
   .home_service
     .container
-      .homeService_ttl.common_ttl.-black.js-scrollAnim
-        span.commonTtl_en.u-font-azoSans SERVICE
-        span.commonTtl_jp 業務内容
-        span.commonTtl_line
+      include ./object/_o-ttl
+      +o-ttl("homeService_ttl", "service", "業務内容", "black")
       p.homeService_txt.js-scrollAnim 映画製作だけではなく、総合的な映像事業を提供しています。
         br
         | 映画製作に興味がある若者や新人若手監督に向けて、
@@ -205,10 +197,8 @@ block contents
 
   .home_news
     .container
-      .homeNews_ttl.common_ttl.-black.js-scrollAnim
-        span.commonTtl_en.u-font-azoSans NEWS
-        span.commonTtl_jp お知らせ
-        span.commonTtl_line
+      include ./object/_o-ttl
+      +o-ttl("homeNews_ttl", "news", "お知らせ", "black")
       ul.homeNews_list.js-scrollAnim
         li.homeNews_item.js-scrollAnim
           a(href="")

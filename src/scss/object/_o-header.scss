@@ -1,0 +1,24 @@
+.o-header {
+  height: 50px;
+  background: linear-gradient(to right, #FF151B, #FFA700, #F40007);
+  position: relative;
+  overflow: hidden;
+  .o-header_txt {
+    position: absolute;
+    top: calc(-50% - 4px);
+    transform: translateY(0%);
+  }
+  .o-header_en {
+    font-size: 77px;
+    color: #fff;
+    opacity: 0.3;
+    text-transform: uppercase;
+  }
+  .o-header_jp {
+    display: inline-block;
+    font-size: 29px;
+    font-weight: bold;
+    padding-left: 35px;
+    transform: translateY(-25%);
+  }
+}

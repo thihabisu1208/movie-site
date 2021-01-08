@@ -1,0 +1,41 @@
+
+
+.o-ttl {
+  text-align: center;
+  line-height: 1;
+  span {
+    display: block;
+  }
+  .o-ttl_en {
+    font-size: 18px;
+    font-weight: medium;
+    color: #FFB100;
+    text-transform: uppercase;
+  }
+  .o-ttl_jp {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  .o-ttl_line {
+    margin: 20px auto 0;
+    width: 30px;
+    height: 1px;
+  }
+  &.-white {
+    .o-ttl_jp {
+      color: #fff;
+    }
+    .o-ttl_line {
+      background: #fff;
+    }
+  }
+  &.-black {
+    .o-ttl_jp {
+      color: #000;
+    }
+    .o-ttl_line {
+      background: #000;
+    }
+  }
+}

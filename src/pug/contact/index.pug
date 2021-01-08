@@ -9,7 +9,8 @@ block meta
     }
 
 block name
-  - const name = "works"
+  - const name = "contact"
 
 block contents
-  .outline hey
+  include ./../object/_o-header
+  +o-header("contact us", "お問い合わせ")
