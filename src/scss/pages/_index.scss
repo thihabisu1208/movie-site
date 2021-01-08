@@ -55,26 +55,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 1px solid rgba(#FF0000, 0.3);
-    @include flex-align-left($width: 25%);
+    // border-top: 1px solid rgba(#FF0000, 0.3);
+    @include flex-align-left($width: 33.333%);
 
     .homeNumbers_item {
-      width: 25%;
+      width: 33.333%;
       padding: 25px 12px 40px;
       border-left: 1px solid rgba(#FF0000, 0.3);
-      border-right: 1px solid rgba(#FF0000, 0.3);
-      border-bottom: 1px solid rgba(#FF0000, 0.3);
-      &:nth-of-type(1n+1) {
+      &:first-child {
         border-left: none;
       }
 
+      &:nth-of-type(-n+3) {
+      border-bottom: 1px solid rgba(#FF0000, 0.3);
+      }
+
       &:nth-of-type(4n+4) {
-        border-right: none;
+        border-left: none;
       }
 
       &:last-child {
         border-right: none;
-        border-bottom: none;
       }
 
       &.-build {
@@ -94,7 +95,7 @@
       }
       &.-gender {
         .homeNumbersItem_img {
-          width: 21px;
+          width: 44px;
         }
       }
       &.-role {
@@ -117,11 +118,11 @@
       .homeNumbersItem_pic {
         margin-top: 23px;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
 
         .homeNumbersItem_details {
-          padding-left: 22px;
+          padding-left: 10px;
           display: flex;
           align-items: flex-end;
           line-height: 1;
@@ -130,12 +131,44 @@
         .homeNumbersItemDetails_num {
           font-size: 77px;
           font-weight: bolder;
+          transform: translateY(10px);
         }
 
         .homeNumbersItemDetails_txt {
           font-size: 17px;
           color: #F47424;
         }
+      }
+    }
+  }
+
+  .homeNumbers_link {
+    // display: none;
+    margin: 40px auto 0;
+    text-align: center;
+    a {
+      display: block;
+      color: #000;
+      padding: 25px 0;
+      width: 302px;
+      margin: 0 auto;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1px solid #000;
+      transition: 0.4s $ease-out;
+      @include arrow;
+      &:hover {
+        background: #000;
+        color: #fff;
+        &::after {
+          border-color: #fff;
+        }
+      }
+      &::after {
+        border-color: #000;
+        right: 30px;
+        top: calc(50% + 1px);
+        transition: 0.4s $ease-out;
       }
     }
   }

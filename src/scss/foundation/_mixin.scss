@@ -64,7 +64,7 @@
 }
 
 // border で arrow 作成.
-@mixin arrow($size: 6px, $rotate: 45deg, $color: #fff) {
+@mixin arrow($size: 8px, $rotate: 45deg, $color: #fff) {
   position: relative;
   &::after {
     content: "";

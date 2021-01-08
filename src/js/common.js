@@ -3,6 +3,7 @@ import Loading from "./common/_Loading";
 import LazyLoad from "./common/_LazyLoad";
 import GuardImg from "./common/_GuardImg";
 import SetModal from "./common/_SetModal";
+import Navigation from "./common/_Navigation";
 
 import ScrollAnim from "./modules/_ScrollAnim";
 import AnchorScroll from "./modules/_AnchorScroll";
@@ -23,6 +24,9 @@ $(() => {
 
   const setModal = new SetModal();
   setModal.init();
+
+  const navigation = new Navigation();
+  navigation.init();
 
   const scrollAnim = new ScrollAnim();
   scrollAnim.init();

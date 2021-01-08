@@ -32,6 +32,9 @@
         height: 3px;
         background: linear-gradient(to top right, #FF0007, #FF9300);
       }
+      &.is-inactive::after {
+        display: none;
+      }
       a {
         color: #fff;
       }

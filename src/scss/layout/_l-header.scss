@@ -26,6 +26,9 @@
         height: 3px;
         background: linear-gradient(to top right, #FF0007, #FF9300);
       }
+      &.is-inactive::after {
+        display: none;
+      }
       a {
         color: #000;
         transition: 0.4s $ease-out;

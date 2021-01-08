@@ -30,10 +30,12 @@
   }
 }
 
-.js-fadeIn {
-  opacity: 0;
-  transition: opacity 0.4s $ease-out;
-  &.is-active {
-    opacity: 1;
+.js-scrollAnim {
+    opacity: 0;
+    transition: 1s $ease-out;
+    transform: translateY(10px);
+    &.on-anim {
+      opacity: 1;
+    transform: translateY(0px);
+    }
   }
-}
