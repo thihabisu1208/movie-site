@@ -1,15 +1,18 @@
+-
+  const path = "/movie-site/";
+
 header.l-header
   .container
     .l-header_logo
       a(href="/")
-        img(src="/assets/img/img_logo-header.png", alt="")
+        img(src=`${path}/assets/img/img_logo-header.png`, alt="")
     ul.l-header_nav
       li.l-header_nav-item.is-active
         a(href="/")
           span トップ
           span.u-font-azoSans TOP
       li.l-header_nav-item
-        a(href="/outline/")
+        a(href="/movie-site/outline/")
           span 会社案内
           span.u-font-azoSans OUTLINE
       li.l-header_nav-item
