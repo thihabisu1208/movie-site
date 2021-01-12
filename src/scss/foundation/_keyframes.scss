@@ -35,3 +35,30 @@
     display: none;
   }
 }
+
+@keyframes loop {
+  0% {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+ 
+@keyframes loop2 {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+ 
+@keyframes loop3 {
+  0% {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-300%);
+  }
+}

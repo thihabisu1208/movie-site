@@ -1,0 +1,148 @@
+.drone_top {
+    padding-bottom: 78px;
+    margin-bottom: 50px;
+    background: #000;
+    position: relative;
+    .droneTop_bg {
+        @include linear-bg;
+        opacity: 0.5;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .droneTop_ttl {
+        padding: 71px 0 75px;
+    }
+}
+
+.drone_prize {
+    padding-top: 75px;
+    padding-bottom: 50px;
+
+    .dronePrize_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .dronePrize_details {
+        width: 45%;
+        .dronePrizeDetails_ttl {
+            font-size: 29px;
+            font-weight: bold;
+        }
+        .dronePrizeDetails_txt {
+            padding-top: 30px;
+            font-size: 17px;
+        }
+    }
+
+    .dronePrize_img {
+        width: 55%;
+        display: flex;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.drone_paper {
+    background: #F5F5F5;
+    padding-top: 69px;
+    padding-bottom: 45px;
+
+    .dronePaper_inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dronePaper_img {
+        width: 55%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .dronePaperImg_item {
+            width: calc(50% - 10px);
+            margin: 10px 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .dronePaper_details {
+        width: calc(45% - 70px);
+        .dronePaperDetails_ttl {
+            font-size: 29px;
+            font-weight: bold;
+        }
+        .dronePaperDetails_txt {
+            padding-top: 30px;
+            font-size: 17px;
+        }
+    }
+}
+
+.drone_order {
+    background: #F5F5F5;
+    padding-top: 78px;
+    padding-bottom: 80px;
+
+    .container {
+        max-width: 687px;
+    }
+
+    .droneOrder_ttl {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .droneOrder_item {
+        padding-top: 50px;
+        padding-bottom: 15px;
+        margin-bottom: 28px;
+        display: flex;
+        align-items: flex-end;
+        line-height: 1.4;
+        border-bottom: 1px solid #E5E5E5;
+        position: relative;
+        &:not(:first-child)::after {
+            content: "";
+            width: 16px;
+            height: 14px;
+            background: url("/movie-site/assets/img/drone/ico_polygon.png") 100%;
+            background-size: cover;
+            position: absolute;
+            border-color: #000;
+            top: 0;
+            left: 50%;
+        }
+        .droneOrderItem_step {
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            display: inline-block;
+            transform: translateY(10px);
+            color: #C4C4C4;
+            span {
+                padding-left: 10px;
+                font-size: 50px;
+                display: inline-block;
+                transform: translateY(5px);
+            }
+        }
+        .droneOrderItem_txt {
+            padding-left: 45px;
+            font-size: 17px;
+            span {
+                display: block;
+                font-size: 12px;
+            }
+        }
+    }
+}

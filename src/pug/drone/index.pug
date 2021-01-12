@@ -14,3 +14,73 @@ block name
 block contents
   include ./../object/_o-header
   +o-header("drone", "ドローン事業")
+
+  .drone_top
+    .droneTop_bg
+    .container
+      include ./../object/_o-ttl
+      +o-ttl("droneTop_ttl", "pick up", "ドローン事業が始まる", "white")
+      .droneTop_intro.js-scrollAnim
+        img(src=`${path}/assets/img/drone/img_drone.jpg`, alt="")
+
+  .drone_prize
+    .container
+      .dronePrize_inner
+        .dronePrize_details.js-scrollAnim
+          .dronePrizeDetails_ttl 実績・終了証明書
+          .dronePrizeDetails_txt ドローン空撮ご相談承ります！
+            br
+            | 赤外線調査撮影、農業調査、農薬散布等も
+        .dronePrize_img
+          .dronePrizeImg_item.js-scrollAnim
+            img(src=`${path}/assets/img/drone/img_prize-01.png`, alt="")
+          .dronePrizeImg_item.js-scrollAnim
+            img(src=`${path}/assets/img/drone/img_prize-02.png`, alt="")
+
+  .drone_paper
+    .container
+      .dronePaper_inner
+        .dronePaper_img
+          .dronePaperImg_item.js-scrollAnim
+            img(src=`${path}/assets/img/drone/img_paper-01.png`, alt="")
+          .dronePaperImg_item.js-scrollAnim
+            img(src=`${path}/assets/img/drone/img_paper-02.png`, alt="")
+          .dronePaperImg_item.js-scrollAnim
+            img(src=`${path}/assets/img/drone/img_paper-03.png`, alt="")
+          .dronePaperImg_item.js-scrollAnim
+            img(src=`${path}/assets/img/drone/img_paper-04.png`, alt="")
+        .dronePaper_details.js-scrollAnim
+          .dronePaperDetails_ttl 資格を取る
+          .dronePaperDetails_txt ドローン空撮ご相談承ります！
+            br
+            | 赤外線調査撮影、農業調査、農薬散布等も
+
+  .drone_form
+    .container
+      include ./../object/_o-ttl
+      +o-ttl("droneForm_ttl", "contact us", "ドローン空撮・撮影お問い合わせ", "black")
+
+  .drone_order
+    .container
+      .droneOrder_ttl.js-scrollAnim ご注⽂の流れ
+      ul.droneOrder_list
+        li.droneOrder_item.js-scrollAnim
+          .droneOrderItem_step.u-font-dinPro step
+            span.common_txtGradient 1
+          .droneOrderItem_txt お問い合わせフォーム
+            span ※必要事項をご記⼊いただき、お問い合わせください。
+        li.droneOrder_item.js-scrollAnim
+          .droneOrderItem_step.u-font-dinPro step
+            span.common_txtGradient 2
+          .droneOrderItem_txt 詳細ヒアリング
+            span  ※弊社よりご連絡いたします。詳細のヒアリングをさせていただきます。
+        li.droneOrder_item.js-scrollAnim
+          .droneOrderItem_step.u-font-dinPro step
+            span.common_txtGradient 3
+          .droneOrderItem_txt お打合せ、ロケハン
+            span ※撮影前に、詳細の打合せ・必要な書類の取り交わし・ロケハンなどを⾏います。
+        li.droneOrder_item.js-scrollAnim
+          .droneOrderItem_step.u-font-dinPro step
+            span.common_txtGradient 4
+          .droneOrderItem_txt 撮影／納品
+            span ※安全に配慮しながら撮影をいたします。お打ち合わせでの形式･⽅法で納品いたします。

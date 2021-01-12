@@ -11,6 +11,7 @@ import Accordion from "./modules/_Accordion";
 import Share from "./modules/_Share";
 
 import Top from "./pages/_Top";
+import Works from "./pages/_Works";
 
 $(() => {
   const loading = new Loading();
@@ -42,6 +43,9 @@ $(() => {
 
   const top = new Top();
   top.init();
+
+  const works = new Works();
+  works.init();
 
   polyfill();
   controlScrollIE();
