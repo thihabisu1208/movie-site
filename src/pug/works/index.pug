@@ -16,16 +16,52 @@ block contents
   +o-header("works", "作品履歴")
   .works_top
     .worksTop_bg
+    include ./../object/_o-ttl
+    +o-ttl("worksTop_ttl", "latest works", "最新作品", "white")
+    .worksTop_mainSlider
+      ul.worksTopMainSlider_inner.js-scrollAnim
+        li.worksTopMainSlider_item
+          img(src=`${path}/assets/img/works/img_slide-02.png`, alt="")
+        li.worksTopMainSlider_item
+          img(src=`${path}/assets/img/works/img_slide-03.png`, alt="")
+        li.worksTopMainSlider_item
+          img(src=`${path}/assets/img/works/img_slide-04.png`, alt="")
+        li.worksTopMainSlider_item
+          img(src=`${path}/assets/img/works/img_slide-06.png`, alt="")
+  
+  .works_other
     .container
-      include ./../object/_o-ttl
-      +o-ttl("worksTop_ttl", "latest works", "最新作品", "white")
-      .worksTop_mainSlider
-        ul.worksTopMainSlider_inner
-          li.worksTopMainSlider_item
-            img(src=`${path}/assets/img/works/img_slide-02.png`, alt="")
-          li.worksTopMainSlider_item
-            img(src=`${path}/assets/img/works/img_slide-03.png`, alt="")
-          li.worksTopMainSlider_item
-            img(src=`${path}/assets/img/works/img_slide-04.png`, alt="")
-          li.worksTopMainSlider_item
-            img(src=`${path}/assets/img/works/img_slide-06.png`, alt="")
+      .worksOther_slider.swiper-container.js-scrollAnim
+        ul.worksOtherSlider_inner.swiper-wrapper
+          li.worksOtherSlider_item.swiper-slide
+            img(src=`${path}/assets/img/works/img_otherslide-01.jpg`, alt="")
+            .details
+              p hey
+          li.worksOtherSlider_item.swiper-slide
+            img(src=`${path}/assets/img/works/img_otherslide-02.jpg`, alt="")
+            .details
+              p hey
+          li.worksOtherSlider_item.swiper-slide
+            img(src=`${path}/assets/img/works/img_otherslide-03.jpg`, alt="")
+            .details
+              p hey
+          li.worksOtherSlider_item.swiper-slide
+            img(src=`${path}/assets/img/works/img_otherslide-04.jpg`, alt="")
+            .details
+              p hey
+          li.worksOtherSlider_item.swiper-slide
+            img(src=`${path}/assets/img/works/img_otherslide-05.jpg`, alt="")
+            .details
+              p hey
+          li.worksOtherSlider_item.swiper-slide
+            img(src=`${path}/assets/img/works/img_otherslide-06.jpg`, alt="")
+            .details
+              p hey
+          li.worksOtherSlider_item.swiper-slide
+            img(src=`${path}/assets/img/works/img_otherslide-07.jpg`, alt="")
+            .details
+              p hey
+        .swiper-pagination
+        .buttons
+          .swiper-button-prev
+          .swiper-button-next

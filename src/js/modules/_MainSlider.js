@@ -17,7 +17,6 @@ export default class MainSlider extends App {
 
   init() {
     const option = {
-      effect: "fade",
       loop: true,
       autoplay: {
         delay: 5000,
