@@ -14,3 +14,35 @@ block name
 block contents
   include ./../object/_o-header
   +o-header("staff", "スタッフ")
+  .staff_top
+    .staffTop_bg
+    include ./../object/_o-ttl
+    +o-ttl("staffTop_ttl", "join us", "スタッフについて", "white")
+    .container
+      .staffTop_txt 映画製作に興味がある若者や新人若手監督に向けて、
+        br
+        | 2007年から現在にかけて、無数な作品を作成した。
+        br
+        | ジャンゴフィルムの総合力は、映画、映像制作のスペシャリストの集まりであり、
+        br
+        | 映画制作のことなら何でもできる、という力です。私たちは様々な作品を作りたい、挑戦したい、
+        br
+        | 今まで色々な困難を越えて、この世界へ。
+      .staffTop_img
+        .staffTopImg_team
+          img(src=`${path}/assets/img/staff/img_team.png`, alt="")
+        .staffTopImg_join
+          img(src=`${path}/assets/img/staff/img_join.png`, alt="")
+    
+  .staffData
+    .container
+      .staffData_head
+        span.common_txtGradient.u-font-dinPro 2014
+        span 年以降の主な担当作品
+      .staffData_ttl
+        .staffDataTtl_img
+          img(src=`${path}/assets/img/staff/img_person.png`, alt="")
+        .staffDataTtl_txt プロデューサー
+        .staffDataTtl_line
+      ul.staffData_list
+        include ./../object/_o-staffData

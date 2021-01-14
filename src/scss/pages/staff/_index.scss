@@ -1,0 +1,159 @@
+.staff_top {
+    padding-bottom: 99px;
+    margin-bottom: 110px;
+    background: #000;
+    position: relative;
+    .staffTop_bg {
+        @include linear-bg;
+        opacity: 0.5;
+    }
+    .staffTop_ttl {
+        position: relative;
+        z-index: 2;
+        padding: 67px 0 40px;
+    }
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    .staffTop_txt {
+        color: #fff;
+        text-align: center;
+        line-height: 2;
+    }
+    .staffTop_img {
+        img {
+            width: 100%;
+        }
+        .staffTopImg_team {
+            margin: 52px auto 0;
+            width: 134px;
+        }
+        .staffTopImg_join {
+            margin: 32px auto 0;
+            width: 327px;
+        }
+    }
+}
+
+.staffData {
+    .staffData_head {
+        text-align: center;
+        span:nth-of-type(1) {
+            font-size: 59px;
+        }
+        span:nth-of-type(2) {
+            padding-left: 22px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+    .staffData_ttl {
+        margin-top: 65px;
+        display: flex;
+        position: relative;
+        width: 100%;
+        .staffDataTtl_img {
+            width: 31px;
+            img {
+                width: 100%;
+            }
+        }
+        .staffDataTtl_txt {
+            display: flex;
+            align-items: flex-end;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 0 22px 0 25px;
+            line-height: 1;
+        }
+        .staffDataTtl_line {
+            content: "";
+            display: block;
+            position: absolute;
+            top: calc(50% + 11px);
+            right: 0;
+            width: calc(100% - 276px);
+            height: 1px;
+            background: #A7A7A7;
+        }
+    }
+
+    .staffData_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include flex-align-left(calc(33.333% - 28px));
+        img {
+            width: 100%;
+        }
+        .staffData_item {
+            margin-top: 40px;
+            width: calc(33.333% - 28px);
+            position: relative;
+            .staffDataItem_btn {
+                &::before,
+                &::after {
+                    width: 8px;
+                    top: auto;
+                    bottom: 8.5px;
+                }
+            }
+            .staffDataItem_name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .staffDataItemName_img {
+                    width: 99px;
+                }
+                .staffDataItemName_txt {
+                    padding-top: 10px;
+                    font-size: 12px;
+                    color: #FF0000;
+                }
+            }
+            .staffDataItem_details {
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+                text-align: right;
+                .staffDataItemDetails_role {
+                    font-size: 16px;
+                    font-weight: bold;
+                    transform: translateX(15px);
+                }
+                .staffDataItemDetails_btn {
+                    color: #707070;
+                    font-size: 12px;
+                }
+            }
+            .staffDataItem_works {
+                margin-top: 20px;
+                background: #F8F8F8;
+                padding: 20px 15px;
+                .staffDataItemWorks_item {
+                    padding-top: 20px;
+                    display: flex;
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                    .staffDataItemWorksItem_year {
+                        font-size: 13px;
+                    }
+                    .staffDataItemWorksItem_data {
+                        padding-left: 14px;
+                        font-size: 15px;
+                        font-weight: bold;
+                        span {
+                            display: block;
+                            font-size: 11px;
+                            font-weight: medium;
+                            color: #910000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

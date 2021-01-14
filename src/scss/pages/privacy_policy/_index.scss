@@ -1,6 +1,6 @@
 .privacyPolicy_main {
     .privacyPolicyMain_ttl {
-        padding: 71px 0 63px;
+        padding: 71px 0 0px;
     }
 
     .privacyPolicyMain_head {
@@ -9,7 +9,7 @@
     }
 
     .privacyPolicyMain_body {
-        margin-top: 72px;
+        margin-top: 85px;
         line-height: 2.2;
         font-size: 14px;
 
@@ -33,11 +33,14 @@
         margin: 140px 0 0 auto;
         width: 365px;
         text-align: right;
-        display: flex;
-        align-items: flex-end;
-
+        font-size: 12px;
         .privacyPolicyMainFoot_details {
-            padding-left: 60px;
+            display: block;
+            width: 143px;
+            margin: 28px 0 0 auto;
+            img {
+                width: 100%;
+            }
         }
     }
 

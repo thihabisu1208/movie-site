@@ -31,11 +31,83 @@
 }
 
 .js-scrollAnim {
-    opacity: 0;
-    transition: 1s $ease-out;
-    transform: translateY(10px);
-    &.on-anim {
-      opacity: 1;
-    transform: translateY(0px);
+  opacity: 0;
+  transition: 1s $ease-out;
+  transform: translateY(10px);
+  &.on-anim {
+    opacity: 1;
+  transform: translateY(0px);
+  }
+}
+// スクロール追従 @/src/js/modules/_Stick.js
+.js-stick_container {
+  position: relative;
+  @include mq(small) {
+    .js-stick_inner {
+      position: absolute;
+      left: 50%;
+      &.is-fixed-bottom {
+        top: auto;
+        bottom: 0;
+      }
+      .js-stick {
+        position: absolute;
+        &.is-fixed {
+          position: fixed;
+          top: 100px;
+          bottom: auto;
+        }
+        &.is-fixed-top {
+          // top: 72px;
+          top: 0;
+          bottom: auto;
+        }
+        &.is-fixed-bottom {
+          top: auto;
+          bottom: 0;
+        }
+      }
     }
   }
+}
+
+// accordion @/src/js/common/_Util.js > setAccordion()
+.js-accordion {
+  &.is-open {
+    .js-accordion_btn {
+      &::before {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+.js-accordion_btn {
+  cursor: pointer;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background: #888;
+    position: absolute;
+    right: 0px;
+    top: calc(50% + 20px);
+    transition: 0.4s $ease-out;
+    transition-property: transform, opacity;
+    @include mq(small) {
+      right: 5px;
+    }
+  }
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+.js-accordion_target {
+  display: none;
+}
