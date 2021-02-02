@@ -15,10 +15,12 @@
     text-transform: uppercase;
   }
   .o-header_jp {
+    color: #fff;
     display: inline-block;
-    font-size: 29px;
+    font-size: 45px;
     font-weight: bold;
     padding-left: 35px;
-    transform: translateY(-25%);
+    transform: translateY(-10%);
+    text-shadow: 1px 1px rgba(#000000, 0.6);
   }
 }

@@ -1,3 +1,7 @@
+.staff {
+    margin-bottom: 180px;
+}
+
 .staff_top {
     padding-bottom: 99px;
     margin-bottom: 110px;
@@ -54,7 +58,7 @@
         position: relative;
         width: 100%;
         .staffDataTtl_img {
-            width: 31px;
+            // width: 31px;
             img {
                 width: 100%;
             }
@@ -71,11 +75,17 @@
             content: "";
             display: block;
             position: absolute;
-            top: calc(50% + 11px);
+            top: calc(50% + 20px);
             right: 0;
-            width: calc(100% - 276px);
+            width: calc(100% - 300px);
             height: 1px;
             background: #A7A7A7;
+            &.other1 {
+                width: calc(100% - 180px);
+            }
+            &.other2 {
+                width: calc(100% - 310px);
+            }
         }
     }
 
@@ -99,6 +109,55 @@
                     bottom: 8.5px;
                 }
             }
+            .staffDataItem_btn {
+                &::before,
+                &::after {
+                    right: 35px;
+                }
+                &.other1 {
+                    &::before,
+                    &::after {
+                        @include mq(large) {
+                            right: 15px;
+                        }
+                        @include mq(xlarge) {
+                            right: 65px;
+                        }
+                    }
+                    .staffDataItem_details {
+                        @include mq(large) {
+                            right: 30px;
+                        }
+                        @include mq(xlarge) {
+                            right: 80px;
+                        }
+                    }
+                }
+                &.other2 {
+                    &::before,
+                    &::after {
+                        @include mq(large) {
+                            right: 115px;
+                        }
+                        @include mq(xlarge) {
+                            right: 155px;
+                        }
+                    }
+                    .staffDataItem_details {
+                        @include mq(large) {
+                            right: 130px;
+                        }
+                        @include mq(xlarge) {
+                            right: 170px;
+                        }
+                    }
+                }
+            }
+            .staffDataItem_ttl {
+                color: #FF0000;
+                font-size: 25px;
+                font-weight: bold;
+            }
             .staffDataItem_name {
                 display: flex;
                 flex-direction: column;
@@ -116,7 +175,7 @@
             .staffDataItem_details {
                 position: absolute;
                 bottom: 0;
-                right: 20px;
+                right: 52px;
                 text-align: right;
                 .staffDataItemDetails_role {
                     font-size: 16px;

@@ -1,6 +1,6 @@
 -
   const path = "/movie-site/";
-  const data = htmlWebpackPlugin.options.data.staffData;
+  const data = htmlWebpackPlugin.options.data.staffData2;
 
 each item in data
     li.staffData_item.js-accordion
@@ -14,10 +14,9 @@ each item in data
                     .staffDataItemDetails_role #{item.role}
                 .staffDataItemDetails_btn works
         .staffDataItem_works.js-accordion_target
-            each item in data
-                each work in item.works
-                    .staffDataItemWorks_item
-                        .staffDataItemWorksItem_year #{work.year}
-                        .staffDataItemWorksItem_data !{work.ttl}
-                            if work.subTtl
-                                span !{work.subTtl}
+            each work in item.works
+                .staffDataItemWorks_item
+                    .staffDataItemWorksItem_year #{work.year}
+                    .staffDataItemWorksItem_data !{work.ttl}
+                        if work.subTtl
+                            span !{work.subTtl}

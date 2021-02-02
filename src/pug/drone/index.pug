@@ -22,6 +22,8 @@ block contents
       +o-ttl("droneTop_ttl", "pick up", "ドローン事業が始まる", "white")
       .droneTop_intro.js-scrollAnim
         img(src=`${path}/assets/img/drone/img_drone.jpg`, alt="")
+    .droneTop_link.js-scrollAnim
+      img(src=`${path}/assets/img/drone/img_link.png`, alt="")
 
   .drone_prize
     .container
@@ -55,14 +57,10 @@ block contents
             br
             | 赤外線調査撮影、農業調査、農薬散布等も
 
-  .drone_form
-    .container
-      include ./../object/_o-ttl
-      +o-ttl("droneForm_ttl", "contact us", "ドローン空撮・撮影お問い合わせ", "black")
-
   .drone_order
     .container
-      .droneOrder_ttl.js-scrollAnim ご注⽂の流れ
+      include ./../object/_o-ttl
+      +o-ttl(".droneOrder_ttl", "flow", "ご注⽂の流れ", "black")
       ul.droneOrder_list
         li.droneOrder_item.js-scrollAnim
           .droneOrderItem_step.u-font-dinPro step

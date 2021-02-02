@@ -16,6 +16,17 @@
     .droneTop_ttl {
         padding: 71px 0 75px;
     }
+
+    .droneTop_link {
+        width: 330px;
+        position: absolute;
+        right: 50px;
+        bottom: 98px;
+        z-index: 10;
+        img {
+            width: 100%;
+        }
+    }
 }
 
 .drone_prize {
@@ -89,7 +100,7 @@
 }
 
 .drone_order {
-    background: #F5F5F5;
+    background: #FFF;
     padding-top: 78px;
     padding-bottom: 80px;
 
