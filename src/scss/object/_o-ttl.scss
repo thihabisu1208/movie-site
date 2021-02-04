@@ -11,17 +11,27 @@
     font-weight: medium;
     color: #FFB100;
     text-transform: uppercase;
+    @include mq-max(medium) {
+      font-size: 14px;
+    }
   }
   .o-ttl_jp {
     font-size: 32px;
     font-weight: bold;
     margin-top: 16px;
     line-height: 1.4;
+    @include mq-max(medium) {
+      font-size: 24px;
+      margin-top: 7px;
+    }
   }
   .o-ttl_line {
     margin: 20px auto 0;
     width: 30px;
     height: 1px;
+    @include mq-max(medium) {
+      margin-top: 18px;
+    }
   }
   &.-white {
     .o-ttl_jp {

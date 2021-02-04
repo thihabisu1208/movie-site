@@ -3,16 +3,27 @@
   background: linear-gradient(to right, #FF151B, #FFA700, #F40007);
   position: relative;
   overflow: hidden;
+  @include mq-max(medium) {
+    height: 45px;
+  }
   .o-header_txt {
     position: absolute;
     top: calc(-50% - 4px);
     transform: translateY(0%);
+    @include mq-max(medium) {
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 1;
+    }
   }
   .o-header_en {
     font-size: 77px;
     color: #fff;
     opacity: 0.3;
     text-transform: uppercase;
+    @include mq-max(medium) {
+      display: none;
+    }
   }
   .o-header_jp {
     color: #fff;
@@ -22,5 +33,10 @@
     padding-left: 35px;
     transform: translateY(-10%);
     text-shadow: 1px 1px rgba(#000000, 0.6);
+    @include mq-max(medium) {
+      font-size: 25px;
+      margin-top: 3px;
+      padding-left: 20px;
+    }
   }
 }

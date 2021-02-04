@@ -3,6 +3,10 @@
     margin-bottom: 50px;
     background: #000;
     position: relative;
+    @include mq-max(medium) {
+        padding-bottom: 60px;
+        margin-bottom: 0;
+    }
     .droneTop_bg {
         @include linear-bg;
         opacity: 0.5;
@@ -15,6 +19,9 @@
 
     .droneTop_ttl {
         padding: 71px 0 75px;
+        @include mq-max(medium) {
+            padding: 37px 0 35px;
+        }
     }
 
     .droneTop_link {
@@ -23,6 +30,10 @@
         right: 50px;
         bottom: 98px;
         z-index: 10;
+        @include mq-max(medium) {
+            width: 100%;
+            right: 0;
+        }
         img {
             width: 100%;
         }
@@ -32,28 +43,48 @@
 .drone_prize {
     padding-top: 75px;
     padding-bottom: 50px;
+    @include mq-max(medium) {
+        padding-top: 47px;
+    }
 
     .dronePrize_inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include mq-max(medium) {
+            display: block;
+        }
     }
 
     .dronePrize_details {
         width: 45%;
+        @include mq-max(medium) {
+            width: 100%;
+        }
         .dronePrizeDetails_ttl {
             font-size: 29px;
             font-weight: bold;
+            @include mq-max(medium) {
+                font-size: 22px;
+            }
         }
         .dronePrizeDetails_txt {
             padding-top: 30px;
             font-size: 17px;
+            @include mq-max(medium) {
+                padding-top: 26px;
+                font-size: 15px;
+            }
         }
     }
 
     .dronePrize_img {
         width: 55%;
         display: flex;
+        @include mq-max(medium) {
+            width: 100%;
+            margin-top: 40px;
+        }
         img {
             width: 100%;
         }
@@ -64,10 +95,18 @@
     background: #F5F5F5;
     padding-top: 69px;
     padding-bottom: 45px;
+    @include mq-max(medium) {
+        padding-top: 47px;
+        padding-bottom: 50px;
+    }
 
     .dronePaper_inner {
         display: flex;
+        flex-direction: row-reverse;
         justify-content: space-between;
+        @include mq-max(medium) {
+            display: block;
+        }
     }
 
     .dronePaper_img {
@@ -75,6 +114,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @include mq-max(medium) {
+            width: 100%;
+        }
 
         .dronePaperImg_item {
             width: calc(50% - 10px);
@@ -88,13 +130,24 @@
 
     .dronePaper_details {
         width: calc(45% - 70px);
+        @include mq-max(medium) {
+            width: 100%;
+        }
         .dronePaperDetails_ttl {
             font-size: 29px;
             font-weight: bold;
+            @include mq-max(medium) {
+                font-size: 22px;
+            }
         }
         .dronePaperDetails_txt {
             padding-top: 30px;
             font-size: 17px;
+            @include mq-max(medium) {
+                padding-top: 26px;
+                font-size: 15px;
+                margin-bottom: 40px;
+            }
         }
     }
 }
@@ -103,6 +156,10 @@
     background: #FFF;
     padding-top: 78px;
     padding-bottom: 80px;
+    @include mq-max(medium) {
+				padding-top: 47px;
+				padding-bottom: 70px;
+    }
 
     .container {
         max-width: 687px;
@@ -121,7 +178,10 @@
         align-items: flex-end;
         line-height: 1.4;
         border-bottom: 1px solid #E5E5E5;
-        position: relative;
+				position: relative;
+				@include mq-max(medium) {
+					align-items: flex-start;
+				}
         &:not(:first-child)::after {
             content: "";
             width: 16px;
@@ -140,19 +200,34 @@
             display: inline-block;
             transform: translateY(10px);
             color: #C4C4C4;
+            @include mq-max(medium) {
+							font-size: 12px;
+							line-height: 1;
+							display: flex;
+							align-items: flex-end;
+            }
             span {
                 padding-left: 10px;
                 font-size: 50px;
                 display: inline-block;
-                transform: translateY(5px);
+								transform: translateY(5px);
+								@include mq-max(medium) {
+									font-size: 31px;
+								}
             }
         }
         .droneOrderItem_txt {
             padding-left: 45px;
             font-size: 17px;
+            @include mq-max(medium) {
+              	font-size: 16px;
+            }
             span {
                 display: block;
-                font-size: 12px;
+								font-size: 12px;
+								@include mq-max(medium) {
+									margin-top: 10px;
+								}
             }
         }
     }

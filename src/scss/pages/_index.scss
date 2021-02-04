@@ -3,6 +3,10 @@
   margin-bottom: 90px;
   background: #000;
   position: relative;
+  @include mq-max(medium) {
+    padding-bottom: 60px;
+    margin-bottom: 56px;
+  }
 
   .homeAbout_bg {
     @include linear-bg();
@@ -16,11 +20,18 @@
 
   .homeAbout_ttl {
     padding-top: 95px;
+    @include mq-max(medium) {
+      padding-top: 40px;
+    }
   }
 
   .homeAbout_catch {
     width: 492px;
     margin: 90px auto 0;
+    @include mq-max(medium) {
+      width: 250px;
+      margin-top: 40px;
+    }
     img {
       width: 100%;
     }
@@ -29,9 +40,15 @@
 
 .home_numbers {
   margin-bottom: 90px;
+  @include mq-max(medium) {
+    margin-bottom: 70px;
+  }
   .homeNumbers_years {
     margin-top: 65px;
     text-align: center;
+    @include mq-max(medium) {
+      margin-top: 40px;
+    }
     * {
       display: inline;
     }
@@ -39,6 +56,9 @@
       font-size: 77px;
       line-height: 1;
       font-weight: bolder;
+      @include mq-max(medium) {
+        font-size: 40px;
+      }
     }
     .homeNumbersYears_year {
       font-size: 17px;
@@ -47,6 +67,9 @@
     .homeNumbersYears_now {
       font-size: 12px;
       color: #969696;
+      @include mq-max(medium) {
+        display: block;
+      }
     }
   }
 
@@ -57,17 +80,28 @@
     justify-content: space-between;
     // border-top: 1px solid rgba(#FF0000, 0.3);
     @include flex-align-left($width: 33.333%);
+    @include mq-max(medium) {
+      display: block;
+    }
 
     .homeNumbers_item {
       width: 33.333%;
       padding: 25px 12px 40px;
       border-left: 1px solid rgba(#FF0000, 0.3);
+      @include mq-max(medium) {
+        border-left: none;
+        width: auto;
+        padding-bottom: 50px;
+      }
       &:first-child {
         border-left: none;
       }
 
       &:nth-of-type(-n+3) {
-      border-bottom: 1px solid rgba(#FF0000, 0.3);
+        border-bottom: 1px solid rgba(#FF0000, 0.3);
+        @include mq-max(medium) {
+          border-bottom: none;
+        }
       }
 
       &:nth-of-type(4n+4) {
@@ -81,31 +115,49 @@
       &.-build {
         .homeNumbersItem_img {
           width: 48px;
+          @include mq-max(medium) {
+            margin-right: 20px;
+          }
         }
       }
       &.-staff {
         .homeNumbersItem_img {
           width: 31px;
+          @include mq-max(medium) {
+            margin-right: 20px;
+          }
         }
       }
       &.-age {
         .homeNumbersItem_img {
           width: 37px;
+          @include mq-max(medium) {
+            margin-right: 20px;
+          }
         }
       }
       &.-gender {
         .homeNumbersItem_img {
           width: 44px;
+          @include mq-max(medium) {
+            margin-right: 20px;
+          }
         }
       }
       &.-role {
         .homeNumbersItem_img {
           width: 46px;
+          @include mq-max(medium) {
+            margin-right: 20px;
+          }
         }
       }
       &.-works {
         .homeNumbersItem_img {
           width: 40px;
+          @include mq-max(medium) {
+            margin-right: 20px;
+          }
         }
       }
 
@@ -120,6 +172,9 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        @include mq-max(medium) {
+          margin-top: 20px;
+        }
 
         .homeNumbersItem_details {
           padding-left: 10px;
@@ -132,11 +187,17 @@
           font-size: 77px;
           font-weight: bolder;
           transform: translateY(10px);
+          @include mq-max(medium) {
+            font-size: 68px;
+          }
         }
 
         .homeNumbersItemDetails_txt {
           font-size: 17px;
           color: #F47424;
+          @include mq-max(medium) {
+            margin-left: 10px;
+          }
         }
       }
     }
@@ -157,6 +218,11 @@
       border: 1px solid #000;
       transition: 0.4s $ease-out;
       @include arrow;
+      @include mq-max(medium) {
+        padding: 20px 0;
+        width: 100%;
+        font-size: 16px;
+      }
       &:hover {
         background: #000;
         color: #fff;
@@ -179,6 +245,10 @@
   margin-bottom: 90px;
   background: #000;
   position: relative;
+  @include mq-max(medium) {
+    padding-bottom: 60px;
+    margin-bottom: 56px;
+  }
 
   .homeVision_bg {
     @include linear-bg();
@@ -192,17 +262,27 @@
 
   .homeVision_ttl {
     padding-top: 95px;
+    @include mq-max(medium) {
+      padding-top: 60px;
+    }
   }
 }
 
 .home_service {
   margin-bottom: 90px;
+  @include mq-max(medium) {
+    margin-bottom: 70px;
+  }
   .homeService_txt {
     margin-top: 45px;
     margin-bottom: 24px;
     text-align: center;
     line-height: 2.2;
     font-size: 15px;
+    @include mq-max(medium) {
+      margin-top: 36px;
+      line-height: 1.7;
+    }
   }
 
   .homeService_list {
@@ -218,6 +298,9 @@
       border: 1px solid #707070;
       display: flex;
       cursor: pointer;
+      @include mq-max(medium) {
+        width: 100%;
+      }
 
       img {
         width: 100%;
@@ -288,8 +371,14 @@
         justify-content: space-between;
         padding: 20px;
         width: 100%;
+        @include mq-max(medium) {
+          display: block;
+        }
         .homeServiceItem_pic {
           width: calc(100% - 234px);
+          @include mq-max(medium) {
+            width: 100%;
+          }
           .homeServiceItem_img {
             margin: 0 auto;
           }
@@ -299,6 +388,10 @@
             font-size: 23px;
             font-weight: bold;
             line-height: 1.2;
+            @include mq-max(medium) {
+              padding-top: 14px;
+              font-size: 20px;
+            }
             span {
               display: block;
               font-size: 16px;
@@ -308,6 +401,9 @@
         .homeServiceItem_details {
           width: 224px;
           font-size: 16px;
+          @include mq-max(medium) {
+            margin-top: 30px;
+          }
         }
       }
     }
@@ -317,23 +413,39 @@
 .home_news {
   padding-bottom: 105px;
   background: #F5F5F5;
+  @include mq-max(medium) {
+    padding-bottom: 52px;
+  }
   .homeNews_ttl {
     padding-top: 90px;
+    @include mq-max(medium) {
+      padding-top: 47px;
+    }
   }
   .homeNews_item {
     padding: 20px 0;
     border-bottom: 1px solid #D6D6D6;
     * {
       display: inline;
+      @include mq-max(medium) {
+        display: block;
+      }
     }
     .homeNewsItem_date {
       font-size: 15px;
       color: #969696;
+      @include mq-max(medium) {
+        font-size: 13px;
+      }
     }
     .homeNewsItem_txt {
       font-size: 17px;
       padding-left: 35px;
       color: #000;
+      @include mq-max(medium) {
+        font-size: 15px;
+        padding-left: 0;
+      }
     }
   }
 }

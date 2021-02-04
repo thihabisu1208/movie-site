@@ -19,6 +19,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include mq-max(medium) {
+      display: none;
+    }
     .l-footer_nav-item {
       text-align: center;
       position: relative;
@@ -70,6 +73,9 @@
   .l-footer_logo {
     width: 102px;
     margin: 40px auto 0;
+    @include mq-max(medium) {
+      margin-top: 114px;
+    }
     img {
       width: 100%;
     }
@@ -79,7 +85,10 @@
     font-size: 11px;
     padding-top: 16px;
     text-align: center;
-    color: #fff
+    color: #fff;
+    @include mq-max(medium) {
+      line-height: 1.6;
+    }
   }
 
   .l-footer_sns {
@@ -87,6 +96,13 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    @include mq-max(medium) {
+      width: 120px;
+      left: 0;
+      top: 130px;
+      bottom: 0;
+      margin: 0 auto;
+    }
     .l-footer_sns-item {
       img {
         width: 32px;

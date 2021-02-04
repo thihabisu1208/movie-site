@@ -2,7 +2,7 @@
     padding-bottom: 78px;
     margin-bottom: 90px;
     background: #000;
-    position: relative;
+		position: relative;
     .worksTop_bg {
         @include linear-bg;
         opacity: 0.5;
@@ -10,7 +10,10 @@
     .worksTop_ttl {
         position: relative;
         z-index: 2;
-        padding: 67px 0 40px;
+				padding: 67px 0 40px;
+				@include mq-max(medium) {
+					padding: 37px 0;
+				}
     }
 
     .worksTop_mainSlider {

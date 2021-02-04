@@ -11,6 +11,17 @@
   }
 }
 
+// @media screen and (max-width: XXXXpx)
+@mixin mq-max($breakpoint: medium, $rule: max, $direction: width) {
+  $breakpoint: map_get($mq-breakpoints, $breakpoint);
+  @if $rule == max {
+    $breakpoint: $breakpoint - 1;
+  }
+  @media screen and (#{$rule}-#{$direction}: $breakpoint) {
+    @content;
+  }
+}
+
 // @media screen and (min-width: XXXXpx) and (max-width: XXXXpx)
 @mixin mq-and(
   $breakpoint-01: medium,

@@ -1,12 +1,19 @@
 .staff {
-    margin-bottom: 180px;
+		margin-bottom: 180px;
+		@include mq-max(medium) {
+			margin-bottom: 70px;
+		}
 }
 
 .staff_top {
     padding-bottom: 99px;
     margin-bottom: 110px;
     background: #000;
-    position: relative;
+		position: relative;
+		@include mq-max(medium) {
+			padding-bottom: 65px;
+			margin-bottom: 50px;
+		}
     .staffTop_bg {
         @include linear-bg;
         opacity: 0.5;
@@ -14,7 +21,10 @@
     .staffTop_ttl {
         position: relative;
         z-index: 2;
-        padding: 67px 0 40px;
+				padding: 67px 0 40px;
+				@include mq-max(medium) {
+					padding: 37px 0 35px;
+				}
     }
     .container {
         position: relative;
@@ -23,7 +33,11 @@
     .staffTop_txt {
         color: #fff;
         text-align: center;
-        line-height: 2;
+				line-height: 2;
+				@include mq-max(medium) {
+					text-align: left;
+					line-height: 1.7;
+				}
     }
     .staffTop_img {
         img {
@@ -31,11 +45,19 @@
         }
         .staffTopImg_team {
             margin: 52px auto 0;
-            width: 134px;
+						width: 134px;
+						@include mq-max(medium) {
+							margin-top: 35px;
+							width: 165px;
+						}
         }
         .staffTopImg_join {
             margin: 32px auto 0;
-            width: 327px;
+						width: 327px;
+						@include mq-max(medium) {
+							margin-top: 27px;
+							width: 197px;
+						}
         }
     }
 }
@@ -44,21 +66,34 @@
     .staffData_head {
         text-align: center;
         span:nth-of-type(1) {
-            font-size: 59px;
+						font-size: 59px;
+						@include mq-max(medium) {
+							font-size: 27px;
+						}
         }
         span:nth-of-type(2) {
             padding-left: 22px;
             font-size: 30px;
-            font-weight: bold;
+						font-weight: bold;
+						@include mq-max(medium) {
+							padding-left: 15px;
+							font-size: 20px;
+						}
         }
     }
     .staffData_ttl {
         margin-top: 65px;
         display: flex;
         position: relative;
-        width: 100%;
+				width: 100%;
+				@include mq-max(medium) {
+					margin-top: 35px;
+				}
         .staffDataTtl_img {
-            // width: 31px;
+						// width: 31px;
+						@include mq-max(medium) {
+							width: 43px;
+						}
             img {
                 width: 100%;
             }
@@ -69,7 +104,11 @@
             font-size: 28px;
             font-weight: bold;
             padding: 0 22px 0 25px;
-            line-height: 1;
+						line-height: 1;
+						@include mq-max(medium) {
+							font-size: 20px;
+							padding-left: 15px;
+						}
         }
         .staffDataTtl_line {
             content: "";
@@ -79,12 +118,24 @@
             right: 0;
             width: calc(100% - 300px);
             height: 1px;
-            background: #A7A7A7;
+						background: #A7A7A7;
+						@include mq-max(medium) {
+							top: auto;
+							right: 0;
+							bottom: 10px;
+							width: calc(100% - 214px);
+						}
             &.other1 {
-                width: calc(100% - 180px);
+								width: calc(100% - 180px);
+								@include mq-max(medium) {
+									width: calc(50% - 10px);
+								}
             }
             &.other2 {
-                width: calc(100% - 310px);
+								width: calc(100% - 310px);
+								@include mq-max(medium) {
+									width: calc(100% - 220px);
+								}
             }
         }
     }
@@ -93,14 +144,21 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        @include flex-align-left(calc(33.333% - 28px));
+				@include flex-align-left(calc(33.333% - 28px));
+				@include mq-max(medium) {
+					display: block;
+				}
         img {
             width: 100%;
         }
         .staffData_item {
             margin-top: 40px;
             width: calc(33.333% - 28px);
-            position: relative;
+						position: relative;
+						@include mq-max(medium) {
+							margin-top: 44px;
+							width: 100%;
+						}
             .staffDataItem_btn {
                 &::before,
                 &::after {
@@ -112,7 +170,10 @@
             .staffDataItem_btn {
                 &::before,
                 &::after {
-                    right: 35px;
+										right: 35px;
+										@include mq-max(medium) {
+											right: 0;
+										}
                 }
                 &.other1 {
                     &::before,
@@ -156,7 +217,10 @@
             .staffDataItem_ttl {
                 color: #FF0000;
                 font-size: 25px;
-                font-weight: bold;
+								font-weight: bold;
+								@include mq-max(medium) {
+									font-size: 20px;
+								}
             }
             .staffDataItem_name {
                 display: flex;
@@ -164,7 +228,10 @@
                 align-items: center;
                 justify-content: center;
                 .staffDataItemName_img {
-                    width: 99px;
+										width: 99px;
+										@include mq-max(medium) {
+											width: 79px;
+										}
                 }
                 .staffDataItemName_txt {
                     padding-top: 10px;
@@ -176,7 +243,10 @@
                 position: absolute;
                 bottom: 0;
                 right: 52px;
-                text-align: right;
+								text-align: right;
+								@include mq-max(medium) {
+									right: 15px;
+								}
                 .staffDataItemDetails_role {
                     font-size: 16px;
                     font-weight: bold;
