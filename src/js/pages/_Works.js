@@ -33,36 +33,36 @@ export default class Works extends App {
     this.initiateOtherSliders();
   }
 
-  initiateMainSlider() {
-    $(".worksTopMainSlider_inner").not(".slick-initialized").slick({
-      // arrows: false,
-      autoplay: true,
-      /* ポイントここから～ */
-      autoplaySpeed: 0,
-      cssEase: 'linear',
-      speed: 5000,
-      /* ～ここまで */
-      slidesToShow: 7,
-      slidesToScroll: 1,
-    });
-  }
-
   // initiateMainSlider() {
-  //   const option = {
-  //     slidesPerView: 'auto',
-  //     loopPreventsSlide: false,
-  //     freeMode: true,
+  //   $(".worksTopMainSlider_inner").not(".slick-initialized").slick({
+  //     // arrows: false,
+  //     autoplay: true,
+  //     /* ポイントここから～ */
+  //     autoplaySpeed: 0,
+  //     cssEase: 'linear',
   //     speed: 5000,
-  //     autoplay: {
-  //       delay: 0,
-  //       disableOnInteraction: false
-  //     },
-  //     loop: true,
-  //     loopedSlides: (this.mainSlider).length
-  //   };
-  
-  //   this.mainSwiper = new Swiper(this.mainSlider, option);
+  //     /* ～ここまで */
+  //     slidesToShow: 7,
+  //     slidesToScroll: 1,
+  //   });
   // }
+
+  initiateMainSlider() {
+    const option = {
+      slidesPerView: 'auto',
+      loopPreventsSlide: false,
+      freeMode: true,
+      speed: 5000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+      },
+      loop: true,
+      loopedSlides: (this.mainSlider).length
+    };
+  
+    this.mainSwiper = new Swiper(this.mainSlider, option);
+  }
 
   initiateOtherSliders() {
     const otherOption = {
@@ -89,7 +89,6 @@ export default class Works extends App {
   
     this.otherSwiper = new Swiper(this.otherSlider.slider, otherOption);
     this.otherSwiper.slideTo(Math.floor(this.otherSlider.slider.length / 2 / 2) - 1, false, false)
-    console.log(this.otherSlider.buttons)
     $(this.otherSlider.buttons).css({
       "right": `${$(this.otherSlider.slider).width() / 2 - 70}px`,
       "left": "auto"

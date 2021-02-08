@@ -431,6 +431,11 @@
         display: block;
       }
     }
+    &:hover {
+      .homeNewsItem_txt {
+        color: #F47424;
+      }
+    }
     .homeNewsItem_date {
       font-size: 15px;
       color: #969696;
@@ -439,6 +444,7 @@
       }
     }
     .homeNewsItem_txt {
+      transition: 0.4s $ease-out;
       font-size: 17px;
       padding-left: 35px;
       color: #000;

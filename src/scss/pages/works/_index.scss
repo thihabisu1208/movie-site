@@ -46,7 +46,7 @@
 }
 
 .works_other {
-    margin-bottom: 100px;
+    margin-bottom: 300px;
 
     .worksOther_slider {
         position: relative;
@@ -116,6 +116,9 @@
                     &::after {
                         background: rgba(#000, 0.9) !important;
                     }
+                }
+                p {
+                    padding-top: 60px;
                 }
             }
         }
