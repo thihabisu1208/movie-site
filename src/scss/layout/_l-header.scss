@@ -113,6 +113,13 @@
       a {
         color: #000;
         transition: 0.4s $ease-out;
+        &.is-inactive {
+          pointer-events: none;
+          color: rgba(#333333, 0.3);
+          &:hover {
+            color: rgba(#333333, 0.3);
+          }
+        }
         
         &:hover{
           color: #FF0000;
@@ -176,6 +183,13 @@
           position: relative;
           color: #fff;
           display: inline-block;
+          &.is-inactive {
+            pointer-events: none;
+            color: rgba(#fff, 0.3);
+            .l-sp_en {
+              color: rgba(#fff, 0.3);
+            }
+          }
           span {
             display: block;
             font-size: 16px;

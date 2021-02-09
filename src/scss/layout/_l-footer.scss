@@ -40,6 +40,13 @@
       }
       a {
         color: #fff;
+        &.is-inactive {
+          pointer-events: none;
+          color: rgba(#fff, 0.5);
+          &:hover {
+            color: rgba(#fff, 0.5);
+          }
+        }
       }
       span {
         display: block;
