@@ -1,9 +1,14 @@
-export default class Navigation {
+import App from "./_App";
+
+export default class Navigation extends App {
   constructor() {
+    super();
     this.urlParams = window.location.pathname;
     this.$headerNav = $(".l-header_nav");
+    this.$headerSP = $(".l-ham");
     this.$headerSPNav = $(".l-sp_nav");
     this.$hambergerSP = $(".l-sp_ham");
+    this.$hambergerTtl = $(".l-sp_ttl");
     this.$headerNavItems = this.$headerNav.find(".l-header_nav-item");
     this.$headerSpItems = this.$headerSPNav.find(".l-sp_nav-item");
     this.$footerNav = $(".l-footer_nav");
@@ -19,7 +24,8 @@ export default class Navigation {
   addEvents() {
     this.onClickNavHeader();
     this.onClickNavFooter();
-    this.$hambergerSP.on('click', () => this.onClickHumberger());
+    this.$window.on("scroll", this.onScroll.bind(this));
+    this.$headerSP.on('click', () => this.onClickHumberger());
   }
 
   onClickNavHeader() {
@@ -48,6 +54,17 @@ export default class Navigation {
   }
 
   onClickHumberger() {
-    $("body, .l-sp_ham, .l-header_sp").toggleClass('active');
+    $(".l-sp_ham, .l-header_sp, .l-sp_ttl").toggleClass('active');
   }
+
+  onScroll() {
+    if(window.innerWidth < this.width.medium) return;
+    if(this.$hambergerSP.offset().top > 600) {
+        this.$hambergerSP.addClass("is-show");
+        this.$hambergerTtl.addClass("is-show");
+    } else {
+        this.$hambergerSP.removeClass("is-show");
+        this.$hambergerTtl.removeClass("is-show");
+    }
+}
 }

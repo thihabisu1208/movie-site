@@ -1,0 +1,107 @@
+.o-step_list {
+    position: relative;
+    max-width: 200px;
+    margin: 36px auto 0;
+    @include dashed-border-side();
+    @include mq(medium) {
+        max-width: 540px;
+        display: flex;
+    }
+    &::after {
+        top: 14px;
+        z-index: 1;
+        height: 140px;
+        @include mq(medium) {
+            content: none;
+        }
+    }
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 123px;
+        bottom: calc(-100% + 12px);
+        height: 2px;
+        width: calc(100% - 240px);
+        background: linear-gradient(
+            to right,
+            #CECECE 4px,
+            transparent 2px,
+            transparent 2px
+        );
+        background-repeat: repeat-x;
+        background-size: 14px 3px;
+    }
+    .o-step_item {
+        position: relative;
+        font-weight: bold;
+        margin-top: 25px;
+        @include mq(medium) {
+            margin-top: 0;
+        }
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            border: 2px solid #CECECE;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            z-index: 2;
+            @include mq(medium) {
+                top: auto;
+                left: auto;
+                right: 30px;
+                bottom: -100%;
+            }
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+        &:not(:first-child) {
+            &::before {
+                right: 80px;
+            }
+        }
+        &.is-now {
+            &:before {
+                background: #000;
+                border: 2px solid #000;
+            }
+            .o-stepItem_details {
+                .o-stepItem_num {
+                    background: linear-gradient(to bottom right, #FF0007, #FF9300);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: rgba(0,0,0, 0);
+                }
+                .o-stepItem_txt {
+                    color: #000;
+                }
+            }
+        }
+        &.is-complete {
+            &:before {
+                background: #CECECE;
+                border: 2px solid #CECECE;
+            }
+        }
+        .o-stepItem_details {
+            line-height: 1;
+            padding-left: 45px;
+            .o-stepItem_num {
+                color: #CECECE;
+                font-size: 35px;
+            }
+            .o-stepItem_txt {
+                color: #CECECE;
+                font-size: 17px;
+                padding-left: 14px;
+            }
+        }
+    }
+}

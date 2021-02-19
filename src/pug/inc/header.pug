@@ -1,15 +1,19 @@
 -
   const path = "/movie-site/";
 
+.overlay
+
 header.l-header
   .container
     .l-header_logo
       a(href="/movie-site/")
         img(src=`${path}/assets/img/img_logo-header.png`, alt="")
-    .l-sp_ham
+    .l-ham
+      .l-sp_ham
         span(class="l-ham_line l-sp_ham_one")
         span(class="l-ham_line l-sp_ham_two")
         span(class="l-ham_line l-sp_ham_three")
+      .l-sp_ttl MENU
     ul.l-header_nav
       li.l-header_nav-item.is-active
         a(href="/movie-site/")
@@ -28,7 +32,7 @@ header.l-header
           span スタッフ
           span.u-font-azoSans STAFF
       li.l-header_nav-item
-        a.is-inactive
+        a(href="/movie-site/contact/")
           span お問い合わせ
           span.u-font-azoSans CONTACT US
       li.l-header_nav-item
@@ -61,7 +65,7 @@ header.l-header
             span スタッフ
             span.u-font-azoSans.l-sp_en STAFF
         li.l-sp_nav-item
-          a.is-inactive
+          a(href="/movie-site/contact/")
             span お問い合わせ
             span.u-font-azoSans.l-sp_en CONTACT US
         li.l-sp_nav-item

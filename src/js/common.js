@@ -12,6 +12,7 @@ import Share from "./modules/_Share";
 
 import Top from "./pages/_Top";
 import Works from "./pages/_Works";
+import Contact from "./pages/_Contact";
 
 $(() => {
   const loading = new Loading();
@@ -46,6 +47,9 @@ $(() => {
 
   const works = new Works();
   works.init();
+
+  const contact = new Contact();
+  contact.init();
 
   polyfill();
   controlScrollIE();

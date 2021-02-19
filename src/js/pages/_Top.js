@@ -11,6 +11,8 @@ export default class Top extends App {
     this.omitTxt = new OmitTxt();
     this.mainSlider = new MainSlider();
     this.animateText = new AnimateText();
+
+    this.$newsList = $(".homeNews_list");
   }
 
   init() {
@@ -24,5 +26,24 @@ export default class Top extends App {
     this.stick.init();
     this.mainSlider.init();
     this.animateText.init();
+    this.getNews();
+  }
+
+  getNews() {
+    $.getJSON(this.NEWS_URL, (res) => {
+      for(let i = 0; i < res.length; i++) {
+        const newsItem = res[i];
+        console.log(newsItem);
+        let template = `
+          <li class="homeNews_item">
+            <a href="${newsItem.url}">
+              <div class="homeNewsItem_date">${newsItem.date}</div>
+              <div class="homeNewsItem_txt">${newsItem.label}</div>
+            </a>
+          </li>
+        `;
+        this.$newsList.append(template);
+      }
+    })
   }
 }

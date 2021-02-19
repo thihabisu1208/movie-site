@@ -36,6 +36,14 @@
       width: 100%;
     }
   }
+
+  .homeAbout_details {
+    margin-top: 54px;
+    .commonDetails_txt {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
 
 .home_numbers {
@@ -65,11 +73,9 @@
       color: #F47424;
     }
     .homeNumbersYears_now {
+      display: block;
       font-size: 12px;
       color: #969696;
-      @include mq-max(medium) {
-        display: block;
-      }
     }
   }
 
@@ -87,7 +93,7 @@
     .homeNumbers_item {
       width: 33.333%;
       padding: 25px 12px 40px;
-      border-left: 1px solid rgba(#FF0000, 0.3);
+      // border-left: 1px solid rgba(#FF0000, 0.3);
       @include mq-max(medium) {
         border-left: none;
         width: auto;
@@ -98,7 +104,7 @@
       }
 
       &:nth-of-type(-n+3) {
-        border-bottom: 1px solid rgba(#FF0000, 0.3);
+        // border-bottom: 1px solid rgba(#FF0000, 0.3);
         @include mq-max(medium) {
           border-bottom: none;
         }
@@ -114,7 +120,8 @@
 
       &.-build {
         .homeNumbersItem_img {
-          width: 48px;
+          width: 44px;
+          margin: 0 auto;
           @include mq-max(medium) {
             margin-right: 20px;
           }
@@ -122,31 +129,8 @@
       }
       &.-staff {
         .homeNumbersItem_img {
-          width: 31px;
-          @include mq-max(medium) {
-            margin-right: 20px;
-          }
-        }
-      }
-      &.-age {
-        .homeNumbersItem_img {
-          width: 37px;
-          @include mq-max(medium) {
-            margin-right: 20px;
-          }
-        }
-      }
-      &.-gender {
-        .homeNumbersItem_img {
-          width: 44px;
-          @include mq-max(medium) {
-            margin-right: 20px;
-          }
-        }
-      }
-      &.-role {
-        .homeNumbersItem_img {
-          width: 46px;
+          width: 30px;
+          margin: 0 auto;
           @include mq-max(medium) {
             margin-right: 20px;
           }
@@ -154,7 +138,8 @@
       }
       &.-works {
         .homeNumbersItem_img {
-          width: 40px;
+          width: 41px;
+          margin: 0 auto;
           @include mq-max(medium) {
             margin-right: 20px;
           }
@@ -162,13 +147,14 @@
       }
 
       .homeNumbersItem_txt {
+        margin-top: 14px;
         text-align: center;
         font-size: 17px;
         font-weight: bold;
       }
 
       .homeNumbersItem_pic {
-        margin-top: 23px;
+        // margin-top: 23px;
         display: flex;
         align-items: flex-end;
         justify-content: center;
@@ -297,7 +283,6 @@
       position: relative;
       border: 1px solid #707070;
       display: flex;
-      cursor: pointer;
       @include mq-max(medium) {
         width: 100%;
       }
@@ -314,53 +299,37 @@
 
       &.-drama {
         .homeServiceItem_img {
-          width: 42px;
+          width: 43px;
+        }
+      }
+
+      &.-location {
+        .homeServiceItem_img {
+          width: 45px;
+        }
+      }
+
+      &.-cast {
+        .homeServiceItem_img {
+          width: 38px;
+        }
+      }
+
+      &.-script {
+        .homeServiceItem_img {
+          width: 41px;
+        }
+      }
+
+      &.-plot {
+        .homeServiceItem_img {
+          width: 47px;
         }
       }
 
       &.-drone {
         .homeServiceItem_img {
           width: 48px;
-        }
-      }
-
-      &.-location {
-        .homeServiceItem_img {
-          width: 50px;
-        }
-      }
-
-      &.-music {
-        .homeServiceItem_img {
-          width: 61px;
-        }
-      }
-
-      .homeServiceItem_bg {
-        height: 100%;
-        overflow: hidden;
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0;
-        transition: 0.4s $ease-out;
-        img {
-          width: 100%;
-          height: 100%;
-          transform-origin: center;
-          opacity: 0;
-          transform: scale(1);
-          transition: opacity 0.4s $ease-out, transform 2s $ease-out;
-        }
-      }
-
-      &:hover .homeServiceItem_bg {
-        opacity: 1;
-        img{
-          opacity: 1;
-          transform: scale(1.05);
         }
       }
 
@@ -372,24 +341,36 @@
         padding: 20px;
         width: 100%;
         @include mq-max(medium) {
-          display: block;
+          // padding: 0 20px 20px 0;
         }
         .homeServiceItem_pic {
           width: calc(100% - 234px);
+          height: 100%;
+          display: flex;
+          align-items: center;
           @include mq-max(medium) {
-            width: 100%;
+            width: calc(100% - 180px);
           }
           .homeServiceItem_img {
             margin: 0 auto;
           }
+        }
+        .homeServiceItem_details {
+          width: 224px;
+          font-size: 16px;
+          @include mq-max(medium) {
+            width: 180px;
+            // margin-top: 30px;
+          }
           .homeServiceItem_txt {
-            text-align: center;
+            display: block;
+            text-align: left;
             padding-top: 10px;
             font-size: 23px;
             font-weight: bold;
             line-height: 1.2;
             @include mq-max(medium) {
-              padding-top: 14px;
+              padding-top: 0px;
               font-size: 20px;
             }
             span {
@@ -397,12 +378,19 @@
               font-size: 16px;
             }
           }
-        }
-        .homeServiceItem_details {
-          width: 224px;
-          font-size: 16px;
-          @include mq-max(medium) {
-            margin-top: 30px;
+          .homeServiceItem_desc {
+            display: block;
+            font-size: 13px;
+            padding-top: 10px;
+          }
+          .homeServiceItem_list {
+            display: block;
+            padding-top: 10px;
+            span {
+              font-size: 13px;
+              display: block;
+              @include txt-indent();
+            }
           }
         }
       }

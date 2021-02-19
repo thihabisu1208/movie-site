@@ -197,3 +197,40 @@ img {
   -webkit-background-clip: text;
   color: rgba(0,0,0, 0);
 }
+
+main {
+  &.home {
+    &::before {
+      content: none;
+    }
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 12px;
+    background: linear-gradient(to right, #D80000, #FE4B0A, #FD6B36, #FF8321, #FDB72B, #FED02F, #FFE984, #FFFAD1);
+  }
+}
+
+@include mq(medium) {
+  .u-sp {
+    display: none;
+  }
+}
+
+@include mq(medium, max) {
+  .u-pc {
+    display: none;
+  }
+}
+
+// .u-tab をマルチクラスで付与することで TAB サイズで PC の要素を表示可能.
+@include mq-and(small, medium) {
+  .u-sp.u-tab {
+    display: none;
+  }
+  .u-pc.u-tab {
+    display: block;
+  }
+}

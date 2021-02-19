@@ -44,20 +44,20 @@
             width: 100%;
         }
         .staffTopImg_team {
-            margin: 52px auto 0;
-						width: 134px;
-						@include mq-max(medium) {
-							margin-top: 35px;
-							width: 165px;
-						}
+            margin: 32px auto 0;
+            width: 210px;
+            @include mq-max(medium) {
+                margin-top: 27px;
+                width: 169px;
+            }
         }
         .staffTopImg_join {
-            margin: 32px auto 0;
-						width: 327px;
-						@include mq-max(medium) {
-							margin-top: 27px;
-							width: 197px;
-						}
+            margin: 52px auto 0;
+            width: 327px;
+            @include mq-max(medium) {
+                margin-top: 35px;
+                width: 197px;
+            }
         }
     }
 }
@@ -66,49 +66,53 @@
     .staffData_head {
         text-align: center;
         span:nth-of-type(1) {
-						font-size: 59px;
-						@include mq-max(medium) {
-							font-size: 27px;
-						}
+            font-size: 17px;
+            color: #6C6C6C;
         }
         span:nth-of-type(2) {
-            padding-left: 22px;
-            font-size: 30px;
-						font-weight: bold;
-						@include mq-max(medium) {
-							padding-left: 15px;
-							font-size: 20px;
-						}
+            display: block;
+            line-height: 1;
+            margin-top: 3px;
+            font-size: 26px;
+            font-weight: bold;
+                @include mq-max(medium) {
+                    font-size: 24px;
+                }
         }
     }
     .staffData_ttl {
         margin-top: 65px;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         position: relative;
-				width: 100%;
-				@include mq-max(medium) {
-					margin-top: 35px;
-				}
+        width: 100%;
+            @include mq-max(medium) {
+                margin-top: 80px;
+            }
         .staffDataTtl_img {
-						// width: 31px;
-						@include mq-max(medium) {
-							width: 43px;
-						}
+            width: 54px;
+            transform: translateY(-16px);
+            @include mq-max(medium) {
+                width: 43px;
+            }
             img {
                 width: 100%;
             }
         }
         .staffDataTtl_txt {
-            display: flex;
-            align-items: flex-end;
+            display: block;
             font-size: 28px;
             font-weight: bold;
-            padding: 0 22px 0 25px;
-						line-height: 1;
-						@include mq-max(medium) {
-							font-size: 20px;
-							padding-left: 15px;
-						}
+            padding: 0;
+            line-height: 1;
+            background: #fff;
+            transform: translateY(-16px);
+            padding: 0 20px;
+            @include mq-max(medium) {
+                font-size: 20px;
+            }
         }
         .staffDataTtl_line {
             content: "";
@@ -116,26 +120,12 @@
             position: absolute;
             top: calc(50% + 20px);
             right: 0;
-            width: calc(100% - 300px);
+            width: calc(100%);
             height: 1px;
-						background: #A7A7A7;
-						@include mq-max(medium) {
-							top: auto;
-							right: 0;
-							bottom: 10px;
-							width: calc(100% - 214px);
-						}
-            &.other1 {
-								width: calc(100% - 180px);
-								@include mq-max(medium) {
-									width: calc(50% - 10px);
-								}
-            }
-            &.other2 {
-								width: calc(100% - 310px);
-								@include mq-max(medium) {
-									width: calc(100% - 220px);
-								}
+            background: #A7A7A7;
+            z-index: -1;
+            @include mq-max(medium) {
+                display: none;
             }
         }
     }

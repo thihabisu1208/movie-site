@@ -1,3 +1,19 @@
+body, main {
+  background: #fff;
+}
+
+.overlay {
+  z-index: 1;
+  top: 0px;
+  position: fixed;
+  background: #0f0f0f;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.7s ease-out;
+}
+
 .l-header {
   margin: 30px 0;
   @include mq-max(medium) {
@@ -13,62 +29,121 @@
       width: 100%;
     }
   }
+
+  .l-ham {
+    cursor: pointer;
+    &:hover {
+      .l-sp_ttl {
+        opacity: 0.8;
+      }
+      .l-ham_line {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .l-sp_ttl {
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.4s $ease-out;
+    z-index: 9999;
+    color: #fff;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    &.is-show {
+      pointer-events: all;
+      opacity: 1;
+    }
+    &.active {
+      opacity: 0 !important;
+      pointer-events: none;
+    }
+    @include mq-max(medium) {
+      display: none;
+      opacity: 0;
+    }
+  }
   
   .l-sp_ham {
-    display: none;
-    position: absolute;
+    // display: none;
+    position: fixed;
     top: 27px;
-    right: 20px;
+    right: 100px;
     width: 26px;
     height: 14px;
+    opacity: 0;
+    transition: 0.4s $ease-out;
+    z-index: 9999;
+    pointer-events: none;
+    &.is-show {
+      pointer-events: all;
+      opacity: 1;
+    }
     @include mq-max(medium) {
+      // position: absolute;
+      position: fixed;
+      right: 20px;
       display: block;
+      opacity: 1;
+      pointer-events: all;
     }
     .l-ham_line {
       content: '';
       position: absolute;
       width: 100%;
-      height: 1px;
+      height: 2px;
       display: block;
-      background-color: #000;
-      transition: all .3s;
+      background: #000;
+      transition: 0.4s $ease-out;
       z-index: 999;
+      mix-blend-mode: difference;
     }
     .l-sp_ham_one {
       top: 0;
-      transition: transform .3s;
+      transition: 0.4s $ease-out;
     }
     .l-sp_ham_two {
       top: 50%;
       transform: translateY(-50%);
-      transition: opacity .3s;
+      transition: 0.4s $ease-out;
     }
     .l-sp_ham_three {
       bottom: 0;
-      transition: transform .3s;
+      transition: 0.4s $ease-out;
     }
   }
 
   .l-sp_ham.active {
-    position: absolute;
+    cursor: pointer;
+    position: fixed;
     top: 27px;
     right: 20px;
     width: 26px;
     height: 14px;
+    opacity: 1;
+    &:hover {
+      .l-ham_line {
+        background: #FF0007;
+      }
+    }
     .l-ham_line {
       content: '';
       position: absolute;
       width: 100%;
       height: 1px;
-      background-color: #fff;
+      background: #fff;
       z-index: 999;
+      transition: 0.4s $ease-out;
     }
     .l-sp_ham_one {
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      transform: rotateZ(-30deg);
+      transform: rotateZ(-45deg);
       margin: auto;
       transform-origin: 50% 50%;
     }
@@ -81,7 +156,7 @@
       bottom: 0;
       left: 0;
       margin: auto;
-      transform: rotateZ(30deg);
+      transform: rotateZ(45deg);
       transform-origin: 50% 50%;
     }
   }
@@ -139,10 +214,11 @@
     }
   }
   .l-header_sp {
-    display: none;
+    // display: none;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: auto;
+    right: 0;
+    width: 80%;
     height: 100%;
     padding: 27px 20px 0;
     box-sizing: border-box;
@@ -153,15 +229,25 @@
     z-index: 99;
     @include mq-max(medium) {
       display: block;
+      width: 100%;
+      left: 0;
+      right: auto;
     }
     .l-sp_logo {
       width: 82px;
+      @include mq(medium) {
+        display: none;
+      }
       img {
         width: 100%;
       }
     }
     .l-sp_nav {
       margin-top: 25px;
+      @include mq(medium) {
+        margin-top: 120px;
+        margin-left: 30px;
+      }
       .l-sp_nav-item {
         position: relative;
         margin-bottom: 23px;
@@ -183,6 +269,13 @@
           position: relative;
           color: #fff;
           display: inline-block;
+          transition: 0.4s $ease-out;
+          &:hover {
+            color: #FF0007;
+            .l-sp_en {
+              color: rgba($color: #FF0007, $alpha: 0.8);
+            }
+          }
           &.is-inactive {
             pointer-events: none;
             color: rgba(#fff, 0.3);
@@ -199,12 +292,16 @@
             font-size: 12px;
             font-weight: normal;
             color: rgba($color: #fff, $alpha: 0.8);
+            transition: 0.4s $ease-out;
           }
         }
       }
     }
   }
   .l-header_sp.active {
-    transform: translateX(0);
+    transform: translateX(90%);
+    @include mq-max(medium) {
+      transform: translateX(0);
+    }
   }
 }

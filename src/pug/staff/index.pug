@@ -12,8 +12,6 @@ block name
   - const name = "staff"
 
 block contents
-  include ./../object/_o-header
-  +o-header("staff", "スタッフ")
   .staff_top
     .staffTop_bg
     include ./../object/_o-ttl
@@ -29,16 +27,16 @@ block contents
         br(class='pc')
         | 今まで色々な困難を越えて、この世界へ。
       .staffTop_img.js-scrollAnim
-        .staffTopImg_team
-          img(src=`${path}/assets/img/staff/img_team.png`, alt="")
         .staffTopImg_join
           img(src=`${path}/assets/img/staff/img_join.png`, alt="")
+        .staffTopImg_team
+          img(src=`${path}/assets/img/staff/img_team.png`, alt="")
     
   .staffData
     .container
       .staffData_head.js-scrollAnim
-        span.common_txtGradient.u-font-dinPro 2014
-        span 年以降の主な担当作品
+        span 過去5年間の
+        span 主な担当作品
       .staffData_ttl.js-scrollAnim
         .staffDataTtl_img
           img(src=`${path}/assets/img/staff/img_person.svg`, alt="")

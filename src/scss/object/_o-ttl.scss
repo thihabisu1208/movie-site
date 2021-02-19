@@ -7,22 +7,22 @@
     display: block;
   }
   .o-ttl_en {
-    font-size: 18px;
+    margin-top: 16px;
+    font-size: 13px;
     font-weight: medium;
     color: #FFB100;
     text-transform: uppercase;
     @include mq-max(medium) {
       font-size: 14px;
+      margin-top: 7px;
     }
   }
   .o-ttl_jp {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
-    margin-top: 16px;
     line-height: 1.4;
     @include mq-max(medium) {
       font-size: 24px;
-      margin-top: 7px;
     }
   }
   .o-ttl_line {

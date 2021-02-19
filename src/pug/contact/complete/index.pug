@@ -1,0 +1,27 @@
+extends  ./../../layout/_layout
+
+block meta
+  -
+    const meta = {
+      title: "株式会社 ジャンゴフィルム",
+      description: "100年",
+      url: "https://django-film.jp/"
+    }
+
+block name
+  - const name = "contact"
+
+block contents
+  .contact_top 
+    .container
+      include ./../../object/_o-ttl
+      +o-ttl("contactTop_ttl", "contact", "お問い合わせ", "black")
+
+      include ./../../object/_o-step
+      +o-step(3)
+  
+  .contact_form
+    .container
+      form.contactForm_form(method="POST" action="/movie-site/contact/") 
+        p.contactForm_thanks ありがとうございました。
+        a(href="/movie-site/contact/").contactForm_submit 最初の画面に戻る

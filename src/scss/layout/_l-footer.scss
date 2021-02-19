@@ -2,6 +2,9 @@
   position: relative;
   background: #000;
   height: 320px;
+  @include mq-max(medium) {
+    height: 411px;
+  }
 
   .l-footer_bg {
     @include linear-bg(linear-gradient(to top, #000000, #151515, #3B3B3B, #717171));
@@ -40,12 +43,13 @@
       }
       a {
         color: #fff;
+        transition: 0.4s $ease-out;
         &.is-inactive {
           pointer-events: none;
           color: rgba(#fff, 0.5);
-          &:hover {
-            color: rgba(#fff, 0.5);
-          }
+        }
+        &:hover {
+          color: #CC0E13;
         }
       }
       span {
@@ -65,15 +69,30 @@
   .l-footer_other {
     padding-top: 46px;
     display: flex;
+    @include mq-max(medium) {
+      display: inline-block;
+    }
     a {
+      margin-top: 10px;
+      display: block;
       color: #fff;
       font-size: 12px;
-      &:nth-of-type(2) {
+      transition: 0.4s $ease-out;
+      &:hover {
+        color: #CC0E13;
+      }
+      &:not(:first-child) {
         padding-left: 40px;
+        @include mq-max(medium) {
+          padding-left: 0;
+        }
       }
     }
     span {
       display: block;
+      @include mq-max(medium) {
+        display: inline;
+      }
     }
   }
 
@@ -106,7 +125,7 @@
     @include mq-max(medium) {
       width: 120px;
       left: 0;
-      top: 130px;
+      top: 200px;
       bottom: 0;
       margin: 0 auto;
     }
