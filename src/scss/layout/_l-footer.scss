@@ -12,6 +12,25 @@
     height: 100%;
   }
 
+  .l-footer_toTop {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    width: 43px;
+    height: 43px;
+    right: 20px;
+    top: -21.5px;
+    @include mq(medium) {
+      width: 61px;
+      height: 61px;
+      right: 90px;
+      top: -30.5px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
   .container {
     position: relative;
     z-index: 2;

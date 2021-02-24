@@ -1,8 +1,12 @@
 .works_top {
-    padding-bottom: 78px;
-    margin-bottom: 90px;
+    padding-bottom: 30px;
+    margin-bottom: 47px;
     background: #000;
-		position: relative;
+    position: relative;
+    @include mq(medium) {
+        padding-bottom: 78px;
+        margin-bottom: 0;
+    }
     .worksTop_bg {
         @include linear-bg;
         opacity: 0.5;
@@ -19,53 +23,206 @@
     .worksTop_mainSlider {
         position: relative;
         z-index: 2;
+        width: 100%;
         .worksTopMainSlider_inner {
             display: flex;
-            transition-timing-function: linear !important;
+            -webkit-transition-timing-function:linear!important; 
+            -o-transition-timing-function:linear!important;
+            transition-timing-function:linear!important; 
             .slick-track {
                 display: flex;
                 width: 100% !important;
             }
             .slick-slide {
-                width: 218px !important;
-                height: 310px !important;
+                width: 121px;
+                height: 200px;
+                @include mq(medium) {
+                    width: 218px;
+                    height: 310px;
+                }
             }
             .worksTopMainSlider_item {
-                width: 218px;
-                height: 310px;
-                margin: 0 9px;
+                width: 121px;
+                height: 200px;
+                margin: 0 4px;
+                @include mq(medium) {
+                    width: 218px;
+                    height: 310px;
+                    margin: 0 9px;
+                }
             }
-    
             img {
-                width: 218px;
-                height: 310px;
+                width: 121px;
+                height: 200px;
+                @include mq(medium) {
+                    width: 218px;
+                    height: 310px;
+                }
             }
-    
+        }
+    }
+
+    .worksTop_link {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding: 0 20px;
+        margin: 46px auto 0;
+        @include mq(medium) {
+            width: 250px;
+            position: absolute;
+            right: 50px;
+            bottom: 30px;
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            display: block;
         }
     }
 }
 
 .works_other {
-    margin-bottom: 300px;
-
+    padding-bottom: 400px;
+    position: relative;
+    @include mq(medium) {
+        padding-top: 48px;
+    }
+    .container {
+        // position: relative;
+        @include mq(medium) {
+            width: calc(100% - 170px);
+        }
+    }
+    .worksOther_history {
+        margin-top: 34px;
+    }
+    .worksOther_select {
+        .worksOther_ttl {
+            font-size: 15px;
+        }
+        .worksOther_select-year {
+            position: relative;
+            @include arrow;
+            &:focus {
+                &::after {
+                    content: none;
+                }
+            }
+            &::after {
+                transition: 0.4s $ease-out;
+                border-color: #6C6C6C;
+                top: calc(50% + 3px);
+                right: 22px;
+                transform: translate(0, -50%) rotate(135deg);
+            }
+            select {
+                outline: none;
+                margin-top: 8px;
+                width: 100%;
+                background: #F5F5F5;
+                font-size: 16px;
+                font-weight: bold;
+                font-family: $font-dinPro;
+                color: #848484;
+                padding: 12px 20px;
+                option {
+                    outline: none;
+                    margin-top: 6px;
+                    border: none;
+                    background: #F5F5F5;
+                }
+            }
+        }
+    }
+    .worksOther_select-pc {
+        display: none;
+        @include mq(medium) {
+            display: block;
+            width: 170px;
+            height: 100%;
+            background: #EDEDED;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .worksOther_select-year-pc {
+            display: none;
+            @include mq(medium) {
+                position: relative;
+                z-index: 10;
+                display: block;
+                padding-left: 20px;
+                li {
+                    width: 63px;
+                    color: #848484;
+                    position: relative;
+                    cursor: pointer;
+                    margin: 20px auto 0;
+                    font-weight: bold;
+                    &.is-active {
+                        background: linear-gradient(to bottom right, #FF0007, #FF9300);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: rgba(0,0,0, 0);
+                        &::after {
+                            background: #F47424;
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background: #848484;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: -20px;
+                        top: calc(50% - 1px);
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+    .worksOther_year {
+        margin-top: 10px;
+        font-size: 41px;
+        text-align: center;
+        @include mq(medium) {
+            margin-top: 140px;
+            font-size: 40px;
+        }
+    }
     .worksOther_slider {
-        position: relative;
+        margin-top: 25px;
         z-index: 2;
         display: flex;
         overflow: visible;
+        @include mq(medium) {
+            margin-top: 40px;
+        }
         .worksOtherSlider_inner {
             display: flex;
-    
             img {
                 width: 218px;
                 height: 310px;
+                @include mq(medium) {
+                    width: 245px;
+                    height: 347px;
+                }
             }
     
             .worksOtherSlider_item {
+                cursor: pointer;
                 width: 218px;
                 height: 310px;
                 margin: 0 9px;
                 position: relative;
+                @include mq(medium) {
+                    width: 245px;
+                    height: 347px;
+                }
                 &::after {
                     content: "";
                     display: block;
@@ -77,10 +234,6 @@
                     right: 0;
                     bottom: 0;
                     background: rgba(#000, 0.6);
-                    transition: 0.4s $ease-out;
-                }
-                .details {
-                    opacity: 0;
                     transition: 0.4s $ease-out;
                 }
                 &.swiper-slide-active {
@@ -117,8 +270,60 @@
                         background: rgba(#000, 0.9) !important;
                     }
                 }
-                p {
+                .details {
+                    opacity: 0;
+                    transform: translateX(-30px);
+                    width: 280px;
                     padding-top: 60px;
+                    transition: 0.4s $ease-out;
+                    @include mq(xxsmall) {
+                        transform: translateX(-50px);
+                        width: 320px;
+                    }
+                    @include mq(medium) {
+                        transform: translateX(-165px);
+                        width: 600px;
+                        padding-top: 70px;
+                    }
+                    .ttl {
+                        font-size: 25px;
+                        @include mq(medium) {
+                            font-size: 30px;
+                            text-align: center;
+                        }
+                    }
+                    .desc {
+                        margin-top: 12px;
+                        font-size: 14px;
+                        line-height: 1.6;
+                        @include mq(medium) {
+                            margin-top: 16px;
+                            font-size: 15px;
+                            line-height: 1.8;
+                        }
+                    }
+                    .credit {
+                        margin-top: 10px;
+                        font-size: 11px;
+                    }
+                    .link {
+                        display: inline-block;
+                        margin-top: 24px;
+                        font-size: 12px;
+                        border-bottom: 1px solid #000;
+                        transition: 0.4s $ease-out;
+                        &:hover {
+                            border-bottom: 1px solid #FF0000;
+                            a {
+                                color: #FF0000;
+                            }
+                        }
+                        a {
+                            display: inline-block;
+                            color: #000;
+                            transition: 0.4s $ease-out;
+                        }
+                    }
                 }
             }
         }

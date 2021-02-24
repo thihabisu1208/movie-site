@@ -51,6 +51,10 @@ $(() => {
   const contact = new Contact();
   contact.init();
 
+  $(".l-footer_toTop").on("click", () => {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  })
+
   polyfill();
   controlScrollIE();
 })

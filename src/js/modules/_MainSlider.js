@@ -16,6 +16,10 @@ export default class MainSlider extends App {
   }
 
   init() {
+    this.mainSlide();
+  }
+
+  mainSlide() {
     const option = {
       loop: true,
       autoplay: {

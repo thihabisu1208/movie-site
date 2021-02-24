@@ -1,3 +1,15 @@
+.contact_item {
+    pointer-events: none;
+    opacity: 0;
+    display: none;
+    &.is-active {
+        transition: 0.4s $ease-out;
+        pointer-events: all;
+        opacity: 1;
+        display: block;
+    }
+}
+
 .contact_top  {
     margin-top: 46px;
     @include mq(medium) {
@@ -121,6 +133,7 @@
     }
 
     .contactForm_submit {
+        cursor: pointer;
         outline: none;
         margin: 16px auto 0;
         width: 100%;

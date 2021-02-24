@@ -32,6 +32,22 @@
         background-repeat: repeat-x;
         background-size: 14px 3px;
     }
+    &.confirm {
+        .o-step_item {
+            &:first-child:before {
+                background: #CECECE;
+                border: 2px solid #CECECE;
+            }
+        }
+    }
+    &.complete {
+        .o-step_item {
+            &:before {
+                background: #CECECE;
+                border: 2px solid #CECECE;
+            }
+        }
+    }
     .o-step_item {
         position: relative;
         font-weight: bold;
@@ -82,12 +98,6 @@
                 .o-stepItem_txt {
                     color: #000;
                 }
-            }
-        }
-        &.is-complete {
-            &:before {
-                background: #CECECE;
-                border: 2px solid #CECECE;
             }
         }
         .o-stepItem_details {

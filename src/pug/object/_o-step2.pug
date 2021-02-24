@@ -1,0 +1,26 @@
+-
+    const step = [
+        {
+        id: "1",
+        label: "情報の入力"
+        },
+        {
+            id: "2",
+            label: "入力内容の確認"
+        },
+        {
+            id: "3",
+            label: "送信完了"
+        }
+    ]
+
+ul.o-step_list.confirm
+    each item in step
+        -
+            const isNow = parseInt(item.id) === 2 ? "is-now": "";
+
+        li.o-step_item(class=`${isNow}`)
+            span.o-stepItem_dot
+            span.o-stepItem_details
+                span.o-stepItem_num.u-font-dinPro #{item.id}
+                span.o-stepItem_txt #{item.label}

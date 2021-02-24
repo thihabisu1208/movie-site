@@ -38,6 +38,16 @@ export default class Contact extends App {
         this.$content = $(".contactForm_content p");
 
         this.error = false;
+
+        // フォーム切り替え
+        this.$startBtn = $(".contactStart_btn");
+        this.$returnBtn = $(".contactConfirm_return");
+        this.$confirmBtn = $(".contactConfirm_btn");
+        this.$completeBtn = $(".contactComplete_btn");
+
+        this.$startForm = $(".contact_start");
+        this.$confirmForm = $(".contact_confirm");
+        this.$completeForm = $(".contact_complete");
     }
 
   init() {
@@ -48,11 +58,41 @@ export default class Contact extends App {
 
     addEvents() {
         this.validateData();
-        if(window.location.pathname.indexOf("confirm") > -1) {
+        if(location.search) {
             this.addData();
         }
         $(".contactForm_return").on("click", () => {
             location.href("/movie-site/contact/")
+        });
+
+        this.$startBtn.on("click", (e) => {
+            e.preventDefault();
+            this.$startForm.removeClass("is-active");
+            this.$confirmForm.addClass("is-active");
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        });
+
+        this.$returnBtn.on("click", (e) => {
+            e.preventDefault();
+            this.$startForm.addClass("is-active");
+            this.$confirmForm.removeClass("is-active");
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        });
+
+        this.$confirmBtn.on("click", (e) => {
+            e.preventDefault();
+            this.$startForm.removeClass("is-active");
+            this.$confirmForm.removeClass("is-active");
+            this.$completeForm.addClass("is-active");
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        });
+
+        this.$completeBtn.on("click", (e) => {
+            e.preventDefault();
+            this.$startForm.addClass("is-active");
+            this.$confirmForm.removeClass("is-active");
+            this.$completeForm.removeClass("is-active");
+            $("html, body").animate({ scrollTop: 0 }, "slow");
         });
     }
 
@@ -108,16 +148,6 @@ export default class Contact extends App {
                 this.$contentError.css("display", "none");
             } else {
                 this.$contentError.css("display", "block");
-            }
-        });
-
-        // const error = this.$companyNameValue[0].checkValidity() == false || this.$nameValue[0].checkValidity() == false || this.$nameFuriganaValue[0].checkValidity() == false  || this.$mailValue[0].checkValidity() == false  || this.$telValue[0].checkValidity() == false  || this.$contentValue[0].checkValidity() == false  ? true : false;
-
-        $(".contactForm_submit").on("click", () => {
-            if(error == true) {
-                console.log("error")
-            } else {
-                console.log("no error")
             }
         });
     }

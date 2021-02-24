@@ -12,75 +12,138 @@ block name
   - const name = "contact"
 
 block contents
-  .contact_top 
-    .container
-      include ./../object/_o-ttl
-      +o-ttl("contactTop_ttl", "contact", "お問い合わせ", "black")
+  .contact_start.contact_item.is-active
+    .contact_top
+      .container
+        include ./../object/_o-ttl
+        +o-ttl("contactTop_ttl", "contact", "お問い合わせ", "black")
 
-      include ./../object/_o-step
-      +o-step(1)
+        include ./../object/_o-step1
 
-      p.contactTop_txt 以下のフォームに必要な情報を
-        br.u-sp
-        | ご入力の上「確認する」ボタンを
-        br.u-sp
-        | 押してください。
-  
-  .contact_form
-    .container
-      form.contactForm_form(action="/movie-site/contact/confirm/index.html")
-        .contactForm_companyName.contactForm_item
-          label.contactFormItem_label(for="company_name" required) 会社名・学校名
-            span 必須
-          input(type="text", name="company_name", placeholder="例）株式会社ジャンゴフィルム", required)
-          span.contactFormItem_error 会社名・学校名を入力してください。
-
-        .contactForm_companyRole.contactForm_item
-          label.contactFormItem_label(for="company_role") 役職・役割
-          input(type="text", name="company_role", placeholder="例）総務部長")
-
-        .contactForm_name.contactForm_item
-          label.contactFormItem_label(for="name_full") お名前
-            span 必須
-          input(type="text", name="name_full", placeholder="例）ジャンゴ太郎", required)
-          span.contactFormItem_error お名前を入力してください。
-
-        .contactForm_nameFurigana.contactForm_item
-          label.contactFormItem_label(for="name_furigana") お名前（ふりがな）
-            span 必須
-          input(type="text", name="name_furigana", placeholder="例）ジャンゴタロウ", required)
-          span.contactFormItem_error お名前（ふりがな）を入力してください。
-
-        .contactForm_mail.contactForm_item
-          label.contactFormItem_label(for="mail") メールアドレス
-            span 必須
-          input(type="email", name="mail", placeholder="例）django@film.co.jp", required)
-          span.contactFormItem_error メールを入力してください。
-
-        .contactForm_tel.contactForm_item
-          label.contactFormItem_label(for="tel") 電話番号
-            span 必須
-          input(type="tel", name="tel", placeholder="例）0123456789", required)
-          span.contactFormItem_error 電話番号を入力してください。
-        
-        .contactForm_content.contactForm_item.long
-          label.contactFormItem_label(for="content") お問い合わせ内容
-            span 必須
-          textarea(type="tel", name="content", required)
-          span.contactFormItem_error お問い合わせ内容を入力してください。
-
-        p.contact_caution This site is protected by reCAPTCHA and the Google 
-          a(href="") Privacy Policy 
-          | and  
-          a(href="") Terms of Service 
-          | apply.
-
-        p.contact_caution_2 プライバシーポリシーに同意の上
+        p.contactTop_txt 以下のフォームに必要な情報を
           br.u-sp
-          | 送信するボタンをクリックしてください
+          | ご入力の上「確認する」ボタンを
+          br.u-sp
+          | 押してください。
+    
+    .contact_form
+      .container
+        form.contactForm_form(action="")
+          .contactForm_companyName.contactForm_item
+            label.contactFormItem_label(for="company_name" required) 会社名・学校名
+              span 必須
+            input(type="text", name="company_name", placeholder="例）株式会社ジャンゴフィルム", required)
+            span.contactFormItem_error 会社名・学校名を入力してください。
 
-        button.contactForm_submit(type = "submit") 確認する
+          .contactForm_companyRole.contactForm_item
+            label.contactFormItem_label(for="company_role") 役職・役割
+            input(type="text", name="company_role", placeholder="例）総務部長")
 
-        p.contact_error 
-          img(src=`${path}assets/img/ico_error.png`, alt="")
-          span 必須項目に未入力の箇所があります。
+          .contactForm_name.contactForm_item
+            label.contactFormItem_label(for="name_full") お名前
+              span 必須
+            input(type="text", name="name_full", placeholder="例）ジャンゴ太郎", required)
+            span.contactFormItem_error お名前を入力してください。
+
+          .contactForm_nameFurigana.contactForm_item
+            label.contactFormItem_label(for="name_furigana") お名前（ふりがな）
+              span 必須
+            input(type="text", name="name_furigana", placeholder="例）ジャンゴタロウ", required)
+            span.contactFormItem_error お名前（ふりがな）を入力してください。
+
+          .contactForm_mail.contactForm_item
+            label.contactFormItem_label(for="mail") メールアドレス
+              span 必須
+            input(type="email", name="mail", placeholder="例）django@film.co.jp", required)
+            span.contactFormItem_error メールを入力してください。
+
+          .contactForm_tel.contactForm_item
+            label.contactFormItem_label(for="tel") 電話番号
+              span 必須
+            input(type="tel", name="tel", placeholder="例）0123456789", required)
+            span.contactFormItem_error 電話番号を入力してください。
+          
+          .contactForm_content.contactForm_item.long
+            label.contactFormItem_label(for="content") お問い合わせ内容
+              span 必須
+            textarea(type="tel", name="content", required)
+            span.contactFormItem_error お問い合わせ内容を入力してください。
+
+          p.contact_caution This site is protected by reCAPTCHA and the Google 
+            a(href="") Privacy Policy 
+            | and  
+            a(href="") Terms of Service 
+            | apply.
+
+          p.contact_caution_2 プライバシーポリシーに同意の上
+            br.u-sp
+            | 送信するボタンをクリックしてください
+
+          button.contactForm_submit.contactStart_btn(type = "button") 確認する
+
+          p.contact_error 
+            img(src=`${path}assets/img/ico_error.png`, alt="")
+            span 必須項目に未入力の箇所があります。
+
+  .contact_confirm.contact_item
+    .contact_top 
+      .container
+        include ./../object/_o-ttl
+        +o-ttl("contactTop_ttl", "contact", "お問い合わせ", "black")
+
+        include ./../object/_o-step2
+
+        p.contactTop_txt 以下の情報内容がご確認、
+          br.u-sp
+          | 間違えない上「送信する」ボタンを
+          br.u-sp
+          | 押してください。
+    
+    .contact_form
+      .container
+        form.contactForm_form(action="")
+          .contactForm_bg
+            .contactForm_companyName.contactForm_item
+              label.contactFormItem_label(for="company_name") 会社名・学校名
+              p 
+
+            .contactForm_companyRole.contactForm_item
+              label.contactFormItem_label(for="company_role") 役職・役割
+              p 
+
+            .contactForm_name.contactForm_item
+              label.contactFormItem_label(for="name_full") お名前
+              p 
+
+            .contactForm_nameFurigana.contactForm_item
+              label.contactFormItem_label(for="name_furigana") お名前（ふりがな）
+              p 
+
+            .contactForm_mail.contactForm_item
+              label.contactFormItem_label(for="mail") メールアドレス
+              p 
+
+            .contactForm_tel.contactForm_item
+              label.contactFormItem_label(for="tel") 電話番号
+              p 
+            
+            .contactForm_content.contactForm_item.long
+              label.contactFormItem_label(for="content") お問い合わせ内容
+              p 
+
+          a.contactConfirm_return.contactForm_return 戻る
+          button.contactConfirm_btn.contactForm_submit(type = "button") 送信する
+
+  .contact_complete.contact_item
+    .contact_top 
+      .container
+        include ./../object/_o-ttl
+        +o-ttl("contactTop_ttl", "contact", "お問い合わせ", "black")
+
+        include ./../object/_o-step3
+    
+    .contact_form
+      .container
+        form.contactForm_form 
+          p.contactForm_thanks ありがとうございました。
+          a.contactComplete_btn.contactForm_submit 最初の画面に戻る

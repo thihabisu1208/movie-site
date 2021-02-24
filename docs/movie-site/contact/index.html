@@ -39,7 +39,7 @@
 <ul class="l-header_nav">
 <li class="l-header_nav-item is-active"><a href="/movie-site/"><span>トップ</span><span class="u-font-azoSans">TOP</span></a></li>
 <li class="l-header_nav-item"><a class="is-inactive"><span>会社案内</span><span class="u-font-azoSans">OUTLINE</span></a></li>
-<li class="l-header_nav-item"><a class="is-inactive"><span>作品履歴</span><span class="u-font-azoSans">WORKS</span></a></li>
+<li class="l-header_nav-item"><a href="/movie-site/works/"><span>作品履歴</span><span class="u-font-azoSans">WORKS</span></a></li>
 <li class="l-header_nav-item"><a href="/movie-site/staff/"><span>スタッフ</span><span class="u-font-azoSans">STAFF</span></a></li>
 <li class="l-header_nav-item"><a href="/movie-site/contact/"><span>お問い合わせ</span><span class="u-font-azoSans">CONTACT US</span></a></li>
 <li class="l-header_nav-item"><a href="/movie-site/drone/"><span>映画関連サービス</span><span class="u-font-azoSans">FILM</span></a></li>
@@ -50,7 +50,7 @@
 <ul class="l-sp_nav">
 <li class="l-sp_nav-item"><a href="/movie-site/"><span>トップ</span><span class="u-font-azoSans l-sp_en">TOP</span></a></li>
 <li class="l-sp_nav-item"><a class="is-inactive"><span>会社案内</span><span class="u-font-azoSans l-sp_en">OUTLINE</span></a></li>
-<li class="l-sp_nav-item"><a class="is-inactive"><span>作品履歴</span><span class="u-font-azoSans l-sp_en">WORKS</span></a></li>
+<li class="l-sp_nav-item"><a href="/movie-site/works/"><span>作品履歴</span><span class="u-font-azoSans l-sp_en">WORKS</span></a></li>
 <li class="l-sp_nav-item"><a href="/movie-site/staff/"><span>スタッフ</span><span class="u-font-azoSans l-sp_en">STAFF</span></a></li>
 <li class="l-sp_nav-item"><a href="/movie-site/contact/"><span>お問い合わせ</span><span class="u-font-azoSans l-sp_en">CONTACT US</span></a></li>
 <li class="l-sp_nav-item"><a href="/movie-site/drone/"><span>映画関連サービス</span><span class="u-font-azoSans l-sp_en">FILM</span></a></li>
@@ -65,10 +65,11 @@
 <div class="barba_container" data-barba="container" data-barba-namespace="contact">
 <!-- main-->
 <main class="contact">
+<div class="contact_start contact_item is-active">
 <div class="contact_top">
 <div class="container">
 <div class="o-ttl js-scrollAnim contactTop_ttl -black"><span class="o-ttl_jp">お問い合わせ</span><span class="o-ttl_en u-font-azoSans">contact</span><span class="o-ttl_line"></span></div>
-<ul class="o-step_list">
+<ul class="o-step_list start">
 <li class="o-step_item is-now"><span class="o-stepItem_dot"></span><span class="o-stepItem_details"><span class="o-stepItem_num u-font-dinPro">1</span><span class="o-stepItem_txt">情報の入力</span></span></li>
 <li class="o-step_item"><span class="o-stepItem_dot"></span><span class="o-stepItem_details"><span class="o-stepItem_num u-font-dinPro">2</span><span class="o-stepItem_txt">入力内容の確認</span></span></li>
 <li class="o-step_item"><span class="o-stepItem_dot"></span><span class="o-stepItem_details"><span class="o-stepItem_num u-font-dinPro">3</span><span class="o-stepItem_txt">送信完了</span></span></li>
@@ -78,7 +79,7 @@
 </div>
 <div class="contact_form">
 <div class="container">
-<form class="contactForm_form" action="/movie-site/contact/confirm/index.html">
+<form class="contactForm_form" action="">
 <div class="contactForm_companyName contactForm_item">
 <label class="contactFormItem_label" for="company_name" required>会社名・学校名<span>必須</span></label>
 <input type="text" name="company_name" placeholder="例）株式会社ジャンゴフィルム" required><span class="contactFormItem_error">会社名・学校名を入力してください。</span>
@@ -109,9 +110,79 @@
 </div>
 <p class="contact_caution">This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy </a>and <a href="">Terms of Service </a>apply.</p>
 <p class="contact_caution_2">プライバシーポリシーに同意の上<br class="u-sp">送信するボタンをクリックしてください</p>
-<button class="contactForm_submit" type="submit">確認する</button>
+<button class="contactForm_submit contactStart_btn" type="button">確認する</button>
 <p class="contact_error"><img src="/movie-site/assets/img/ico_error.png" alt=""><span>必須項目に未入力の箇所があります。</span></p>
 </form>
+</div>
+</div>
+</div>
+<div class="contact_confirm contact_item">
+<div class="contact_top">
+<div class="container">
+<div class="o-ttl js-scrollAnim contactTop_ttl -black"><span class="o-ttl_jp">お問い合わせ</span><span class="o-ttl_en u-font-azoSans">contact</span><span class="o-ttl_line"></span></div>
+<ul class="o-step_list confirm">
+<li class="o-step_item"><span class="o-stepItem_dot"></span><span class="o-stepItem_details"><span class="o-stepItem_num u-font-dinPro">1</span><span class="o-stepItem_txt">情報の入力</span></span></li>
+<li class="o-step_item is-now"><span class="o-stepItem_dot"></span><span class="o-stepItem_details"><span class="o-stepItem_num u-font-dinPro">2</span><span class="o-stepItem_txt">入力内容の確認</span></span></li>
+<li class="o-step_item"><span class="o-stepItem_dot"></span><span class="o-stepItem_details"><span class="o-stepItem_num u-font-dinPro">3</span><span class="o-stepItem_txt">送信完了</span></span></li>
+</ul>
+<p class="contactTop_txt">以下の情報内容がご確認、<br class="u-sp">間違えない上「送信する」ボタンを<br class="u-sp">押してください。</p>
+</div>
+</div>
+<div class="contact_form">
+<div class="container">
+<form class="contactForm_form" action="">
+<div class="contactForm_bg">
+<div class="contactForm_companyName contactForm_item">
+<label class="contactFormItem_label" for="company_name">会社名・学校名</label>
+<p></p>
+</div>
+<div class="contactForm_companyRole contactForm_item">
+<label class="contactFormItem_label" for="company_role">役職・役割</label>
+<p></p>
+</div>
+<div class="contactForm_name contactForm_item">
+<label class="contactFormItem_label" for="name_full">お名前</label>
+<p></p>
+</div>
+<div class="contactForm_nameFurigana contactForm_item">
+<label class="contactFormItem_label" for="name_furigana">お名前（ふりがな）</label>
+<p></p>
+</div>
+<div class="contactForm_mail contactForm_item">
+<label class="contactFormItem_label" for="mail">メールアドレス</label>
+<p></p>
+</div>
+<div class="contactForm_tel contactForm_item">
+<label class="contactFormItem_label" for="tel">電話番号</label>
+<p></p>
+</div>
+<div class="contactForm_content contactForm_item long">
+<label class="contactFormItem_label" for="content">お問い合わせ内容</label>
+<p></p>
+</div>
+</div><a class="contactConfirm_return contactForm_return">戻る</a>
+<button class="contactConfirm_btn contactForm_submit" type="button">送信する</button>
+</form>
+</div>
+</div>
+</div>
+<div class="contact_complete contact_item">
+<div class="contact_top">
+<div class="container">
+<div class="o-ttl js-scrollAnim contactTop_ttl -black"><span class="o-ttl_jp">お問い合わせ</span><span class="o-ttl_en u-font-azoSans">contact</span><span class="o-ttl_line"></span></div>
+<ul class="o-step_list complete">
+<li class="o-step_item"><span class="o-stepItem_dot"></span><span class="o-stepItem_details"><span class="o-stepItem_num u-font-dinPro">1</span><span class="o-stepItem_txt">情報の入力</span></span></li>
+<li class="o-step_item"><span class="o-stepItem_dot"></span><span class="o-stepItem_details"><span class="o-stepItem_num u-font-dinPro">2</span><span class="o-stepItem_txt">入力内容の確認</span></span></li>
+<li class="o-step_item is-now"><span class="o-stepItem_dot"></span><span class="o-stepItem_details"><span class="o-stepItem_num u-font-dinPro">3</span><span class="o-stepItem_txt">送信完了</span></span></li>
+</ul>
+</div>
+</div>
+<div class="contact_form">
+<div class="container">
+<form class="contactForm_form">
+<p class="contactForm_thanks">ありがとうございました。</p><a class="contactComplete_btn contactForm_submit">最初の画面に戻る</a>
+</form>
+</div>
 </div>
 </div>
 </main>
@@ -122,12 +193,12 @@
 <!-- footer-->
 <footer class="l-footer">
 <div class="l-footer_bg"></div>
-<div class="l-footer_toTop"></div>
+<div class="l-footer_toTop"><img src="/movie-site//assets/img/ico_toTop.png" alt=""></div>
 <div class="container">
 <ul class="l-footer_nav">
 <li class="l-footer_nav-item is-active"><a href="/movie-site/"><span>トップ</span><span class="u-font-azoSans">TOP</span></a></li>
 <li class="l-footer_nav-item"><a class="is-inactive"><span>会社案内</span><span class="u-font-azoSans">OUTLINE</span></a></li>
-<li class="l-footer_nav-item"><a class="is-inactive"><span>作品履歴</span><span class="u-font-azoSans">WORKS</span></a></li>
+<li class="l-footer_nav-item"><a href="/movie-site/works/"><span>作品履歴</span><span class="u-font-azoSans">WORKS</span></a></li>
 <li class="l-footer_nav-item"><a href="/movie-site/staff/"><span>スタッフ</span><span class="u-font-azoSans">STAFF</span></a></li>
 <li class="l-footer_nav-item"><a href="/movie-site/contact/"><span>お問い合わせ</span><span class="u-font-azoSans">CONTACT US</span></a></li>
 <li class="l-footer_nav-item"><a href="/movie-site/drone/"><span>映画関連サービス</span><span class="u-font-azoSans">FILM</span></a></li>

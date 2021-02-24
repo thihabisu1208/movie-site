@@ -15,9 +15,10 @@ block contents
   .works_top
     .worksTop_bg
     include ./../object/_o-ttl
-    +o-ttl("worksTop_ttl", "latest works", "最新作品", "white")
+    +o-ttl("worksTop_ttl", "latest", "最新作品", "white")
     .worksTop_mainSlider
       ul.worksTopMainSlider_inner.js-scrollAnim.swiper-wrapper
+        //- 必ず 8個入れないといけない
         li.worksTopMainSlider_item.swiper-slide
           img(src=`${path}/assets/img/works/img_slide-02.png`, alt="")
         li.worksTopMainSlider_item.swiper-slide
@@ -26,40 +27,46 @@ block contents
           img(src=`${path}/assets/img/works/img_slide-04.png`, alt="")
         li.worksTopMainSlider_item.swiper-slide
           img(src=`${path}/assets/img/works/img_slide-06.png`, alt="")
+        li.worksTopMainSlider_item.swiper-slide
+          img(src=`${path}/assets/img/works/img_slide-02.png`, alt="")
+        li.worksTopMainSlider_item.swiper-slide
+          img(src=`${path}/assets/img/works/img_slide-03.png`, alt="")
+        li.worksTopMainSlider_item.swiper-slide
+          img(src=`${path}/assets/img/works/img_slide-04.png`, alt="")
+        li.worksTopMainSlider_item.swiper-slide
+          img(src=`${path}/assets/img/works/img_slide-06.png`, alt="")
+    .worksTop_link
+      a(href="")
+        img.u-pc(src=`${path}/assets/img/works/img_download.png`, alt="") 
+        img.u-sp(src=`${path}/assets/img/works/img_download-sp.png`, alt="") 
   
   .works_other
     .container
-      .worksOther_slider.swiper-container.js-scrollAnim
-        ul.worksOtherSlider_inner.swiper-wrapper
-          li.worksOtherSlider_item.swiper-slide
-            img(src=`${path}/assets/img/works/img_otherslide-01.jpg`, alt="")
-            .details
-              p 日本で一番悪い奴ら
-          li.worksOtherSlider_item.swiper-slide
-            img(src=`${path}/assets/img/works/img_otherslide-02.jpg`, alt="")
-            .details
-              p ヒーローマニア
-          li.worksOtherSlider_item.swiper-slide
-            img(src=`${path}/assets/img/works/img_otherslide-03.jpg`, alt="")
-            .details
-              p アフロ田中
-          li.worksOtherSlider_item.swiper-slide
-            img(src=`${path}/assets/img/works/img_otherslide-04.jpg`, alt="")
-            .details
-              p お嬢さん
-          li.worksOtherSlider_item.swiper-slide
-            img(src=`${path}/assets/img/works/img_otherslide-05.jpg`, alt="")
-            .details
-              p Death Note : Light Up the New World
-          li.worksOtherSlider_item.swiper-slide
-            img(src=`${path}/assets/img/works/img_otherslide-06.jpg`, alt="")
-            .details
-              p 悪霊病棟
-          li.worksOtherSlider_item.swiper-slide
-            img(src=`${path}/assets/img/works/img_otherslide-07.jpg`, alt="")
-            .details
-              p ANTIPORNO
-        .swiper-pagination
-        .buttons
-          .swiper-button-prev
-          .swiper-button-next
+      include ./../object/_o-ttl
+      +o-ttl("worksTop_ttl", "WORKS", "作品履歴", "black")
+      .worksOther_history
+        .worksOther_select.u-sp
+          h2.worksOther_ttl 年度を選択してください
+          .worksOther_select-year
+            select(name="year")
+              option(value="2019") 2019 
+              option(value="2018") 2018 
+              option(value="2017") 2017 
+              option(value="2016") 2016 
+              option(value="2015") 2015
+        .worksOther_select-pc
+          h2.worksOther_year.common_txtGradient.u-pc
+          ul.worksOther_select-year-pc
+            li.is-active(data-year = 2019) 2019
+            li(data-year = 2018) 2018
+            li(data-year = 2017) 2017
+            li(data-year = 2016) 2016
+            li(data-year = 2015) 2015
+        //- 年別でスライダーを用意する
+        h2.worksOther_year.common_txtGradient.u-sp
+        .worksOther_slider.swiper-container.js-scrollAnim
+          ul.worksOtherSlider_inner.swiper-wrapper
+          .swiper-pagination
+          .buttons
+            .swiper-button-prev
+            .swiper-button-next
