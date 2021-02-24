@@ -59,6 +59,7 @@ export default class Works extends App {
       let $elem = $(elem);
       $elem.on("click", () => {
         let year = $elem.data("year");
+        this.$year.text(year);
         this.createYearlySlides(year);
         $elem.addClass("is-active");
         $elem.siblings().removeClass("is-active");

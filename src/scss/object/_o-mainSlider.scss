@@ -27,6 +27,15 @@
         }
       }
     }
+    &.full {
+      .o-mainSlider_inner {
+        max-width: 100%;
+        display: block;
+        .o-mainSlider_img {
+          width: 100%;
+        }
+      }
+    }
     .o-mainSlider_inner {
       color: #fff;
       @include mq(medium) {

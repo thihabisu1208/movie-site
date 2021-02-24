@@ -28,7 +28,7 @@ block contents
     
     .contact_form
       .container
-        form.contactForm_form(action="")
+        form.contactForm_form(novalidate)
           .contactForm_companyName.contactForm_item
             label.contactFormItem_label(for="company_name" required) 会社名・学校名
               span 必須
@@ -79,6 +79,7 @@ block contents
             br.u-sp
             | 送信するボタンをクリックしてください
 
+          //- button.contactForm_submit.contactStart_btn(type = "submit") 確認する
           button.contactForm_submit.contactStart_btn(type = "button") 確認する
 
           p.contact_error 

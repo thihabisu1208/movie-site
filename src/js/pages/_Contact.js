@@ -20,14 +20,22 @@ export default class Contact extends App {
         this.$telError = $(".contactForm_tel .contactFormItem_error");
         this.$contentError = $(".contactForm_content .contactFormItem_error");
 
-        this.searchParams = new URLSearchParams(window.location.search);
-        this.companyName = this.searchParams.get("company_name");
-        this.companyRole = this.searchParams.get("company_role");
-        this.name = this.searchParams.get("name_full");
-        this.nameFurigana = this.searchParams.get("name_furigana");
-        this.mail = this.searchParams.get("mail");
-        this.tel = this.searchParams.get("tel");
-        this.content = this.searchParams.get("content");
+        // this.searchParams = new URLSearchParams(window.location.search);
+        // this.companyName = this.searchParams.get("company_name");
+        // this.companyRole = this.searchParams.get("company_role");
+        // this.name = this.searchParams.get("name_full");
+        // this.nameFurigana = this.searchParams.get("name_furigana");
+        // this.mail = this.searchParams.get("mail");
+        // this.tel = this.searchParams.get("tel");
+        // this.content = this.searchParams.get("content");
+        
+        this.companyName = $(".contactForm_companyName input").val();
+        this.companyRole = $(".contactForm_companyRole input").val();
+        this.name = $(".contactForm_name input").val();
+        this.nameFurigana = $(".contactForm_nameFurigana input").val();
+        this.mail = $(".contactForm_mail input").val();
+        this.tel = $(".contactForm_tel input").val();
+        this.content = $(".contactForm_content textarea").val();
 
         this.$companyName = $(".contactForm_companyName p");
         this.$companyRole = $(".contactForm_companyRole p");
@@ -58,15 +66,14 @@ export default class Contact extends App {
 
     addEvents() {
         this.validateData();
-        if(location.search) {
-            this.addData();
-        }
-        $(".contactForm_return").on("click", () => {
-            location.href("/movie-site/contact/")
-        });
+        // if(location.search) {
+        //     this.addData();
+        // }
 
         this.$startBtn.on("click", (e) => {
-            e.preventDefault();
+            // e.preventDefault();
+            this.validateData();
+            this.addData();
             this.$startForm.removeClass("is-active");
             this.$confirmForm.addClass("is-active");
             $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -101,6 +108,7 @@ export default class Contact extends App {
         this.$companyNameValue.on("keyup", (e) => {
             if(this.$companyNameValue[0].value !== "") {
                 this.$companyNameError.css("display", "none");
+                // this.$companyName.text(this.$companyNameValue[0].value);
             } else {
                 this.$companyNameError.css("display", "block");
             }
@@ -153,12 +161,12 @@ export default class Contact extends App {
     }
 
     addData() {
-        this.$companyName.text(this.companyName);
-        this.$companyRole.text(this.companyRole);
-        this.$name.text(this.name);
-        this.$nameFurigana.text(this.nameFurigana);
-        this.$mail.text(this.mail);
-        this.$tel.text(this.tel);
-        this.$content.text(this.content);
+        this.$companyName.text(this.$companyNameValue[0].value);
+        this.$companyRole.text(this.$companyRoleValue[0].value);
+        this.$name.text(this.$nameValue[0].value);
+        this.$nameFurigana.text(this.$nameFuriganaValue[0].value);
+        this.$mail.text(this.$mailValue[0].value);
+        this.$tel.text(this.$telValue[0].value);
+        this.$content.text(this.$contentValue[0].value);
     }
 }
