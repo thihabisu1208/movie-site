@@ -20,11 +20,15 @@
     height: 43px;
     right: 20px;
     top: -21.5px;
+    transition: 0.4s $ease-out;
     @include mq(medium) {
       width: 61px;
       height: 61px;
       right: 90px;
       top: -30.5px;
+      &:hover {
+        opacity: 0.9;
+      }
     }
     img {
       width: 100%;
@@ -149,6 +153,10 @@
       margin: 0 auto;
     }
     .l-footer_sns-item {
+      transition: 0.4s $ease-out;
+      &:hover {
+        opacity: 0.9;
+      }
       img {
         width: 32px;
       }

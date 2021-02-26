@@ -3,9 +3,9 @@ extends  ./../layout/_layout
 block meta
   -
     const meta = {
-      title: "株式会社 ジャンゴフィルム",
+      title: "株式会社 ジャンゴフィルム | お問い合わせ",
       description: "100年",
-      url: "https://django-film.jp/"
+      url: "https://django-film.jp/contact/"
     }
 
 block name
@@ -32,7 +32,7 @@ block contents
           .contactForm_companyName.contactForm_item
             label.contactFormItem_label(for="company_name" required) 会社名・学校名
               span 必須
-            input(type="text", name="company_name", placeholder="例）株式会社ジャンゴフィルム", required)
+            input.required(type="text", name="company_name", placeholder="例）株式会社ジャンゴフィルム", required)
             span.contactFormItem_error 会社名・学校名を入力してください。
 
           .contactForm_companyRole.contactForm_item
@@ -42,31 +42,31 @@ block contents
           .contactForm_name.contactForm_item
             label.contactFormItem_label(for="name_full") お名前
               span 必須
-            input(type="text", name="name_full", placeholder="例）ジャンゴ太郎", required)
+            input.required(type="text", name="name_full", placeholder="例）ジャンゴ太郎", required)
             span.contactFormItem_error お名前を入力してください。
 
           .contactForm_nameFurigana.contactForm_item
             label.contactFormItem_label(for="name_furigana") お名前（ふりがな）
               span 必須
-            input(type="text", name="name_furigana", placeholder="例）ジャンゴタロウ", required)
+            input.required(type="text", name="name_furigana", placeholder="例）ジャンゴタロウ", required)
             span.contactFormItem_error お名前（ふりがな）を入力してください。
 
           .contactForm_mail.contactForm_item
             label.contactFormItem_label(for="mail") メールアドレス
               span 必須
-            input(type="email", name="mail", placeholder="例）django@film.co.jp", required)
+            input.required(type="email", name="mail", placeholder="例）django@film.co.jp", required)
             span.contactFormItem_error メールを入力してください。
 
           .contactForm_tel.contactForm_item
             label.contactFormItem_label(for="tel") 電話番号
               span 必須
-            input(type="tel", name="tel", placeholder="例）0123456789", required)
+            input.required(type="tel", name="tel", placeholder="例）0123456789", required)
             span.contactFormItem_error 電話番号を入力してください。
           
           .contactForm_content.contactForm_item.long
             label.contactFormItem_label(for="content") お問い合わせ内容
               span 必須
-            textarea(type="tel", name="content", required)
+            textarea.required(type="tel", name="content", required)
             span.contactFormItem_error お問い合わせ内容を入力してください。
 
           p.contact_caution This site is protected by reCAPTCHA and the Google 

@@ -50,8 +50,7 @@ body, main {
     opacity: 0;
     transition: 0.4s $ease-out;
     z-index: 9999;
-    color: #fff;
-    mix-blend-mode: difference;
+    color: #000;
     pointer-events: none;
     &.is-show {
       pointer-events: all;

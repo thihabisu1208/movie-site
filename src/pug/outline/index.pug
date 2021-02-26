@@ -3,12 +3,146 @@ extends  ./../layout/_layout
 block meta
   -
     const meta = {
-      title: "株式会社 ジャンゴフィルム",
+      title: "株式会社 ジャンゴフィルム | 会社案内",
       description: "100年",
-      url: "https://django-film.jp/"
+      url: "https://django-film.jp/outline/"
     }
 
 block name
   - const name = "outline"
 
 block contents
+  .outline_top
+    .container
+      include ./../object/_o-ttl
+      +o-ttl("outlineTop_ttl", "company outline", "会社概要", "black")
+      .outlineTop_details
+        .outlineTopDetails_list
+          .outlineTopDetails_item.js-scrollAnim  
+            h3.ttl 住所
+            p.txt 〒 182 - 0023
+              br
+              | 東京都調布市染地 2 - 8 - 12　
+              br.u-sp
+              | (日活調布撮影所内)
+          .outlineTopDetails_item.js-scrollAnim  
+            h3.ttl 資本金
+            p.txt 4,000 万円
+          .outlineTopDetails_item.js-scrollAnim  
+            h3.ttl 株主
+            p.txt 日活株式会社
+          .outlineTopDetails_item.js-scrollAnim  
+            h3.ttl 役員
+            p.txt 
+              span 代表取締役社長
+              span 由里 敬三
+              br
+              span 取締役
+              span 阿部 浩二
+              br
+              span 取締役 (非常勤)
+              span 鳥羽 乾二郎
+              br
+              span 取締役 (非常勤)
+              span 海老原 卓生
+              br
+              span 取締役 (非常勤)
+              span 永山 雅也
+              br
+              span 取締役 (非常勤)
+              span 内堀 利彦
+              br
+              span 取締役 (非常勤)
+              span 田中 正
+              br
+              span 監査役 (非常勤)
+              span 秋葉 千晴
+          .outlineTopDetails_item.js-scrollAnim  
+            h3.ttl 設立年月日
+            p.txt 2007 年 10 月 12 日
+          .outlineTopDetails_item.js-scrollAnim  
+            h3.ttl 決算期
+            p.txt 毎年 2 月末
+          .outlineTopDetails_item.js-scrollAnim  
+            h3.ttl 事業内容
+            p.txt 映画・ＴＶ等の企画制作プロダクション業務
+              br
+              | ＣＭ・ＰＶ等の制作プロダクション業務
+          .outlineTopDetails_item.js-scrollAnim  
+            h3.ttl 常勤役員･
+              br
+              | スタッフ数
+            p.txt 16 名 (2021 年 2 月現在)
+              br
+              | プロデューサー 7 名
+              br
+              | 脚本家 2 名
+              br
+              | キャスティング 2 名
+              br
+              | アシスタントプロデューサー 1 名　ほか
+
+  .outline_history 
+    .container 
+      include ./../object/_o-ttl
+      +o-ttl("outlineHistory_ttl", "history", "沿革", "black")
+      .outlineHistory_list
+        .outlineHistory_item.js-scrollAnim 
+          p.ttl 2017
+          p.date 10月12日
+          p.txt 創立10年を迎える。
+        .outlineHistory_item.js-scrollAnim 
+          p.ttl 2012
+          p.date 12月
+          p.txt 日活撮影所内で事務所を移転。
+        .outlineHistory_item.js-scrollAnim 
+          p.ttl 2009
+          p.date 12月
+          p.txt 日活撮影所内で事務所を移転。
+          p.date 3月31日
+          p.txt 日活の100%子会社となる。
+        .outlineHistory_item.js-scrollAnim 
+          p.ttl 2007
+          p.date 10月12日
+          p.txt 日活株式会社と株式会社デスぺラードの出資により設立。
+
+  .outline_access
+    .container 
+      include ./../object/_o-ttl
+      +o-ttl("outlineAccess_ttl", "access", "アクセス", "black")
+      p.outlineAccess_address.js-scrollAnim 〒 182 - 0023  東京都調布市染地
+        br.u-sp
+        | 2 - 8 - 12  （日活調布撮影所内）
+      .outlineAccess_item.js-scrollAnim
+        h3.outlineAccess_ttl 京王線・京王相模原線
+        p.outlineAccess_txt 京王線 調布駅下車
+          span 京王バス
+          span.three-line 調布駅南口 バス4番のりば
+            br.u-sp
+            | 「多摩川住宅西」行
+            br.u-sp
+            | 「ライオンズマンション」下車
+        p.outlineAccess_txt 京王線 布田駅
+          span 徒歩15分
+        p.outlineAccess_txt 京王相模原線 京王多摩川駅
+          span 徒歩10分
+          span.three-line 調布駅南口 バス4番のりば
+            br.u-sp
+            | 「多摩川住宅西」行
+            br.u-sp
+            | 京王バス「多摩川住宅西」行
+          span.two-line バス停「調布南高校前」または
+            br.u-sp
+            | バス停「ライオンズマンション」
+          span 下車徒歩3分
+      .outlineAccess_item.js-scrollAnim
+        h3.outlineAccess_ttl 小田急線 狛江駅
+        p.outlineAccess_txt 小田急線 狛江駅
+          span.two-line 狛江駅北口 バス1番のりば
+            br.u-sp
+            | 「多摩川住宅」行
+          span バス停「多摩川住宅南口」下車
+          span 徒歩10分
+      .outlineAccess_map.js-scrollAnim
+        h3.outlineAccess_subTtl 日活調布撮影所まで
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12970.059048996589!2d139.5422226697754!3d35.6396871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f05e6ffea5ab%3A0x1eaf5def33c6bc6e!2sNikkatsu%20Chofu%20Studio!5e0!3m2!1sen!2sjp!4v1614313521486!5m2!1sen!2sjp" width="345" height="260" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")

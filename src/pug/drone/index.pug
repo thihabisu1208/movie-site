@@ -3,9 +3,9 @@ extends  ./../layout/_layout
 block meta
   -
     const meta = {
-      title: "株式会社 ジャンゴフィルム",
+      title: "株式会社 ジャンゴフィルム | 映画関連サービス",
       description: "100年",
-      url: "https://django-film.jp/"
+      url: "https://django-film.jp/drone/"
     }
 
 block name
@@ -21,7 +21,8 @@ block contents
       .droneTop_intro.js-scrollAnim
         img(src=`${path}/assets/img/drone/img_drone.jpg`, alt="")
     .droneTop_link.js-scrollAnim
-      img(src=`${path}/assets/img/drone/img_link.png`, alt="")
+      a(href="") 
+        img(src=`${path}/assets/img/drone/img_link.png`, alt="")
 
   .drone_prize
     .container

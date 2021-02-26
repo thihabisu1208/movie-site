@@ -1,0 +1,220 @@
+.outline {
+    .outline_top {
+        margin-top: 47px;
+        @include mq(medium) {
+            margin-top: 77px;
+        }
+        .outlineTop_details {
+            @include mq(medium) {
+                max-width: 670px;
+                margin: 0 auto;
+            }
+            .outlineTopDetails_list {
+                .outlineTopDetails_item {
+                    margin-top: 24px;
+                    display: flex;
+                    @include mq(medium) {
+                        margin-top: 22px;
+                    }
+                    &:first-child {
+                        margin-top: 30px;
+                        @include mq(medium) {
+                            margin-top: 70px;
+                        }
+                    }
+                    .ttl {
+                        width: 85px;
+                        font-size: 15px;
+                        border-bottom: 1px solid #333333;
+                        @include mq(medium) {
+                            width: 120px;
+                            font-size: 16px;
+                            padding-left: 20px;
+                        }
+                    }
+                    .txt {
+                        width: calc(100% - 85px);
+                        font-size: 14px;
+                        border-bottom: 1px solid #C4C4C4;
+                        padding-bottom: 20px;
+                        line-height: 1.9;
+                        margin-top: -1px;
+                        @include mq(medium) {
+                            width: calc(100% - 120px);
+                            font-size: 15px;
+                            line-height: 1.7;
+                            padding-left: 38px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .outline_history {
+        margin-top: 48px;
+        padding: 47px 0 58px;
+        background: #F5F5F5;
+        @include mq(medium) {
+            margin-top: 38px;
+            padding: 87px 0 114px;
+        }
+        .container {
+            @include mq(medium) {
+                max-width: 670px;
+                margin: 0 auto;
+            }
+        }
+        .outlineHistory_list {
+            margin-left: 25px;
+            position: relative;
+            padding-left: 35px;
+            @include mq(medium) {
+                margin-left: 0;
+                padding-left: 55px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 18px;
+                left: 0;
+                width: 1px;
+                height: calc(100% - 120px);
+                background: #000;
+                @include mq(medium) {
+                    height: calc(100% - 100px);
+                }
+            }
+            .outlineHistory_item {
+                margin-top: 56px;
+                .ttl {
+                    display: inline-block;
+                    font-weight: bold;
+                    position: relative;
+                    font-size: 35px;
+                    line-height: 1;
+                    background: linear-gradient(135deg, #D80000, #FE4B0A, #FD6B36, #FF8321, #FDB72B, #FED02F, #FFE984, #FFFAD1);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: rgba(0,0,0, 0);
+                    @include mq(medium) {
+                        font-size: 41px;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: -39px;
+                        transform: translateY(-50%);
+                        width: 9px;
+                        height: 9px;
+                        border-radius: 50%;
+                        background: #000;
+                        @include mq(medium) {
+                            left: -58px;
+                        }
+                    }
+                }
+                .date {
+                    margin-top: 8px;
+                    font-size: 14px;
+                    color: #FF0000;
+                }
+                .txt {
+                    margin-top: 6px;
+                    font-size: 15px;
+                    @include mq(medium) {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    .outline_access {
+        padding: 47px 0 60px;
+        .container {
+            @include mq(medium) {
+                max-width: 670px;
+                margin: 0 auto;
+            }
+        }
+        .outlineAccess_address {
+            margin-top: 32px;
+            font-size: 15px;
+            @include mq(medium) {
+                margin-top: 58px;
+                font-size: 17px;
+            }
+        }
+        .outlineAccess_item {
+            margin-top: 32px;
+            .outlineAccess_ttl {
+                display: inline-block;
+                line-height: 1;
+                font-size: 15px;
+                color: #fff;
+                background: #000;
+                padding: 8px 12px;
+            }
+            .outlineAccess_txt {
+                padding-left: 12px;
+                margin-top: 21px;
+                font-size: 17px;
+                span {
+                    display: block;
+                    position: relative;
+                    padding-left: 12px;
+                    @include mq(medium) {
+                        display: inline;
+                        margin-left: 25px;
+                        padding-left: 25px;
+                    }
+                    &.two-line {
+                        &::before {
+                            top: calc(25% - 1px);
+                            @include mq(medium) {
+                                top: calc(22% - 1px);
+                            }
+                        }
+                    }
+                    &.three-line {
+                        &::before {
+                            top: calc(16% - 1px);
+                            @include mq(medium) {
+                                top: calc(22% - 1px);
+                            }
+                        }
+                    }
+                    &::before {
+                        content: "";
+                        width: 6px;
+                        height: 6px;
+                        background: url("/movie-site/assets/img/ico_arrow.png") center center;
+                        background-size: cover;
+                        position: absolute;
+                        left: 0;
+                        top: calc(50% - 1px);
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+        .outlineAccess_map {
+            margin-top: 14px;
+            @include mq(medium) {
+                margin-top: 30px;
+            }
+            .outlineAccess_subTtl {
+                font-size: 17px;
+            }
+            iframe {
+                margin-top: 14px;
+                width: 100%;
+                @include mq(medium) {
+                    margin-top: 20px;
+                    height: 370px;
+                }
+            }
+        }
+    }
+}

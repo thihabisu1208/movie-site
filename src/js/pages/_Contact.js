@@ -45,6 +45,7 @@ export default class Contact extends App {
         this.$tel = $(".contactForm_tel p");
         this.$content = $(".contactForm_content p");
 
+        this.allRequired = true;
         this.error = false;
 
         // フォーム切り替え
@@ -65,18 +66,10 @@ export default class Contact extends App {
     }
 
     addEvents() {
-        this.validateData();
-        // if(location.search) {
-        //     this.addData();
-        // }
 
         this.$startBtn.on("click", (e) => {
             // e.preventDefault();
             this.validateData();
-            this.addData();
-            this.$startForm.removeClass("is-active");
-            this.$confirmForm.addClass("is-active");
-            $("html, body").animate({ scrollTop: 0 }, "slow");
         });
 
         this.$returnBtn.on("click", (e) => {
@@ -88,10 +81,7 @@ export default class Contact extends App {
 
         this.$confirmBtn.on("click", (e) => {
             e.preventDefault();
-            this.$startForm.removeClass("is-active");
-            this.$confirmForm.removeClass("is-active");
-            this.$completeForm.addClass("is-active");
-            $("html, body").animate({ scrollTop: 0 }, "slow");
+            this.postData();
         });
 
         this.$completeBtn.on("click", (e) => {
@@ -104,6 +94,25 @@ export default class Contact extends App {
     }
 
     validateData() {
+        $(".required").each((_, elem) => {
+            if($(elem).val() == "") {
+                this.allRequired = false
+            } else {
+                this.allRequired = true
+            }
+        })
+
+        if(!this.allRequired) {
+            $(".contact_error").addClass("is-active");
+            return false;
+        } else {
+            this.addData();
+            this.$startForm.removeClass("is-active");
+            this.$confirmForm.addClass("is-active");
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        }
+
+
         // 会社名
         this.$companyNameValue.on("keyup", (e) => {
             if(this.$companyNameValue[0].value !== "") {
@@ -168,5 +177,31 @@ export default class Contact extends App {
         this.$mail.text(this.$mailValue[0].value);
         this.$tel.text(this.$telValue[0].value);
         this.$content.text(this.$contentValue[0].value);
+    }
+
+    postData() {
+        let postUrl = "https://reqres.in/api/users";
+        $.ajax({
+            url: postUrl,
+            type: "POST",
+            dataType: "json",
+            data: {
+                company_name: this.$companyName.text(),
+                company_role: this.$companyRole.text(),
+                name: this.$name.text(),
+                nameFurigana: this.$nameFurigana.text(),
+                mail: this.$mail.text(),
+                tel: this.$tel.text(),
+                content: this.$content.text(),
+            },
+            timeout: 3000
+        }).done((res) => {
+            this.$startForm.removeClass("is-active");
+            this.$confirmForm.removeClass("is-active");
+            this.$completeForm.addClass("is-active");
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        }).fail((err) => {
+            console.log(err);
+        })
     }
 }

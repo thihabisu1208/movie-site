@@ -1,7 +1,7 @@
-import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
+import Swiper, { Navigation, Pagination, Autoplay, EffectFade } from "swiper";
 import App from "../common/_App";
 
-Swiper.use([Navigation, Pagination, Autoplay]);
+Swiper.use([Navigation, Pagination, Autoplay, EffectFade]);
 
 export default class MainSlider extends App {
   constructor(selector) {
@@ -21,6 +21,10 @@ export default class MainSlider extends App {
 
   mainSlide() {
     const option = {
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
+      },
       loop: true,
       autoplay: {
         delay: 5000,
@@ -29,11 +33,7 @@ export default class MainSlider extends App {
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
-      },
-      navigation: {
-        prevEl: this.selector.prev,
-        nextEl: this.selector.next,
-      },
+      }
     };
 
     this.slider = new Swiper(this.selector.main, option);
