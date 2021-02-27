@@ -75,7 +75,10 @@
         }
         img {
           width: 100%;
-          height: 100%;
+          height: 455px;
+          @include mq(medium) {
+            height: 100%;
+          }
         }
       }
       .o-mainSlider_details {

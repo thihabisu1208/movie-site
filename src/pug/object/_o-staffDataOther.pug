@@ -1,17 +1,12 @@
 -
   const path = "/movie-site/";
-  const data = htmlWebpackPlugin.options.data.staffData;
+  const data = htmlWebpackPlugin.options.data.staffDataOther;
 
 each item in data
     li.staffData_item.js-accordion.js-scrollAnim
-        .staffDataItem_btn.js-accordion_btn
-            .staffDataItem_name
-                .staffDataItemName_img
-                    img(src=`${path}/assets/img/staff/img_staff-${item.id}.svg`, alt="")
-                .staffDataItemName_txt #{item.name}
+        .staffDataItem_btn.js-accordion_btn.other1
+            .staffDataItem_ttl そのほか制作作品
             .staffDataItem_details
-                if item.role 
-                    .staffDataItemDetails_role #{item.role}
                 .staffDataItemDetails_btn works
         .staffDataItem_works.js-accordion_target
             each work in item.works

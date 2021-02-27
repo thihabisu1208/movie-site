@@ -13,6 +13,7 @@ import Share from "./modules/_Share";
 import Top from "./pages/_Top";
 import Works from "./pages/_Works";
 import Contact from "./pages/_Contact";
+import Drone from "./pages/_Drone";
 
 $(() => {
   const loading = new Loading();
@@ -50,6 +51,9 @@ $(() => {
 
   const contact = new Contact();
   contact.init();
+
+  const drone = new Drone();
+  drone.init();
 
   $(".l-footer_toTop").on("click", () => {
     $("html, body").animate({ scrollTop: 0 }, "slow");

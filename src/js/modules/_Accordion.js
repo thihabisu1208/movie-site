@@ -29,13 +29,18 @@ export default class Accordion {
       const $clicked = $(e.currentTarget);
       const $accordion = $clicked.parents(".js-accordion");
       const $accordionTarget = $accordion.find(".js-accordion_target");
+      const $accordionOthers = $accordion.siblings();
+      const $accordionOthersTarget = $accordionOthers.find(".js-accordion_target");
       const duration = 400;
 
-      $accordionTarget.slideToggle(duration, () => {
-        // $accordionTarget.css("height", "auto");
-      });
+      $accordionTarget.animate({
+        height: "toggle",
+        opacity: "toggle"
+      }, "slow");
 
       $accordion.toggleClass("is-open");
+      $accordionOthers.removeClass("is-open");
+      $accordionOthersTarget.slideUp(duration);
     });
   }
 

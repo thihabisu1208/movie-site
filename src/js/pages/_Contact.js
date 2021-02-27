@@ -66,7 +66,6 @@ export default class Contact extends App {
     }
 
     addEvents() {
-
         this.$startBtn.on("click", (e) => {
             // e.preventDefault();
             this.validateData();

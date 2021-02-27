@@ -43,6 +43,10 @@ export default class Works extends App {
       },
       slideToClickedSlide: true
     };
+
+    this.$link = $(".worksTop_link");
+    this.$slideFooter = $(".worksOther_slider");
+    this.$footer = $("footer");
   }
 
   init() {
@@ -71,6 +75,7 @@ export default class Works extends App {
     this.initiateMainSlider();
     this.$year.text(2019);
     this.createYearlySlides(2019);
+    this.$window.on("scroll", this.onScroll.bind(this));
   }
 
   initiateMainSlider() {
@@ -108,11 +113,12 @@ export default class Works extends App {
   }
 
   createYearlySlides(year) {
-    this.$slideList.empty();
-    if(this.otherSwiper) {
-      this.otherSwiper.destroy();
-    }
+    this.$slideFooter.addClass("is-hide");
     $.getJSON(this.WORKS_URL, (res) => {
+      if(this.otherSwiper) {
+        this.$slideList.empty();
+        this.otherSwiper.destroy();
+      }
       for(let i = 0; i < Object.keys(res).length; i++) {
         if(Object.keys(res)[i] == year) {
           // get designated year
@@ -137,6 +143,7 @@ export default class Works extends App {
         }
       }
     }).then(() => {
+      this.$slideFooter.removeClass("is-hide");
       this.otherSwiper = new Swiper(this.otherSlider.slider, this.otherOption);
       this.otherSwiper.slideTo(Math.floor(this.$slideList.children().length / 2), false, false)
       $(this.otherSlider.buttons).css({
@@ -145,4 +152,20 @@ export default class Works extends App {
       });
     });
   }
+
+  onScroll() {
+    if(window.innerWidth < this.width.small) {
+      if(this.$link.offset().top > this.$slideFooter.offset().top - 200) {
+          this.$link.addClass("is-hide");
+      } else {
+          this.$link.removeClass("is-hide");
+      }
+    } else {
+      if(this.$link.offset().top > this.$footer.offset().top - 200) {
+        this.$link.addClass("is-hide");
+    } else {
+        this.$link.removeClass("is-hide");
+    }
+    }
+}
 }

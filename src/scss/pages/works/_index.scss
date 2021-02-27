@@ -1,5 +1,5 @@
 .works_top {
-    padding-bottom: 30px;
+    padding-bottom: 140px;
     margin-bottom: 47px;
     background: #000;
     position: relative;
@@ -66,14 +66,21 @@
     }
 
     .worksTop_link {
-        position: relative;
+        position: fixed;
         z-index: 2;
         width: 100%;
         padding: 0 20px;
         margin: 46px auto 0;
+        z-index: 999;
+        opacity: 1;
+        pointer-events: all;
+        transition: 0.4s $ease-out;
+        &.is-hide {
+            opacity: 0;
+            pointer-events: none;
+        }
         @include mq(medium) {
             width: 250px;
-            position: absolute;
             right: 50px;
             bottom: 30px;
             padding: 0;
@@ -202,6 +209,12 @@
         z-index: 2;
         display: flex;
         overflow: visible;
+        opacity: 1;
+        transition: 0.4s $ease-out;
+        &.is-hide {
+            opacity: 0;
+            // transition-duration: 0s;
+        }
         @include mq(medium) {
             margin-top: 40px;
         }

@@ -24,22 +24,45 @@
         }
     }
 
-    .droneTop_link {
-        width: 330px;
-        position: absolute;
-        right: 50px;
-        bottom: 98px;
-        z-index: 10;
-        @include mq-max(medium) {
-            width: 100%;
-            right: 0;
-        }
-        a {
-            display: block;
-        }
+    .droneTop_intro {
+        @include mq(medium) {
+            display: flex;
+            max-width: 900px;
+            margin: 0 auto
+        };
         img {
             width: 100%;
+            max-width: 450px;
         }
+    }
+}
+
+.droneTop_link {
+    width: 330px;
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.4s $ease-out;
+    &.is-hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+    @include mq-max(medium) {
+        right: 0;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    a {
+        display: block;
+    }
+    img {
+        width: 100%;
     }
 }
 

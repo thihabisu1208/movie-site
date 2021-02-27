@@ -123,7 +123,7 @@
           width: 44px;
           margin: 0 auto;
           @include mq-max(medium) {
-            margin-right: 20px;
+            // margin-right: 20px;
           }
         }
       }
@@ -132,7 +132,7 @@
           width: 30px;
           margin: 0 auto;
           @include mq-max(medium) {
-            margin-right: 20px;
+            // margin-right: 20px;
           }
         }
       }
@@ -141,7 +141,7 @@
           width: 41px;
           margin: 0 auto;
           @include mq-max(medium) {
-            margin-right: 20px;
+            // margin-right: 20px;
           }
         }
       }
@@ -390,6 +390,23 @@
               font-size: 13px;
               display: block;
               @include txt-indent();
+              &.two-line {
+                &::before {
+                  top: 25%;
+                }
+              }
+              &::before {
+                content: ""; 
+                display: block; 
+                position: absolute; 
+                left: 0; 
+                top: 50%; 
+                transform: translateY(-50%); 
+                width: 5px; 
+                height: 5px; 
+                background: #910000; 
+                border-radius: 50%;
+              }
             }
           }
         }
