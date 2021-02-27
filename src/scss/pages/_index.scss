@@ -436,6 +436,13 @@
         display: block;
       }
     }
+    &.no-link {
+      &:hover {
+        .homeNewsItem_txt {
+          color: #000;
+        }
+      }
+    }
     &:hover {
       .homeNewsItem_txt {
         color: #F47424;

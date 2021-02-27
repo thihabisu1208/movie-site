@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "img": "/movie-site/assets/img/top/img_slide-01.png",
+        "ttl": "燃えよデブゴン",
+        "subTtl": "TOKYO MISSION",
+        "date": "2021.1.1",
+        "day": "金•元日より",
+        "place": "TOHOシネマズ日比谷ほか全国公開",
+        "roles": {
+            "label1": "監督｜谷垣健治",
+            "label2": "脚本｜ウォン・ジン",
+            "label3": "製作｜ドニー・イェン、ウォン・ジン、コニー・ウォン",
+            "label4": "出演｜ドニー・イェン、テレサ・モウ、ウォン・ジン、 ニキ・チョウ、竹中直人、丞威、渡辺哲、バービーほか"
+        },
+        "year": "2020 年 / 香港 / カラー / スコープサイズ / 広東語・日本語 / 原題 肥龍過江 / 96 分<br>©2020 MEGA-VISION PROJECT WORKSHOP LIMITED.ALL RIGHTS RESERVED.<br>配給：ツイン",
+        "fullSize": false
+    },
+    {
+        "id": 2,
+        "img": "/movie-site/assets/img/top/img_slide-02.png",
+        "fullSize": true
+    },
+    {
+        "id": 3,
+        "img": "/movie-site/assets/img/top/img_slide-01.png",
+        "ttl": "燃えよデブゴン",
+        "subTtl": "TOKYO MISSION",
+        "date": "2021.1.1",
+        "day": "金•元日より",
+        "place": "TOHOシネマズ日比谷ほか全国公開",
+        "roles": {
+            "label1": "監督｜谷垣健治",
+            "label2": "脚本｜ウォン・ジン",
+            "label3": "製作｜ドニー・イェン、ウォン・ジン、コニー・ウォン",
+            "label4": "出演｜ドニー・イェン、テレサ・モウ、ウォン・ジン、 ニキ・チョウ、竹中直人、丞威、渡辺哲、バービーほか"
+        },
+        "year": "2020 年 / 香港 / カラー / スコープサイズ / 広東語・日本語 / 原題 肥龍過江 / 96 分<br>©2020 MEGA-VISION PROJECT WORKSHOP LIMITED.ALL RIGHTS RESERVED.<br>配給：ツイン",
+        "fullSize": false
+    },
+    {
+        "id": 4,
+        "img": "/movie-site/assets/img/top/img_slide-02.png",
+        "fullSize": true
+    },
+    {
+        "id": 5,
+        "img": "/movie-site/assets/img/top/img_slide-01.png",
+        "ttl": "燃えよデブゴン",
+        "subTtl": "TOKYO MISSION",
+        "date": "2021.1.1",
+        "day": "金•元日より",
+        "place": "TOHOシネマズ日比谷ほか全国公開",
+        "roles": {
+            "label1": "監督｜谷垣健治",
+            "label2": "脚本｜ウォン・ジン",
+            "label3": "製作｜ドニー・イェン、ウォン・ジン、コニー・ウォン",
+            "label4": "出演｜ドニー・イェン、テレサ・モウ、ウォン・ジン、 ニキ・チョウ、竹中直人、丞威、渡辺哲、バービーほか"
+        },
+        "year": "2020 年 / 香港 / カラー / スコープサイズ / 広東語・日本語 / 原題 肥龍過江 / 96 分<br>©2020 MEGA-VISION PROJECT WORKSHOP LIMITED.ALL RIGHTS RESERVED.<br>配給：ツイン",
+        "fullSize": false
+    },
+    {
+        "id": 6,
+        "img": "/movie-site/assets/img/top/img_slide-02.png",
+        "fullSize": true
+    }
+]

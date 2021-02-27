@@ -33,16 +33,29 @@ export default class Top extends App {
     $.getJSON(this.NEWS_URL, (res) => {
       for(let i = 0; i < res.length; i++) {
         const newsItem = res[i];
-        console.log(newsItem);
-        let template = `
-          <li class="homeNews_item">
-            <a href="${newsItem.url}">
-              <div class="homeNewsItem_date">${newsItem.date}</div>
-              <div class="homeNewsItem_txt">${newsItem.label}</div>
-            </a>
-          </li>
-        `;
-        this.$newsList.append(template);
+        if(newsItem.url !== "") {
+          // json 内の url に何かが入ってると リンクにする
+          let template = `
+            <li class="homeNews_item">
+              <a href="${newsItem.url}" target="_blank">
+                <div class="homeNewsItem_date">${newsItem.date}</div>
+                <div class="homeNewsItem_txt">${newsItem.label}</div>
+              </a>
+            </li>
+          `;
+          this.$newsList.append(template);
+        } else {
+          // 入ってない場合は テキストにする
+          let template = `
+            <li class="homeNews_item no-link">
+              <a>
+                <div class="homeNewsItem_date">${newsItem.date}</div>
+                <div class="homeNewsItem_txt">${newsItem.label}</div>
+              </a>
+            </li>
+          `;
+          this.$newsList.append(template);
+        }
       }
     })
   }

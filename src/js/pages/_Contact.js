@@ -94,14 +94,18 @@ export default class Contact extends App {
 
     validateData() {
         $(".required").each((_, elem) => {
-            if($(elem).val() == "") {
+            if($(elem).val() === "") {
                 this.allRequired = false
+                $(elem).addClass("is-error");
+                $(elem).siblings(".contactFormItem_error").css("display", "block");
             } else {
                 this.allRequired = true
+                $(elem).removeClass("is-error");
+                $(elem).siblings(".contactFormItem_error").css("display", "none");
             }
         })
 
-        if(!this.allRequired) {
+        if(this.allRequired == false) {
             $(".contact_error").addClass("is-active");
             return false;
         } else {
@@ -110,7 +114,6 @@ export default class Contact extends App {
             this.$confirmForm.addClass("is-active");
             $("html, body").animate({ scrollTop: 0 }, "slow");
         }
-
 
         // 会社名
         this.$companyNameValue.on("keyup", (e) => {
@@ -125,8 +128,10 @@ export default class Contact extends App {
         // 名前
         this.$nameValue.on("keyup", (e) => {
             if(this.$nameValue[0].value !== "") {
+                this.$nameValue.removeClass("is-error");
                 this.$nameError.css("display", "none");
             } else {
+                this.$nameValue.addClass("is-error");
                 this.$nameError.css("display", "block");
             }
         });
@@ -134,8 +139,10 @@ export default class Contact extends App {
         // 名前 ふりがな
         this.$nameFuriganaValue.on("keyup", (e) => {
             if(this.$nameFuriganaValue[0].value !== "") {
+                this.$nameFuriganaValue.removeClass("is-error");
                 this.$nameFuriganaError.css("display", "none");
             } else {
+                this.$nameFuriganaValue.addClass("is-error");
                 this.$nameFuriganaError.css("display", "block");
             }
         });
@@ -143,8 +150,10 @@ export default class Contact extends App {
         // メール
         this.$mailValue.on("keyup", (e) => {
             if(this.$mailValue[0].value !== "") {
+                this.$mailValue.removeClass("is-error");
                 this.$mailError.css("display", "none");
             } else {
+                this.$mailValue.removeClass("is-error");
                 this.$mailError.css("display", "block");
             }
         });
@@ -152,8 +161,10 @@ export default class Contact extends App {
         // tel
         this.$telValue.on("keyup", (e) => {
             if(this.$telValue[0].value !== "") {
+                this.$telValue.removeClass("is-error");
                 this.$telError.css("display", "none");
             } else {
+                this.$telValue.removeClass("is-error");
                 this.$telError.css("display", "block");
             }
         });
@@ -161,8 +172,10 @@ export default class Contact extends App {
         // content
         this.$contentValue.on("keyup", (e) => {
             if(this.$contentValue[0].value !== "") {
+                this.$contentValue.removeClass("is-error");
                 this.$contentError.css("display", "none");
             } else {
+                this.$contentValue.removeClass("is-error");
                 this.$contentError.css("display", "block");
             }
         });

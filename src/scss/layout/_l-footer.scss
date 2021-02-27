@@ -23,14 +23,15 @@
     background: linear-gradient(to right bottom, #D80000, #FE4B0A, #FD6B36, #FF8321, #FDB72B, #FED02F, #FFE984, #FFFAD1);
     right: 20px;
     top: -21.5px;
-    transition: 0.4s $ease-out;
+    transition: 0.1s linear;
+    backface-visibility: hidden;
     @include mq(medium) {
       width: 61px;
       height: 61px;
       right: 90px;
       top: -30.5px;
       &:hover {
-        padding: 6px;
+        padding: 7px;
       }
     }
     img {

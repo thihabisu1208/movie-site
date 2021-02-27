@@ -14,8 +14,9 @@ export default class App {
     this.resizeTimer = false;
     this.defaultWidth = window.innerWidth;
 
-    this.WORKS_URL = "/movie-site/assets/data/works.json";
+    this.TOP_SLIDES_URL = "/movie-site/assets/data/top_slides.json";
     this.NEWS_URL = "/movie-site/assets/data/news.json";
+    this.WORKS_URL = "/movie-site/assets/data/works.json";
 
     this.initApp();
   }
