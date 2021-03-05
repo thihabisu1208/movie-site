@@ -17,6 +17,7 @@ export default class App {
     this.TOP_SLIDES_URL = "/movie-site/assets/data/top_slides.json";
     this.NEWS_URL = "/movie-site/assets/data/news.json";
     this.WORKS_URL = "/movie-site/assets/data/works.json";
+    this.WORKS_URL_EN = "/movie-site/assets/data/works_en.json";
 
     this.initApp();
   }

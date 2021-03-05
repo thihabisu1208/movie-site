@@ -41,7 +41,9 @@
     margin-top: 54px;
     .commonDetails_txt {
       width: 100%;
-      text-align: center;
+      @include mq(medium) {
+        text-align: center;
+      }
     }
   }
 }

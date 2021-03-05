@@ -15,6 +15,7 @@ body, main {
 }
 
 .l-header {
+  position: relative;
   margin: 30px 0;
   @include mq-max(medium) {
     margin: 20px 0;
@@ -27,6 +28,39 @@ body, main {
     }
     img {
       width: 100%;
+    }
+  }
+
+  .l-header_lang {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    a {
+      font-size: 14px;
+      font-weight: medium;
+      color: #000;
+      line-height: 1;
+      transition: 0.4s $ease-out;
+      &:hover {
+        color: #FF0000;
+      }
+      &:first-child {
+        padding-right: 10px;
+        position: relative;
+        &::after {
+          content: "";
+          width: 1px;
+          height: 12px;
+          background: #000;
+          position: absolute;
+          top: calc(50% - 1px);
+          right: 0;
+          transform: translateY(-50%);
+        }
+      }
+      &:last-child {
+        padding-left: 10px;
+      }
     }
   }
 
@@ -75,7 +109,7 @@ body, main {
     height: 14px;
     opacity: 0;
     transition: 0.4s $ease-out;
-    z-index: 9999;
+    z-index: 99998;
     pointer-events: none;
     &.is-show {
       pointer-events: all;
@@ -88,6 +122,13 @@ body, main {
       display: block;
       opacity: 1;
       pointer-events: all;
+    }
+    @include mq(medium) {
+      &:hover {
+        .l-ham_line {
+          background: #FF0007;
+        }
+      }
     }
     .l-ham_line {
       content: '';
@@ -123,9 +164,11 @@ body, main {
     width: 26px;
     height: 14px;
     opacity: 1;
-    &:hover {
-      .l-ham_line {
-        background: #FF0007;
+    @include mq(medium) {
+      &:hover {
+        .l-ham_line {
+          background: #FF0007;
+        }
       }
     }
     .l-ham_line {
@@ -225,7 +268,7 @@ body, main {
     transition: transform .3s;
     @include linear-bg();
     position: fixed;
-    z-index: 99;
+    z-index: 9999;
     @include mq-max(medium) {
       display: block;
       width: 100%;
@@ -239,6 +282,35 @@ body, main {
       }
       img {
         width: 100%;
+      }
+    }
+    .l-sp_lang {
+      margin: 25px 0;
+      a {
+        font-size: 15px;
+        font-weight: medium;
+        color: #fff;
+        line-height: 1;
+        @include mq(medium) {
+          display: none;
+        }
+        &:first-child {
+          padding-right: 10px;
+          position: relative;
+          &::after {
+            content: "";
+            width: 1px;
+            height: 12px;
+            background: #fff;
+            position: absolute;
+            top: calc(50% - 1px);
+            right: 0;
+            transform: translateY(-50%);
+          }
+        }
+        &:last-child {
+          padding-left: 10px;
+        }
       }
     }
     .l-sp_nav {

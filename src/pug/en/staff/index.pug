@@ -1,0 +1,67 @@
+extends  ./../layout/_layout
+
+block meta
+  -
+    const meta = {
+      title: "株式会社 ジャンゴフィルム | スタッフ",
+      description: "100年",
+      url: "https://django-film.jp/staff/"
+    }
+
+block name
+  - const name = "staff"
+
+block contents
+  .staff_top
+    .staffTop_bg
+    include ./../object/_o-ttl
+    +o-ttl("staffTop_ttl", "join us", "スタッフについて", "white")
+    .container
+      .staffTop_txt.js-scrollAnim Django Films is a production service company wholly owned by Nikkatsu.
+        br.u-pc
+        | With its office located within the Chofu Studio,
+        br.u-pc
+        | Django Films is capable of providing the best creative results for a wide range of productions,
+        br.u-pc
+        | from low-budget web dramas to high-end blockbuster feature films,
+        br.u-pc
+        | TV drama, TV commercials and music videos.
+      .staffTop_img.js-scrollAnim
+        .staffTopImg_join
+          img(src=`${path}/assets/img/staff/img_join.png`, alt="")
+        .staffTopImg_team
+          img(src=`${path}/assets/img/staff/img_team.png`, alt="")
+    
+  .staffData
+    .container
+      .staffData_head.js-scrollAnim
+        span
+        span Main production works for the past 5 years
+      .staffData_ttl.js-scrollAnim
+        .staffDataTtl_img
+          img(src=`${path}/assets/img/staff/img_person.svg`, alt="")
+        .staffDataTtl_txt Producer
+        .staffDataTtl_line
+      ul.staffData_list
+        include ./../object/_o-staffData
+
+      ul.staffData_list
+        include ./../object/_o-staffDataOther
+
+      ul.staffData_list
+        include ./../object/_o-staffDataManage
+
+      .staffData_ttl.js-scrollAnim
+        .staffDataTtl_img
+          img(src=`${path}/assets/img/staff/img_person3.svg`, alt="")
+        .staffDataTtl_txt Writer
+        .staffDataTtl_line.other1
+      ul.staffData_list
+        include ./../object/_o-staffData2
+      .staffData_ttl.js-scrollAnim
+        .staffDataTtl_img
+          img(src=`${path}/assets/img/staff/img_person2.svg`, alt="")
+        .staffDataTtl_txt Casting & AP
+        .staffDataTtl_line.other2
+      ul.staffData_list
+        include ./../object/_o-staffData3

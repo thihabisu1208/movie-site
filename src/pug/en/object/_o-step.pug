@@ -1,0 +1,29 @@
+-
+    const step = [
+        {
+        id: "1",
+        label: "情報の入力"
+        },
+        {
+            id: "2",
+            label: "入力内容の確認"
+        },
+        {
+            id: "3",
+            label: "送信完了"
+        }
+    ]
+
+//- @{Number} now - 現在のステップ数.
+mixin o-step(now)
+    ul.o-step_list
+        each item in step
+            -
+                const isComplete = parseInt(item.id) < now ? "is-complete": ""
+                const isNow = parseInt(item.id) === now ? "is-now": "";
+
+            li.o-step_item(class=`${isComplete} ${isNow}`)
+                span.o-stepItem_dot
+                span.o-stepItem_details
+                    span.o-stepItem_num.u-font-dinPro #{item.id}
+                    span.o-stepItem_txt #{item.label}

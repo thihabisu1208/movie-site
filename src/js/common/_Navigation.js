@@ -65,6 +65,7 @@ export default class Navigation extends App {
     } else {
         this.$hambergerSP.removeClass("is-show");
         this.$hambergerTtl.removeClass("is-show");
+        $(".l-sp_ham, .l-header_sp, .l-sp_ttl").removeClass("active");
     }
 }
 }

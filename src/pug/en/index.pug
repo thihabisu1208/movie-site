@@ -1,0 +1,179 @@
+extends  ./layout/_layout
+
+block meta
+  -
+    const meta = {
+      title: "株式会社 ジャンゴフィルム",
+      description: "100年",
+      url: "https://django-film.jp/"
+    }
+
+block name
+  - const name = "home"
+
+block contents
+  include ./object/_o-mainSlider
+  .home_about
+    .common_bg
+    .homeAbout_bg
+    .container
+      include ./object/_o-ttl
+      +o-ttl("homeAbout_ttl", "about us", "私たちについて", "white")
+      .homeAbout_catch.js-scrollAnim
+        img(src=`${path}/assets/img/top/ttl_catch.svg`, alt="")
+      .homeAbout_details.common_details.js-scrollAnim
+        .commonDetails_txt
+          p Django Films is a production service company wholly owned by Nikkatsu.
+            br.u-pc
+            |  With its office located within the Chofu Studio,
+            br.u-pc
+            | Django Films is capable of providing the best creative results for a wide range of productions,
+            br.u-pc
+            |  from low-budget web dramas to high-end blockbuster feature films,
+            br.u-pc
+            |  TV drama, TV commercials and music videos.
+  
+  .home_numbers
+    .container
+      include ./object/_o-ttl
+      +o-ttl("homeNumbers_ttl", "in numbers", "数字で見る<br class='sp'>ジャンゴフィルム", "black")
+      .homeNumbers_years.js-scrollAnim
+        .homeNumbersYears_fromTo.common_txtGradient.u-font-dinPro 2007 - 
+          span.js-animateText(data-num = 2021 data-duration = 500) 2007
+          //- span.js-animateText(data-num = 2020 data-duration = 1000) 2007
+        .homeNumbersYears_year 年
+        .homeNumbersYears_now 2020年12月時点
+      ul.homeNumbers_list.js-scrollAnim
+        li.homeNumbers_item.-build.js-scrollAnim
+          .homeNumbersItem_img
+            img(src=`${path}/assets/img/top/ico_build.svg`, alt="")
+          .homeNumbersItem_txt 設立年数
+          .homeNumbersItem_pic
+              .homeNumbersItem_details
+                span.homeNumbersItemDetails_num.common_txtGradient.js-animateText.u-font-dinPro(data-num = 13 data-duration = 500)
+                span.homeNumbersItemDetails_txt 年
+        li.homeNumbers_item.-staff.js-scrollAnim
+          .homeNumbersItem_img
+            img(src=`${path}/assets/img/top/ico_staff.svg`, alt="")
+          .homeNumbersItem_txt スタッフ数
+          .homeNumbersItem_pic
+            .homeNumbersItem_details
+              span.homeNumbersItemDetails_num.common_txtGradient.js-animateText.u-font-dinPro(data-num = 14 data-duration = 600)
+              span.homeNumbersItemDetails_txt 人
+        li.homeNumbers_item.-works.js-scrollAnim
+          .homeNumbersItem_img
+            img(src=`${path}/assets/img/top/ico_works.svg`, alt="")
+          .homeNumbersItem_txt 作品数
+          .homeNumbersItem_pic
+            .homeNumbersItem_details
+              span.homeNumbersItemDetails_num.common_txtGradient.js-animateText.u-font-dinPro(data-num = 112 data-duration = 1100)
+              span.homeNumbersItemDetails_txt 件
+      .homeNumbers_link.js-scrollAnim
+        a(href=`${path}outline/`) 会社案内
+
+  .home_vision
+    .common_bg
+    .homeVision_bg
+    .container
+      include ./object/_o-ttl
+      +o-ttl("homeVision_ttl", "vision", "会社のビジョン", "white")
+      .homeVision_details.common_details.js-scrollAnim
+        .commonDetails_img
+          img(src=`${path}/assets/img/top/img_vision.png`, alt="")
+        .commonDetails_txt
+          p 映画には、100年以上の歴史があります。
+            br
+            | 先人たちから受け継いだ映画作りの魂を大切に守っていくこと
+            br
+            | その魂を次世代に伝える懸け橋となること――それが我々の望みです。
+            br
+            br
+            | 映画作りを基盤にしつつも、その形にとらわれ過ぎず、様々な展開を見せながら、
+            br
+            | 無限に広がる映像の可能性についてこれからも探究していきます。
+            br
+            br
+            | これからも全世界の皆様に悦び・感動・衝撃をお届けできるようつくり続けていきます。
+
+  .home_service
+    .container
+      include ./object/_o-ttl
+      +o-ttl("homeService_ttl", "service", "業務内容", "black")
+      p.homeService_txt.js-scrollAnim 映画製作だけではなく、総合的な映像事業を提供しています。
+      ul.homeService_list.js-scrollAnim
+        li.homeService_item.-movie.js-scrollAnim
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src=`${path}/assets/img/top/ico_movie.png`, alt="")
+            p.homeServiceItem_details 
+              span.homeServiceItem_txt 映画制作
+              span.homeServiceItem_list
+                span 当社制作作品
+                span.two-line プロデューサー
+                  br
+                  | 業務請負作品
+                span スタッフ出向作品
+                span 企画
+        li.homeService_item.-drama.js-scrollAnim
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src=`${path}/assets/img/top/ico_drama.png`, alt="")
+            p.homeServiceItem_details
+              span.homeServiceItem_txt 映像制作
+              span.homeServiceItem_list 
+                span.two-line ドラマ（テレビ、配信）
+                  br
+                  | PV／MV
+                span 短編映画
+                span CM
+                span 企画
+        li.homeService_item.-location.js-scrollAnim
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src=`${path}/assets/img/top/ico_location.png`, alt="")
+            p.homeServiceItem_details
+              span.homeServiceItem_txt ロケーション
+                br
+                | サービス
+              span.homeServiceItem_desc 主に海外製作作品の日本撮影時のロケーション選定、撮影の許可申請など
+        li.homeService_item.-cast.js-scrollAnim
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src=`${path}/assets/img/top/ico_cast.png`, alt="")
+            p.homeServiceItem_details
+              span.homeServiceItem_txt キャスティング
+              span.homeServiceItem_desc 映画・ドラマ等のキャスティング
+        li.homeService_item.-script.js-scrollAnim
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src=`${path}/assets/img/top/ico_script.png`, alt="")
+            p.homeServiceItem_details
+              span.homeServiceItem_txt 脚本
+              span.homeServiceItem_desc 映画・ドラマ・アニメ等の脚本執筆、プロット作成映画制作・映像制作
+        li.homeService_item.-plot.js-scrollAnim
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src=`${path}/assets/img/top/ico_plot.png`, alt="")
+            p.homeServiceItem_details
+              span.homeServiceItem_txt プロット
+              span.homeServiceItem_desc 映画・ドラマ・アニメ等の脚本執筆、プロット作成映画制作・映像制作
+        li.homeService_item.-drone.js-scrollAnim
+          .homeServiceItem_inner
+            .homeServiceItem_pic
+              .homeServiceItem_img
+                img(src=`${path}/assets/img/top/ico_drone.png`, alt="")
+            p.homeServiceItem_details
+              span.homeServiceItem_txt ドローンサービス
+              span.homeServiceItem_desc 映画・ドラマ等で使われる空撮やダイナミックな表現を可能にするドローン撮影
+
+  .home_news
+    .container
+      include ./object/_o-ttl
+      +o-ttl("homeNews_ttl", "news", "お知らせ", "black")
+      ul.homeNews_list.js-scrollAnim

@@ -15,7 +15,8 @@ export default class MainSlider extends App {
     this.selector.pagination = `${this.selector.main} .swiper-pagination`;
 
     this.$slideContainer = $(".o-mainSlider");
-    this.$slideList = $(".o-mainSlider_list");
+    this.$slideListJp = $(".o-mainSlider_list.jp");
+    this.$slideListEn = $(".o-mainSlider_list.en");
   }
 
   init() {
@@ -24,50 +25,102 @@ export default class MainSlider extends App {
 
   getSlides() {
     $.getJSON(this.TOP_SLIDES_URL, (res) => {
-      for(let i = 0; i < res.length; i++) {
-        let item = res[i];
-        if(item.fullSize === true) {
-          let template = `
-            <li class="o-mainSlider_item swiper-slide full">
-              <div class="o-mainSlider_inner">
-                <div class="o-mainSlider_img">
-                  <img src="${item.img}" />
+      console.log(location.pathname.indexOf("en") > -1)
+      let jpData = res.jp;
+      let enData = res.en;
+      if(location.pathname.indexOf("en") > -1) {
+        for(let i = 0; i < enData.length; i++) {
+          let item = enData[i];
+          if(item.fullSize === true) {
+            let template = `
+              <li class="o-mainSlider_item swiper-slide full">
+                <div class="o-mainSlider_inner">
+                  <div class="o-mainSlider_img">
+                    <img src="${item.img}" />
+                  </div>
                 </div>
-              </div>
-            </li>
-          `;
+              </li>
+            `;
+  
+            this.$slideListEn.append(template);
+          } else {
+            let template = `
+              <li class="o-mainSlider_item swiper-slide">
+                <div class="o-mainSlider_inner">
+                  <div class="o-mainSlider_img">
+                    <img src="${item.img}" />
+                  </div>
+                  <div class="o-mainSlider_details">
+                    <div class="o-mainSliderDetails_head">
+                      <h2 class="o-mainSliderDetails_ttl u-font-azoSans">${item.ttl}</h2>
+                      <h3 class="o-mainSliderDetails_subTtl u-font-azoSans">${item.subTtl}</h3>
+                    </div>
+                    <div class="o-mainSliderDetails_body">
+                      <p class="o-mainSliderDetails_schedule"><span class="date u-font-azoSans">${item.date}</span><span class="day">${item.day}</span><span class="where">${item.place}</span></p>
+                    </div>
+                    <div class="o-mainSliderDetails_footer">
+                      <ul class="o-mainSliderDetails_role">
+                      <li>${item.roles.label1}/li>
+                      <li>${item.roles.label2}</li>
+                      <li>${item.roles.label3}</li>
+                      <li>${item.roles.label4}</li>
+                      </ul>
+                      <p class="o-mainSliderDetails_year">${item.year}</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            `;
+  
+            this.$slideListEn.append(template);
+          }
+        }
+      } else {
+        for(let i = 0; i < jpData.length; i++) {
+          let item = jpData[i];
+          if(item.fullSize === true) {
+            let template = `
+              <li class="o-mainSlider_item swiper-slide full">
+                <div class="o-mainSlider_inner">
+                  <div class="o-mainSlider_img">
+                    <img src="${item.img}" />
+                  </div>
+                </div>
+              </li>
+            `;
 
-          this.$slideList.append(template);
-        } else {
-          let template = `
-            <li class="o-mainSlider_item swiper-slide">
-              <div class="o-mainSlider_inner">
-                <div class="o-mainSlider_img">
-                  <img src="${item.img}" />
+            this.$slideListJp.append(template);
+          } else {
+            let template = `
+              <li class="o-mainSlider_item swiper-slide">
+                <div class="o-mainSlider_inner">
+                  <div class="o-mainSlider_img">
+                    <img src="${item.img}" />
+                  </div>
+                  <div class="o-mainSlider_details">
+                    <div class="o-mainSliderDetails_head">
+                      <h2 class="o-mainSliderDetails_ttl u-font-azoSans">${item.ttl}</h2>
+                      <h3 class="o-mainSliderDetails_subTtl u-font-azoSans">${item.subTtl}</h3>
+                    </div>
+                    <div class="o-mainSliderDetails_body">
+                      <p class="o-mainSliderDetails_schedule"><span class="date u-font-azoSans">${item.date}</span><span class="day">${item.day}</span><span class="where">${item.place}</span></p>
+                    </div>
+                    <div class="o-mainSliderDetails_footer">
+                      <ul class="o-mainSliderDetails_role">
+                      <li>${item.roles.label1}/li>
+                      <li>${item.roles.label2}</li>
+                      <li>${item.roles.label3}</li>
+                      <li>${item.roles.label4}</li>
+                      </ul>
+                      <p class="o-mainSliderDetails_year">${item.year}</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="o-mainSlider_details">
-                  <div class="o-mainSliderDetails_head">
-                    <h2 class="o-mainSliderDetails_ttl u-font-azoSans">${item.ttl}</h2>
-                    <h3 class="o-mainSliderDetails_subTtl u-font-azoSans">${item.subTtl}</h3>
-                  </div>
-                  <div class="o-mainSliderDetails_body">
-                    <p class="o-mainSliderDetails_schedule"><span class="date u-font-azoSans">${item.date}</span><span class="day">${item.day}</span><span class="where">${item.place}</span></p>
-                  </div>
-                  <div class="o-mainSliderDetails_footer">
-                    <ul class="o-mainSliderDetails_role">
-                    <li>${item.roles.label1}/li>
-                    <li>${item.roles.label2}</li>
-                    <li>${item.roles.label3}</li>
-                    <li>${item.roles.label4}</li>
-                    </ul>
-                    <p class="o-mainSliderDetails_year">${item.year}</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-          `;
+              </li>
+            `;
 
-          this.$slideList.append(template);
+            this.$slideListJp.append(template);
+          }
         }
       }
     }).then(() => {

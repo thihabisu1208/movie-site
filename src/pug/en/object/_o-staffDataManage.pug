@@ -1,0 +1,17 @@
+-
+  const path = "/movie-site/";
+  const data = htmlWebpackPlugin.options.data.staffDataManage;
+
+each item in data
+    li.staffData_item.js-accordion.js-scrollAnim
+        .staffDataItem_btn.js-accordion_btn.other2
+            .staffDataItem_ttl 管理作品
+            .staffDataItem_details
+                .staffDataItemDetails_btn works
+        .staffDataItem_works.js-accordion_target
+            each work in item.works
+                .staffDataItemWorks_item
+                    .staffDataItemWorksItem_year #{work.year}
+                    .staffDataItemWorksItem_data !{work.ttl}
+                        if work.subTtl
+                            span !{work.subTtl}

@@ -1,0 +1,23 @@
+-
+  const path = "/movie-site/";
+  const data = htmlWebpackPlugin.options.data.staffData3;
+
+each item in data
+    li.staffData_item.js-accordion.js-scrollAnim
+        .staffDataItem_btn.js-accordion_btn
+            .staffDataItem_name
+                .staffDataItemName_img
+                    img(src=`${path}/assets/img/staff/img_staff-${item.id}.svg`, alt="")
+                .staffDataItemName_txt #{item.name_en}
+            .staffDataItem_details
+                if item.role 
+                    .staffDataItemDetails_role #{item.role}
+                .staffDataItemDetails_btn works
+        .staffDataItem_works.js-accordion_target
+            each work in item.works
+                .staffDataItemWorks_item
+                    if work.year
+                        .staffDataItemWorksItem_year #{work.year}
+                    .staffDataItemWorksItem_data !{work.ttl}
+                        if work.subTtl
+                            span !{work.subTtl}

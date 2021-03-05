@@ -73,6 +73,7 @@
                 width: 100%;
                 font-size: 14px;
                 &.is-error {
+                    position: relative;
                     background: #FFEBEB;
                     border: 1px solid #F00000;
                     &::after {

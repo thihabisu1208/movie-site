@@ -2,6 +2,7 @@
     {
       "id": "01",
       "name": "ヤマモト  アキラ",
+      "name_en": "Akira YAMAMOTO",
       "role": "制作部長",
       "works": [
         {
@@ -40,6 +41,7 @@
     {
         "id": "02",
         "name": "イイヅカ  ノブヒロ",
+        "name_en": "Nobuhiro IIZUKA",
         "role": "",
         "works": [
           {
@@ -79,6 +81,7 @@
     {
         "id": "03",
         "name": "イグチ  キイチ",
+        "name_en": "Kiichi IGUCHI",
         "role": "",
         "works": [
           {
@@ -90,6 +93,7 @@
     {
         "id": "04",
         "name": "フカツ  トモオ",
+        "name_en": "Tomoo FUKATSU",
         "role": "",
         "works": [
           {
@@ -167,6 +171,7 @@
     {
         "id": "05",
         "name": "タナカ  セイイチ",
+        "name_en": "Seiichi TANAKA",
         "role": "",
         "works": [
           {
@@ -232,6 +237,7 @@
     {
         "id": "06",
         "name": "タケウチ  カズナリ",
+        "name_en": "Kazunari TAKEUCHI",
         "role": "",
         "works": [
           {
@@ -283,6 +289,7 @@
     {
         "id": "07",
         "name": "バンノ  タツヤ",
+        "name_en": "Tatsuya BANNO",
         "role": "",
         "works": [
           {

@@ -114,43 +114,86 @@ export default class Works extends App {
 
   createYearlySlides(year) {
     this.$slideFooter.addClass("is-hide");
-    $.getJSON(this.WORKS_URL, (res) => {
-      if(this.otherSwiper) {
-        this.$slideList.empty();
-        this.otherSwiper.destroy();
-      }
-      for(let i = 0; i < Object.keys(res).length; i++) {
-        if(Object.keys(res)[i] == year) {
-          // get designated year
-          let yearList = res[Object.keys(res)[i]];
+    // EN
+    if(location.pathname.indexOf("en") > -1) {
+      $.getJSON(this.WORKS_URL_EN, (res) => {
+        if(this.otherSwiper) {
+          this.$slideList.empty();
+          this.otherSwiper.destroy();
+        }
+        for(let i = 0; i < Object.keys(res).length; i++) {
+          if(Object.keys(res)[i] == year) {
+            // get designated year
+            let yearList = res[Object.keys(res)[i]];
 
-          for(let j = 0; j < yearList.length; j++) {
-            let template = `
-              <li class="worksOtherSlider_item swiper-slide">
-                <img src="${yearList[j].img}" />
-                <div class="details">
-                  <h3 class="ttl">${yearList[j].ttl}</h3>
-                  <p class="desc">${yearList[j].desc}<p>
-                  <p class="credit">${yearList[j].credit}<p>
-                  <div class="link">
-                    <a href="${yearList[j].url}">公式サイト→</a>
+            for(let j = 0; j < yearList.length; j++) {
+              let template = `
+                <li class="worksOtherSlider_item swiper-slide">
+                  <img src="${yearList[j].img}" />
+                  <div class="details">
+                    <h3 class="ttl">${yearList[j].ttl}</h3>
+                    <p class="desc">${yearList[j].desc}<p>
+                    <p class="credit">${yearList[j].credit}<p>
+                    <div class="link">
+                      <a href="${yearList[j].url}">公式サイト→</a>
+                    </div>
                   </div>
-                </div>
-              </li>
-            `;
-            this.$slideList.append(template);
+                </li>
+              `;
+              this.$slideList.append(template);
+            }
           }
         }
-      }
-    }).then(() => {
-      this.$slideFooter.removeClass("is-hide");
-      this.otherSwiper = new Swiper(this.otherSlider.slider, this.otherOption);
-      this.otherSwiper.slideTo(Math.floor(this.$slideList.children().length / 2), false, false)
-      $(this.otherSlider.buttons).css({
-        "right": `${$(this.otherSlider.slider).width() / 2 - 70}px`,
-        "left": "auto"
+      }).then(() => {
+        this.$slideFooter.removeClass("is-hide");
+        this.otherSwiper = new Swiper(this.otherSlider.slider, this.otherOption);
+        this.otherSwiper.slideTo(Math.floor(this.$slideList.children().length / 2), false, false)
+        $(this.otherSlider.buttons).css({
+          "right": `${$(this.otherSlider.slider).width() / 2 - 70}px`,
+          "left": "auto"
+        });
       });
-    });
+    } 
+    // JP
+    else {
+      $.getJSON(this.WORKS_URL, (res) => {
+        if(this.otherSwiper) {
+          this.$slideList.empty();
+          this.otherSwiper.destroy();
+        }
+        for(let i = 0; i < Object.keys(res).length; i++) {
+          if(Object.keys(res)[i] == year) {
+            // get designated year
+            let yearList = res[Object.keys(res)[i]];
+
+            for(let j = 0; j < yearList.length; j++) {
+              let template = `
+                <li class="worksOtherSlider_item swiper-slide">
+                  <img src="${yearList[j].img}" />
+                  <div class="details">
+                    <h3 class="ttl">${yearList[j].ttl}</h3>
+                    <p class="desc">${yearList[j].desc}<p>
+                    <p class="credit">${yearList[j].credit}<p>
+                    <div class="link">
+                      <a href="${yearList[j].url}">公式サイト→</a>
+                    </div>
+                  </div>
+                </li>
+              `;
+              this.$slideList.append(template);
+            }
+          }
+        }
+      }).then(() => {
+        this.$slideFooter.removeClass("is-hide");
+        this.otherSwiper = new Swiper(this.otherSlider.slider, this.otherOption);
+        this.otherSwiper.slideTo(Math.floor(this.$slideList.children().length / 2), false, false)
+        $(this.otherSlider.buttons).css({
+          "right": `${$(this.otherSlider.slider).width() / 2 - 70}px`,
+          "left": "auto"
+        });
+      });
+    }
   }
 
   onScroll() {
