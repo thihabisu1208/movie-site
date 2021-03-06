@@ -18,23 +18,36 @@
     }
 
     .droneTop_ttl {
-        padding: 71px 0 75px;
+        // padding: 71px 0 75px;
+        position: relative;
+        z-index: 2;
+        padding: 67px 0 40px;
         @include mq-max(medium) {
             padding: 37px 0 35px;
         }
     }
 
-    .droneTop_intro {
-        @include mq(medium) {
-            display: flex;
-            max-width: 900px;
-            margin: 0 auto
-        };
-        img {
-            width: 100%;
-            max-width: 450px;
+    .droneTop_txt {
+        color: #fff;
+        text-align: center;
+        line-height: 2;
+        @include mq-max(medium) {
+            text-align: left;
+            line-height: 1.7;
         }
     }
+
+    // .droneTop_intro {
+    //     @include mq(medium) {
+    //         display: flex;
+    //         max-width: 900px;
+    //         margin: 0 auto
+    //     };
+    //     img {
+    //         width: 100%;
+    //         max-width: 450px;
+    //     }
+    // }
 }
 
 .droneTop_link {
@@ -204,15 +217,15 @@
         align-items: flex-end;
         line-height: 1.4;
         border-bottom: 1px solid #E5E5E5;
-				position: relative;
-				@include mq-max(medium) {
-					align-items: flex-start;
-				}
+        position: relative;
+        @include mq-max(medium) {
+            align-items: flex-start;
+        }
         &:not(:first-child)::after {
             content: "";
             width: 16px;
             height: 14px;
-            background: url("/movie-site/assets/img/drone/ico_polygon.png") 100%;
+            background: url($local_url + "assets/img/drone/ico_polygon.png") 100%;
             background-size: cover;
             position: absolute;
             border-color: #000;

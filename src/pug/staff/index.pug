@@ -17,15 +17,24 @@ block contents
     include ./../object/_o-ttl
     +o-ttl("staffTop_ttl", "join us", "スタッフについて", "white")
     .container
-      .staffTop_txt.js-scrollAnim 映画製作に興味がある若者や新人若手監督に向けて、
+      //- .staffTop_txt.js-scrollAnim 映画製作に興味がある若者や新人若手監督に向けて、
+      //-   br.u-pc
+      //-   | 2007年から現在にかけて、無数な作品を作成した。
+      //-   br.u-pc
+      //-   | ジャンゴフィルムの総合力は、映画、映像制作のスペシャリストの集まりであり、
+      //-   br.u-pc
+      //-   | 映画制作のことなら何でもできる、という力です。私たちは様々な作品を作りたい、挑戦したい、
+      //-   br.u-pc
+      //-   | 今まで色々な困難を越えて、この世界へ。
+      .staffTop_txt.js-scrollAnim 映像制作ならば何でも対応できる『総合力』を活かし、
         br.u-pc
-        | 2007年から現在にかけて、無数な作品を作成した。
+        | 大作映画から、低予算のウェブドラマまで、
         br.u-pc
-        | ジャンゴフィルムの総合力は、映画、映像制作のスペシャリストの集まりであり、
+        | テレビドラマ、テレビコマーシャル、ミュージックビデオなど
         br.u-pc
-        | 映画制作のことなら何でもできる、という力です。私たちは様々な作品を作りたい、挑戦したい、
+        | 幅広い作品に最高のクリエイティブなサービスを提供しています。
         br.u-pc
-        | 今まで色々な困難を越えて、この世界へ。
+        | ジャンゴフィルムにお任せください。
       .staffTop_img.js-scrollAnim
         .staffTopImg_join
           img(src=`${path}/assets/img/staff/img_join.png`, alt="")
@@ -53,15 +62,16 @@ block contents
 
       .staffData_ttl.js-scrollAnim
         .staffDataTtl_img
-          img(src=`${path}/assets/img/staff/img_person3.svg`, alt="")
-        .staffDataTtl_txt 脚本家
-        .staffDataTtl_line.other1
-      ul.staffData_list
-        include ./../object/_o-staffData2
-      .staffData_ttl.js-scrollAnim
-        .staffDataTtl_img
           img(src=`${path}/assets/img/staff/img_person2.svg`, alt="")
         .staffDataTtl_txt キャスティング
         .staffDataTtl_line.other2
       ul.staffData_list
         include ./../object/_o-staffData3
+
+      .staffData_ttl.js-scrollAnim
+        .staffDataTtl_img
+          img(src=`${path}/assets/img/staff/img_person3.svg`, alt="")
+        .staffDataTtl_txt 脚本家
+        .staffDataTtl_line.other1
+      ul.staffData_list
+        include ./../object/_o-staffData2

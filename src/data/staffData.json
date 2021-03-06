@@ -6,35 +6,39 @@
       "role": "制作部長",
       "works": [
         {
+            "year": "2021秋 ROAD SHOW",
+            "ttl": "総理の夫",
+            "subTtl": "プロデューサー"
+        },
+        {
+            "year": "2020",
+            "ttl": "夜明けを信じて。",
+            "subTtl": "アソシエイトプロデューサー"
+        },
+        {
             "year": "2019",
-            "ttl": "世界から希望が消えたなら"
+            "ttl": "世界から希望が消えたなら。",
+            "subTtl": "アソシエイトプロデューサー"
         },
         {
             "year": "2018",
-            "ttl": "春が来た",
-            "subTtl": "WOWOW ドラマW"
+            "ttl": "春が来た<br>WOWOW ドラマW",
+            "subTtl": "アソシエイトプロデューサー"
         },
         {
             "year": "2017",
-            "ttl": "関ケ原"
+            "ttl": "関ケ原",
+            "subTtl": "プロデューサー"
         },
         {
             "year": "2015",
-            "ttl": "俺物語!!"
+            "ttl": "俺物語!!",
+            "subTtl": "プロデューサー"
         },
         {
             "year": "2015",
-            "ttl": "劇場霊"
-        },
-        {
-            "year": "2014",
-            "ttl": "世界の風を僕らは受けて",
-            "subTtl": "(Not yet MV)"
-        },
-        {
-            "year": "2014",
-            "ttl": "前しか向かねえ",
-            "subTtl": "(AKB48 35th single MV) "
+            "ttl": "劇場霊",
+            "subTtl": "プロデューサー"
         }
       ]
     },
@@ -46,35 +50,43 @@
         "works": [
           {
             "year": "2020",
-            "ttl": "心霊喫茶「エクストラ」の<br>秘密 -The Real Exorcist-"
+            "ttl": "バーチャル・ライン・スタジオ VP",
+            "subTtl": "ラインプロデューサー"
+          },
+          {
+            "year": "2020",
+            "ttl": "心霊喫茶「エクストラ」の秘密<br> -The Real Exorcist-』",
+            "subTtl": "ラインプロデューサー"
           },
           {
             "year": "2019",
-            "ttl": "旅のおわり世界のはじまり"
+            "ttl": "旅のおわり世界のはじまり",
+            "subTtl": "ラインプロデューサー"
           },
           {
             "year": "2017",
-            "ttl": "予兆 散歩する侵略者"
+            "ttl": "予兆 散歩する侵略者",
+            "subTtl": "ラインプロデューサー"
           },
           {
             "year": "2017",
-            "ttl": "散歩する侵略者"
+            "ttl": "散歩する侵略者",
+            "subTtl": "プロデューサー"
           },
           {
             "year": "2016",
-            "ttl": "デスノート<br>NEW GENERATION"
+            "ttl": "デスノート NEW GENERATION<br>Huluオリジナルドラマ",
+            "subTtl": "プロデューサー"
           },
           {
             "year": "2016",
-            "ttl": "デスノート<br>Light up the NEW world"
+            "ttl": "デスノート Light up the NEW world",
+            "subTtl": "プロデューサー"
           },
           {
             "year": "2016",
-            "ttl": "知らない、ふたり"
-          },
-          {
-            "year": "2014",
-            "ttl": "TOKYO TRIBE"
+            "ttl": "知らない、ふたり",
+            "subTtl": "ラインプロデューサー"
           }
         ]
     },
@@ -86,7 +98,8 @@
         "works": [
           {
             "year": "2020",
-            "ttl": "アパレル・デザイナー"
+            "ttl": "アパレル・デザイナー",
+            "subTtl": "プロデューサー"
           }
         ]
     },
@@ -97,74 +110,103 @@
         "role": "",
         "works": [
           {
-            "year": "2020",
-            "ttl": "サムのこと",
-            "subTtl": "dTV配信ドラマ"
+            "year": "2021",
+            "ttl": "香港映画<br>燃えよデブゴン TOKYO MISSION<br>JAPAN UNIT（日本公開2021.1月）",
+            "subTtl": "ラインプロデューサー"
           },
           {
             "year": "2020",
-            "ttl": "猿に会う",
-            "subTtl": "dTV配信ドラマ"
+            "ttl": "サムのこと<br>dTV配信ドラマ",
+            "subTtl": "ラインプロデューサー"
+          },
+          {
+            "year": "2020",
+            "ttl": "猿に会う<br>dTV配信ドラマ",
+            "subTtl": "ラインプロデューサー"
           },
           {
             "year": "2019",
-            "ttl": "私の彼",
-            "subTtl": "Twitterドラマ"
+            "ttl": "アフロ田中<br>WOWOWオリジナルドラマ",
+            "subTtl": "ラインプロデューサー"
           },
           {
             "year": "2019",
-            "ttl": "Ziggy Stardust",
-            "subTtl": "香港映画<br>JAPAN UNIT ラインプロデューサー"
-          },
-          {
-            "year": "2019",
-            "ttl": "Enter the Fat Dragon",
-            "subTtl": "香港映画<br>JAPAN UNIT ラインプロデューサー"
-          },
-          {
-            "year": "2019",
-            "ttl": "アフロ田中",
-            "subTtl": "WOWOWオリジナルドラマ<br>ラインプロデューサー"
+            "ttl": "私の彼<br>Twitterドラマ"
           },
           {
             "year": "2018",
-            "ttl": "ふたりぼっち",
-            "subTtl": "MV／Twitterドラマ"
+            "ttl": "ふたりぼっち<br>MV／Twitterドラマ"
           },
           {
             "year": "2018",
-            "ttl": "ＨＡＧＥ －ヘイジ－",
-            "subTtl": "Twitterドラマ"
+            "ttl": "ＨＡＧＥ －ヘイジ－<br>Twitterドラマ"
           },
           {
             "year": "2018",
-            "ttl": "嘘まで愛して",
-            "subTtl": "Twitterドラマ"
+            "ttl": "嘘まで愛して<br>Twitterドラマ"
           },
           {
             "year": "2018",
-            "ttl": "パパ活整形",
-            "subTtl": "Twitterドラマ"
-          },
-          {
-            "year": "2018",
-            "ttl": "その愛、お金で買いました。",
-            "subTtl": "Twitterドラマ"
+            "ttl": "パパ活整形<br>Twitterドラマ"
           },
           {
             "year": "2017",
-            "ttl": "ミチシルベ",
-            "subTtl": " (Rihwa MV)"
+            "ttl": "ミチシルベ (Rihwa MV)",
+            "subTtl": "プロデューサー"
           },
           {
             "year": "2017",
-            "ttl": "東京ヴァンパイアホテル",
-            "subTtl": "Amazonプライム"
+            "ttl": "その愛、お金で買いました。<br>Twitterドラマ"
           },
           {
             "year": "2017",
-            "ttl": "ミチシルベ",
-            "subTtl": " (Rihwa MV)"
+            "ttl": "東京ヴァンパイアホテル<br>Amazonプライム",
+            "subTtl": "プロデューサー"
+          },
+          {
+            "year": "2016",
+            "ttl": "牝猫たち<br>ロマンポルノリブート",
+            "subTtl": "ラインプロデューサー"
+          },
+          {
+            "year": "2016",
+            "ttl": "翼はいらない<br>AKB48 44rd single MV",
+            "subTtl": "プロデューサー"
+          },
+          {
+            "year": "2016",
+            "ttl": "次男と次女の物語",
+            "subTtl": "自主映画 監督"
+          },
+          {
+            "year": "2016",
+            "ttl": "不等号<br>乃木坂46 single MV",
+            "subTtl": "プロデューサー"
+          },
+          {
+            "year": "2016",
+            "ttl": "ヒーローマニア-生活-",
+            "subTtl": "ラインプロデューサー"
+          },
+          {
+            "year": "2016",
+            "ttl": "ＤＡＲＣ<br>JAPAN UNIT",
+            "subTtl": "ラインプロデューサー"
+          },
+          {
+            "year": "2016",
+            "ttl": "ヒメアノ～ル",
+            "subTtl": "ラインプロデューサー"
+          },
+          {
+            "year": "2016",
+            "ttl": "MADLY",
+            "subTtl": "ラインプロデューサー"
+          },
+          {
+            "year": "2015",
+            "ttl": "極道大戦争",
+            "subTtl": "アソシエイトプロデューサー"
           }
         ]
     },
@@ -184,8 +226,7 @@
           },
           {
             "year": "2018",
-            "ttl": "家族になれたら",
-            "subTtl": "Twitterドラマ"
+            "ttl": "家族になれたら<br>Twitterドラマ"
           },
           {
             "year": "2017",
@@ -193,8 +234,7 @@
           },
           {
             "year": "2017",
-            "ttl": "ボク、運命の人です。",
-            "subTtl": "日本テレビ連続ドラマ"
+            "ttl": "ボク、運命の人です。<br>日本テレビ連続ドラマ"
           },
           {
             "year": "2016",
@@ -206,8 +246,7 @@
           },
           {
             "year": "2016",
-            "ttl": "怪盗 山猫",
-            "subTtl": "日本テレビ連続ドラマ"
+            "ttl": "怪盗 山猫<br>日本テレビ連続ドラマ"
           },
           {
             "year": "2015",
@@ -215,8 +254,7 @@
           },
           {
             "year": "2014",
-            "ttl": "VIPO-エンドローラーズ-",
-            "subTtl": "テレビ朝日連続ドラマ"
+            "ttl": "VIPO-エンドローラーズ-<br>テレビ朝日連続ドラマ"
           },
           {
             "year": "2014",
@@ -224,13 +262,11 @@
           },
           {
             "year": "2014",
-            "ttl": "世界の風を僕らは受けて",
-            "subTtl": "(Not yet MV)"
+            "ttl": "世界の風を僕らは受けて<br>(Not yet MV)"
           },
           {
             "year": "2014",
-            "ttl": "前しか向かねえ",
-            "subTtl": "(AKB48 35th single MV)"
+            "ttl": "前しか向かねえ<br>(AKB48 35th single MV)"
           }
         ]
     },
@@ -242,47 +278,43 @@
         "works": [
           {
             "year": "2019",
-            "ttl": "近いようで遠くって",
-            "subTtl": "Twitterドラマ"
+            "ttl": "近いようで遠くって<br>Twitterドラマ",
+            "subTtl": "プロデューサー"
           },
           {
             "year": "2019",
-            "ttl": "自己ダン",
-            "subTtl": "Twitterドラマ"
+            "ttl": "自己ダン<br>Twitterドラマ",
+            "subTtl": "プロデューサー"
           },
           {
             "year": "2019",
-            "ttl": "今日も嫌がらせ弁当"
+            "ttl": "今日も嫌がらせ弁当",
+            "subTtl": "プロデューサー"
           },
           {
             "year": "2018",
-            "ttl": "紺田照の合法レシピ",
-            "subTtl": "Amazonプライム"
+            "ttl": "紺田照の合法レシピ<br>Amazonプライム",
+            "subTtl": "プロデューサー"
           },
           {
             "year": "2017",
-            "ttl": "サイモン＆タダタカシ",
-            "subTtl": "第24回PFFスカラシップ作品"
+            "ttl": "サイモン＆タダタカシ<br>第24回PFFスカラシップ作品",
+            "subTtl": "プロデューサー"
           },
           {
             "year": "2017",
-            "ttl": "君のまなざし"
+            "ttl": "君のまなざし",
+            "subTtl": "ラインプロデューサー"
           },
           {
             "year": "2016",
-            "ttl": "天使に“アイム・ファイン”"
+            "ttl": "天使に“アイム・ファイン”",
+            "subTtl": "ラインプロデューサー"
           },
           {
             "year": "2016",
-            "ttl": "俳優 亀岡拓次"
-          },
-          {
-            "year": "2014",
-            "ttl": "ニコ生はTPOを守りましょう"
-          },
-          {
-            "year": "2014",
-            "ttl": "トクソウ"
+            "ttl": "俳優 亀岡拓次",
+            "subTtl": "ラインプロデューサー"
           }
         ]
     },
@@ -294,12 +326,18 @@
         "works": [
           {
             "year": "2020",
-            "ttl": "アパレル・デザイナー"
+            "ttl": "夜明けを信じて。",
+            "subTtl": "ラインプロデューサー"
+          },
+          {
+            "year": "2020",
+            "ttl": "アパレル・デザイナー",
+            "subTtl": "プロデューサー"
           },
           {
             "year": "2018",
             "ttl": "最後の審判",
-            "subTtl": "ndjc"
+            "subTtl": "プロデューサー"
           }
         ]
     }

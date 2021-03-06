@@ -33,11 +33,11 @@
     .staffTop_txt {
         color: #fff;
         text-align: center;
-				line-height: 2;
-				@include mq-max(medium) {
-					text-align: left;
-					line-height: 1.7;
-				}
+        line-height: 2;
+        @include mq-max(medium) {
+            text-align: left;
+            line-height: 1.7;
+        }
     }
     .staffTop_img {
         img {
@@ -155,6 +155,7 @@
                 width: 100%;
             }
             .staffDataItem_btn {
+                margin-bottom: 20px;
                 &::before,
                 &::after {
                     width: 8px;
@@ -238,10 +239,10 @@
                 position: absolute;
                 bottom: 0;
                 right: 52px;
-								text-align: right;
-								@include mq-max(medium) {
-									right: 15px;
-								}
+                text-align: right;
+                @include mq-max(medium) {
+                    right: 15px;
+                }
                 .staffDataItemDetails_role {
                     font-size: 16px;
                     font-weight: bold;
@@ -254,15 +255,18 @@
             }
             .staffDataItem_works {
                 width: 100%;
-                position: absolute;
-                margin-top: 20px;
+                // position: absolute;
+                // margin-top: 20px;
                 background: #F8F8F8;
-                padding: 20px 15px;
+                padding: 0 15px;
                 .staffDataItemWorks_item {
                     padding-top: 20px;
                     display: flex;
                     &:first-child {
-                        padding-top: 0;
+                        // margin-top: 20px;
+                    }
+                    &:last-child {
+                        padding-bottom: 20px;
                     }
                     .staffDataItemWorksItem_year {
                         font-size: 13px;

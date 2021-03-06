@@ -189,7 +189,7 @@
                         content: "";
                         width: 6px;
                         height: 6px;
-                        background: url("/movie-site/assets/img/ico_arrow.png") center center;
+                        background: url($local_url + "assets/img/ico_arrow.png") center center;
                         background-size: cover;
                         position: absolute;
                         left: 0;

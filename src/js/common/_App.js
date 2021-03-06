@@ -14,10 +14,13 @@ export default class App {
     this.resizeTimer = false;
     this.defaultWidth = window.innerWidth;
 
-    this.TOP_SLIDES_URL = "/movie-site/assets/data/top_slides.json";
-    this.NEWS_URL = "/movie-site/assets/data/news.json";
-    this.WORKS_URL = "/movie-site/assets/data/works.json";
-    this.WORKS_URL_EN = "/movie-site/assets/data/works_en.json";
+    this.LOCAL_URL = "/movie-site/"
+
+    this.TOP_SLIDES_URL = this.LOCAL_URL + "assets/data/top_slides.json";
+    this.NEWS_URL = this.LOCAL_URL + "assets/data/news.json";
+    this.NEWS_URL_EN = this.LOCAL_URL + "assets/data/news_en.json";
+    this.WORKS_URL = this.LOCAL_URL + "assets/data/works.json";
+    this.WORKS_URL_EN = this.LOCAL_URL + "assets/data/works_en.json";
 
     this.initApp();
   }

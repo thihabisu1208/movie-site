@@ -73,8 +73,8 @@ export default class Works extends App {
 
   addEvents() {
     this.initiateMainSlider();
-    this.$year.text(2019);
-    this.createYearlySlides(2019);
+    this.$year.text(2021);
+    this.createYearlySlides(2021);
     this.$window.on("scroll", this.onScroll.bind(this));
   }
 
@@ -127,20 +127,34 @@ export default class Works extends App {
             let yearList = res[Object.keys(res)[i]];
 
             for(let j = 0; j < yearList.length; j++) {
-              let template = `
+              if(yearList[j].url !== "") {
+                let template = `
+                  <li class="worksOtherSlider_item swiper-slide">
+                    <img src="${yearList[j].img}" />
+                    <div class="details">
+                      <h3 class="ttl">${yearList[j].ttl}</h3>
+                      <p class="desc">${yearList[j].desc}<p>
+                      <p class="credit">${yearList[j].credit}<p>
+                      <div class="link">
+                        <a href="${yearList[j].url}" target="_blank">公式サイト→</a>
+                      </div>
+                    </div>
+                  </li>
+                `;
+                this.$slideList.append(template);
+              } else {
+                let template = `
                 <li class="worksOtherSlider_item swiper-slide">
                   <img src="${yearList[j].img}" />
                   <div class="details">
                     <h3 class="ttl">${yearList[j].ttl}</h3>
                     <p class="desc">${yearList[j].desc}<p>
                     <p class="credit">${yearList[j].credit}<p>
-                    <div class="link">
-                      <a href="${yearList[j].url}">公式サイト→</a>
-                    </div>
                   </div>
                 </li>
               `;
               this.$slideList.append(template);
+              }
             }
           }
         }
@@ -167,20 +181,34 @@ export default class Works extends App {
             let yearList = res[Object.keys(res)[i]];
 
             for(let j = 0; j < yearList.length; j++) {
-              let template = `
+              if(yearList[j].url !== "") {
+                let template = `
+                  <li class="worksOtherSlider_item swiper-slide">
+                    <img src="${yearList[j].img}" />
+                    <div class="details">
+                      <h3 class="ttl">${yearList[j].ttl}</h3>
+                      <p class="desc">${yearList[j].desc}<p>
+                      <p class="credit">${yearList[j].credit}<p>
+                      <div class="link">
+                        <a href="${yearList[j].url}" target="_blank">公式サイト→</a>
+                      </div>
+                    </div>
+                  </li>
+                `;
+                this.$slideList.append(template);
+              } else {
+                let template = `
                 <li class="worksOtherSlider_item swiper-slide">
                   <img src="${yearList[j].img}" />
                   <div class="details">
                     <h3 class="ttl">${yearList[j].ttl}</h3>
                     <p class="desc">${yearList[j].desc}<p>
                     <p class="credit">${yearList[j].credit}<p>
-                    <div class="link">
-                      <a href="${yearList[j].url}">公式サイト→</a>
-                    </div>
                   </div>
                 </li>
               `;
               this.$slideList.append(template);
+              }
             }
           }
         }

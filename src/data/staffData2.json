@@ -6,9 +6,12 @@
       "role": "",
       "works": [
         {
+            "year": "2020",
+            "ttl": "supernova<br>ドラマCD"
+        },
+        {
             "year": "2019",
-            "ttl": "私の彼",
-            "subTtl": "Twitterドラマ"
+            "ttl": "私の彼<br>Twitterドラマ"
         },
         {
             "year": "2019",
@@ -16,27 +19,35 @@
         },
         {
             "year": "2019",
-            "ttl": "KING OF CASTE続編",
-            "subTtl": "ドラマCD"
+            "ttl": "KING OF CASTE続編<br>ドラマCD"
         },
         {
             "year": "2019",
-            "ttl": "ふたりぼっち",
-            "subTtl": "Twitterドラマ"
+            "ttl": "ふたりぼっち<br>Twitterドラマ"
         },
         {
-            "year": "2015",
-            "ttl": "劇場霊"
+            "year": "2018",
+            "ttl": "KING OF CASTLE<br>ドラマCD"
         },
         {
-            "year": "2014",
-          "ttl": "世界の風を僕らは受けて",
-            "subTtl": "(Not yet MV)"
+            "year": "2018",
+            "ttl": "B-PROJECT～絶頂*エモーション<br>(第4話、第10話)<br>ドラマCD"
         },
         {
-            "year": "2014",
-            "ttl": "前しか向かねえ",
-            "subTtl": "(AKB48 35th single MV) "
+            "year": "2018",
+            "ttl": "嘘まで愛して<br>Twitterドラマ"
+        },
+        {
+            "year": "2017",
+            "ttl": "その愛、お金で買いました。<br>Twitterドラマ"
+        },
+        {
+            "year": "2016",
+            "ttl": "コック警部の晩餐会<br>TBSテレビ"
+        },
+        {
+            "year": "2016",
+            "ttl": "カミワザ・ワンダ<br>TBS系列全国28ネット"
         }
       ]
     }

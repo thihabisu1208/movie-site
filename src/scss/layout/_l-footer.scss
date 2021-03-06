@@ -109,7 +109,7 @@
         color: #CC0E13;
       }
       &:not(:first-child) {
-        padding-left: 40px;
+        padding-left: 20px;
         @include mq-max(medium) {
           padding-left: 0;
         }

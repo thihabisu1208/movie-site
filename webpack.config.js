@@ -8,10 +8,12 @@ const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
+const local_url = "movie-site";
+
 const dir = {
   src: "./src",
   public: "./docs",
-  dist: "./docs/movie-site"
+  dist: "./docs/" + local_url
 };
 
 const convertExtensions = {

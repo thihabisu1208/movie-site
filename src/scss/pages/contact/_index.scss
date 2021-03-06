@@ -80,7 +80,7 @@
                         content: "";
                         width: 23px;
                         height: 23px;
-                        background: url("/movie-site/assets/img/ico_error.png");
+                        background: url($local_url + "assets/img/ico_error.png");
                         background-size: cover;
                         position: absolute;
                         top: 10px;
@@ -108,7 +108,7 @@
                         content: "";
                         width: 23px;
                         height: 23px;
-                        background: url("/movie-site/assets/img/ico_error.png");
+                        background: url($local_url + "assets/img/ico_error.png");
                         background-size: cover;
                         position: absolute;
                         top: 10px;

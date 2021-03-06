@@ -25,5 +25,8 @@ $font-openSans: "Open Sans", sans-serif;
 $font-dinPro: "DIN-Alternate-Bold", "DIN-Pro-Bold", sans-serif;
 $font-azoSans: "Azo Sans", sans-serif;
 
+// 公開する時に変える パス
+$local_url: "/movie-site/";
+
 // ease
 $ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
