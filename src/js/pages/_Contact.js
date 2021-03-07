@@ -192,28 +192,52 @@ export default class Contact extends App {
     }
 
     postData() {
-        let postUrl = "https://reqres.in/api/users";
-        $.ajax({
-            url: postUrl,
-            type: "POST",
-            dataType: "json",
-            data: {
-                company_name: this.$companyName.text(),
-                company_role: this.$companyRole.text(),
-                name: this.$name.text(),
-                nameFurigana: this.$nameFurigana.text(),
-                mail: this.$mail.text(),
-                tel: this.$tel.text(),
-                content: this.$content.text(),
-            },
-            timeout: 3000
-        }).done((res) => {
-            this.$startForm.removeClass("is-active");
-            this.$confirmForm.removeClass("is-active");
-            this.$completeForm.addClass("is-active");
+        let o = this;
+        let postUrl = "/movie-site/contact/api/sendmail.php";
+        let formData =  {
+            company: this.$companyName.text(),
+            role: this.$companyRole.text(),
+            name: this.$name.text(),
+            kana: this.$nameFurigana.text(),
+            email: this.$mail.text(),
+            tel: this.$tel.text(),
+            message: this.$content.text()
+        };
+        let doComplete = function(res){
+            if (res.rescode != '000') {
+                // failure
+                let errmsg = '';
+                $.each(res.data, function(k,v){
+                    errmsg += v + "\n";
+                });
+                alert(errmsg);
+                o.$startForm.addClass("is-active");
+                o.$confirmForm.removeClass("is-active");
+            } else {
+                // success
+                o.$startForm.removeClass("is-active");
+                o.$confirmForm.removeClass("is-active");
+                o.$completeForm.addClass("is-active");
+            }
             $("html, body").animate({ scrollTop: 0 }, "slow");
-        }).fail((err) => {
-            console.log(err);
-        })
+        };
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6Le6k3EaAAAAAMFHFWZUx7idhBf7oBOT57H6L-19', {action: 'homepage'}).then(function(token) {
+                $.ajax({
+                    url: postUrl,
+                    type: "POST",
+                    dataType: "json",
+                    data: $.extend(formData, {
+                        'g-recaptcha-response': token,
+                        action: 'homepage'
+                    }),
+                    timeout: 3000
+                }).done((res) => {
+                    doComplete(res);
+                }).fail((err) => {
+                    console.log(err);
+                });
+            });
+        });
     }
 }

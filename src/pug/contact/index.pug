@@ -12,6 +12,7 @@ block name
   - const name = "contact"
 
 block contents
+  script(src=`https://www.google.com/recaptcha/api.js?render=6Le6k3EaAAAAAMFHFWZUx7idhBf7oBOT57H6L-19` defer)
   .contact_start.contact_item.is-active
     .contact_top
       .container
@@ -70,9 +71,9 @@ block contents
             span.contactFormItem_error お問い合わせ内容を入力してください。
 
           p.contact_caution This site is protected by reCAPTCHA and the Google 
-            a(href="") Privacy Policy 
+            a(href="https://policies.google.com/privacy", target="_blank") Privacy Policy 
             | and  
-            a(href="") Terms of Service 
+            a(href="https://policies.google.com/terms", target="_blank") Terms of Service 
             | apply.
 
           p.contact_caution_2 プライバシーポリシーに同意の上
