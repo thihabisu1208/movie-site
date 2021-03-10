@@ -193,7 +193,7 @@ export default class Contact extends App {
 
     postData() {
         let o = this;
-        let postUrl = "/movie-site/contact/api/sendmail.php";
+        let postUrl = this.LOCAL_URL + "contact/api/sendmail.php";
         let formData =  {
             company: this.$companyName.text(),
             role: this.$companyRole.text(),
