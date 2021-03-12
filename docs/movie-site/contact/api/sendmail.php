@@ -70,12 +70,11 @@ class Sendmail
     public function execute()
     {
         $date = date('Y-m-d H:i:s');
-        return;
         // user
         $this->em->template('user')
             ->keyword($this->data + array('date' => $date))
             ->replace()
-            ->send();
+            ->to($this->data['email'])->send();
         $this->em->clear();
         // admin
         $this->em->template('admin')

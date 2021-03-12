@@ -1,5 +1,5 @@
 from: info@django-film.co.jp
-to: bg.koyama@gmail.com
+to: apply_to@django-film.co.jp
 subject: [DJANGO-FILM] お問い合せ通知
 
 お問い合せフォームより送信がありました。

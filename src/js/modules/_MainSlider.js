@@ -60,7 +60,7 @@ export default class MainSlider extends App {
                     </div>
                     <div class="o-mainSliderDetails_footer">
                       <ul class="o-mainSliderDetails_role">
-                      <li>${item.roles.label1}/li>
+                      <li>${item.roles.label1}</li>
                       <li>${item.roles.label2}</li>
                       <li>${item.roles.label3}</li>
                       <li>${item.roles.label4}</li>
@@ -107,7 +107,7 @@ export default class MainSlider extends App {
                     </div>
                     <div class="o-mainSliderDetails_footer">
                       <ul class="o-mainSliderDetails_role">
-                      <li>${item.roles.label1}/li>
+                      <li>${item.roles.label1}</li>
                       <li>${item.roles.label2}</li>
                       <li>${item.roles.label3}</li>
                       <li>${item.roles.label4}</li>
