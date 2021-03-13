@@ -14,6 +14,7 @@ import Top from "./pages/_Top";
 import Works from "./pages/_Works";
 import Contact from "./pages/_Contact";
 import Drone from "./pages/_Drone";
+import Staff from "./pages/_Staff";
 
 $(() => {
   const loading = new Loading();

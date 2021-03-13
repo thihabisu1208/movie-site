@@ -3,6 +3,7 @@
         {
             "id": 1,
             "img": "/movie-site/assets/img/top/img_slide-01.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-01.png",
             "ttl": "燃えよデブゴン",
             "subTtl": "TOKYO MISSION",
             "date": "2021.1.1",
@@ -20,26 +21,31 @@
         {
             "id": 2,
             "img": "/movie-site/assets/img/top/img_slide-02.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-02.png",
             "fullSize": true
         },
         {
             "id": 3,
             "img": "/movie-site/assets/img/top/img_slide-03.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-03.png",
             "fullSize": true
         },
         {
             "id": 4,
             "img": "/movie-site/assets/img/top/img_slide-04.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-04.png",
             "fullSize": true
         },
         {
             "id": 5,
             "img": "/movie-site/assets/img/top/img_slide-05.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-05.png",
             "fullSize": true
         },
         {
             "id": 6,
             "img": "/movie-site/assets/img/top/img_slide-06.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-06.png",
             "fullSize": true
         }
     ],
@@ -47,6 +53,7 @@
         {
             "id": 1,
             "img": "/movie-site/assets/img/top/img_slide-01.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-01.png",
             "ttl": "燃えよデブゴン",
             "subTtl": "TOKYO MISSION",
             "date": "2021.1.1",
@@ -64,26 +71,31 @@
         {
             "id": 2,
             "img": "/movie-site/assets/img/top/img_slide-02.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-02.png",
             "fullSize": true
         },
         {
             "id": 3,
             "img": "/movie-site/assets/img/top/img_slide-03.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-03.png",
             "fullSize": true
         },
         {
             "id": 4,
             "img": "/movie-site/assets/img/top/img_slide-04.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-04.png",
             "fullSize": true
         },
         {
             "id": 5,
             "img": "/movie-site/assets/img/top/img_slide-05.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-05.png",
             "fullSize": true
         },
         {
             "id": 6,
             "img": "/movie-site/assets/img/top/img_slide-06.png",
+            "imgSp": "/movie-site/assets/img/top/img_slide-06.png",
             "fullSize": true
         }
     ]

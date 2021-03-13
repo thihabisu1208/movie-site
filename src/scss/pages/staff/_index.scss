@@ -143,24 +143,58 @@
             width: 100%;
         }
         .staffData_item {
+            cursor: pointer;
             position: relative;
             margin-top: 40px;
             width: calc(33.333% - 28px);
             z-index: 1;
-            &.is-open {
+            &.is-active {
                 z-index: 2;
+                .staffDataItem_btn {
+                    &::before {
+                        transform: rotate(90deg);
+                        opacity: 0;
+                    }
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+                .staffDataItem_name {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+                .staffDataItem_outer {
+                    height: auto;
+                    opacity: 1;
+                }
             }
             @include mq-max(medium) {
                 margin-top: 44px;
                 width: 100%;
             }
             .staffDataItem_btn {
+                position: relative;
                 margin-bottom: 20px;
+                position: relative;
                 &::before,
                 &::after {
-                    width: 8px;
+                    content: "";
+                    display: block;
+                    width: 10px;
+                    height: 2px;
                     top: auto;
                     bottom: 8.5px;
+                    background: #888;
+                    position: absolute;
+                    transition: 0.4s $ease-out;
+                    transition-property: transform, opacity;
+                    @include mq(small) {
+                        right: 5px;
+                    }
+                }
+                &::after {
+                    transform: rotate(90deg);
                 }
             }
             .staffDataItem_btn {
@@ -213,21 +247,39 @@
             .staffDataItem_ttl {
                 color: #FF0000;
                 font-size: 25px;
-								font-weight: bold;
-								@include mq-max(medium) {
-									font-size: 20px;
-								}
+                font-weight: bold;
+                @include mq-max(medium) {
+                    font-size: 20px;
+                }
             }
             .staffDataItem_name {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: -27px;
+                    left: calc(50% - 8px);
+                    transform: translateX(-50%);
+                    width: 14px;
+                    height: 14px;
+                    border: solid #CCCCCC;
+                    background: #f8f8f8;
+                    border-width: 1px 1px 0 0;
+                    transform: rotate(-45deg);
+                    z-index: 999;
+                    opacity: 0;
+                    transition: 1s $ease-out;
+                }
                 .staffDataItemName_img {
-										width: 99px;
-										@include mq-max(medium) {
-											width: 79px;
-										}
+                    width: 99px;
+                    @include mq-max(medium) {
+                        width: 79px;
+                    }
                 }
                 .staffDataItemName_txt {
                     padding-top: 10px;
@@ -253,20 +305,38 @@
                     font-size: 12px;
                 }
             }
+            .staffDataItem_outer {
+                overflow: hidden;
+                height: 0;
+                opacity: 0;
+                width: calc(100vw - 60px);
+                transition: height 0.4s $ease-out, opacity 0.4s $ease-out;
+                @include mq(medium) {
+                    width: 900px;
+                }
+                @include mq(xlarge) {
+                    width: 1100px;
+                }
+            }
             .staffDataItem_works {
                 width: 100%;
+                min-height: 50px;
                 // position: absolute;
                 // margin-top: 20px;
                 background: #F8F8F8;
-                padding: 0 15px;
-                .staffDataItemWorks_item {
-                    padding-top: 20px;
+                border: 1px solid #CCCCCC;
+                padding: 0px 15px 20px;
+                @include mq(medium) {
                     display: flex;
-                    &:first-child {
-                        // margin-top: 20px;
-                    }
-                    &:last-child {
-                        padding-bottom: 20px;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    @include flex-align-left(33.333%)
+                }
+                .staffDataItemWorks_item {
+                    padding-top: 10px;
+                    display: flex;
+                    @include mq(medium) {
+                        width: calc(33.333% - 5px);
                     }
                     .staffDataItemWorksItem_year {
                         font-size: 13px;

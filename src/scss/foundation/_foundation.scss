@@ -145,19 +145,18 @@ img {
   right: 0;
   bottom: -12px;
   width: 100%;
-  max-width: 832px;
+  // max-width: 832px;
   height: 12px;
-  background: linear-gradient(to top right, #FF0007, #FF9300, #FF0007);
+  background: linear-gradient(to bottom right, #D80000, #FE4B0A, #FD6B36, #FF8321, #FDB72B, #FED02F, #FFE984, #FFE984);
   @include mq-max(medium) {
     bottom: -10px;
     height: 10px;
-    width: 66%;
   }
 }
 
 .common_details {
   margin-top: 70px;
-  margin-left: 68px;
+  // margin-left: 68px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

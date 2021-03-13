@@ -25,24 +25,37 @@ export default class MainSlider extends App {
 
   getSlides() {
     $.getJSON(this.TOP_SLIDES_URL, (res) => {
-      console.log(location.pathname.indexOf("en") > -1)
       let jpData = res.jp;
       let enData = res.en;
       if(location.pathname.indexOf("en") > -1) {
         for(let i = 0; i < enData.length; i++) {
           let item = enData[i];
           if(item.fullSize === true) {
-            let template = `
-              <li class="o-mainSlider_item swiper-slide full">
-                <div class="o-mainSlider_inner">
-                  <div class="o-mainSlider_img">
-                    <img src="${item.img}" />
+            if(window.innerWidth > this.width.small) {
+              let template = `
+                <li class="o-mainSlider_item swiper-slide full">
+                  <div class="o-mainSlider_inner">
+                    <div class="o-mainSlider_img">
+                      <img src="${item.img}" />
+                    </div>
                   </div>
-                </div>
-              </li>
-            `;
-  
-            this.$slideListEn.append(template);
+                </li>
+              `;
+    
+              this.$slideListEn.append(template);
+            } else {
+              let template = `
+                <li class="o-mainSlider_item swiper-slide full">
+                  <div class="o-mainSlider_inner">
+                    <div class="o-mainSlider_img">
+                      <img src="${item.imgSp}" />
+                    </div>
+                  </div>
+                </li>
+              `;
+    
+              this.$slideListEn.append(template);
+            }
           } else {
             let template = `
               <li class="o-mainSlider_item swiper-slide">
@@ -79,17 +92,31 @@ export default class MainSlider extends App {
         for(let i = 0; i < jpData.length; i++) {
           let item = jpData[i];
           if(item.fullSize === true) {
-            let template = `
+            if(window.innerWidth > this.width.small) {
+              let template = `
+                <li class="o-mainSlider_item swiper-slide full">
+                  <div class="o-mainSlider_inner">
+                    <div class="o-mainSlider_img">
+                      <img src="${item.img}" />
+                    </div>
+                  </div>
+                </li>
+              `;
+  
+              this.$slideListJp.append(template);
+            } else {
+              let template = `
               <li class="o-mainSlider_item swiper-slide full">
                 <div class="o-mainSlider_inner">
                   <div class="o-mainSlider_img">
-                    <img src="${item.img}" />
+                    <img src="${item.imgSp}" />
                   </div>
                 </div>
               </li>
             `;
 
             this.$slideListJp.append(template);
+            }
           } else {
             let template = `
               <li class="o-mainSlider_item swiper-slide">
@@ -134,11 +161,11 @@ export default class MainSlider extends App {
       fadeEffect: {
         crossFade: true
       },
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
+      // loop: true,
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,

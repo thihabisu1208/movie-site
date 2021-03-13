@@ -41,6 +41,10 @@ body, main {
       color: #000;
       line-height: 1;
       transition: 0.4s $ease-out;
+      &.is-active {
+        pointer-events: none;
+        color: rgba(51, 51, 51, 0.3);
+      }
       &:hover {
         color: #FF0000;
       }
@@ -291,6 +295,10 @@ body, main {
         font-weight: medium;
         color: #fff;
         line-height: 1;
+        &.is-active {
+          pointer-events: none;
+          color: rgba(#fff, 0.3);
+        }
         @include mq(medium) {
           display: none;
         }

@@ -97,6 +97,7 @@
     position: relative;
     @include mq(medium) {
         padding-top: 48px;
+        padding-bottom: 500px;
     }
     .container {
         // position: relative;
@@ -211,7 +212,7 @@
     .worksOther_slider {
         margin-top: 25px;
         z-index: 2;
-        display: flex;
+        // display: flex;
         overflow: visible;
         opacity: 1;
         transition: 0.4s $ease-out;
@@ -294,7 +295,7 @@
                     opacity: 0;
                     transform: translateX(-30px);
                     width: 280px;
-                    padding-top: 60px;
+                    padding-top: 80px;
                     transition: 0.4s $ease-out;
                     @include mq(xxsmall) {
                         transform: translateX(-50px);
@@ -348,75 +349,82 @@
             }
         }
 
-        .swiper-pagination {
-            left: -30px;
-            bottom: -50px;
-            z-index: 500;
-            .swiper-pagination-bullet {
-                transition: 0.4s $ease-out;
-            }
-            .swiper-pagination-bullet-active {
-                background: #000;
-            }
-        }
-
-        .buttons {
-            position: absolute;
-            width: 0;
-            right: 0;
-            bottom: 2px;
-            z-index: 9999;
-        }
-
-        .swiper-button-prev,
-        .swiper-button-next {
-            top: auto;
-            bottom: -50px;
-            background: #000;
-            width: 20px;
-            height: 20px;
-            padding: 7px 9px;
-            border-radius: 16px;
-            border: 1px solid #000;
-            transition: 0.4s $ease-out;
-            &::after {
-                display: none;
-            }
-            &::before {
-                content: "";
-                display: block;
-                width: 7px;
-                height: 7px;
-                border: solid #fff;
-                border-width: 1px 1px 0 0;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                transition: 0.4s $ease-out;
-            }
-            &:hover {
-                background: #fff;
-                &::before {
-                    border: solid #000;
-                    border-width: 1px 1px 0 0;
+        .swiper-elements {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            padding-top: 10px;
+            .swiper-pagination {
+                position: static;
+                .swiper-pagination-bullet {
+                    margin: 0 5px;
+                    transition: 0.4s $ease-out;
+                }
+                .swiper-pagination-bullet-active {
+                    background: #000;
                 }
             }
-        }
 
-        .swiper-button-prev {
-            left: -30px;
-            &::before {
-                left: calc(50% + 2px);
-                transform: translate(-50%, -50%) rotate(225deg);
+            .buttons {
+                width: 70px;
+                height: 50px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                z-index: 9999;
+                @include mq(medium) {
+                    margin-left: 20px;
+                }
             }
-        }
 
-        .swiper-button-next {
-            right: -30px;
-            &::before {
-                left: calc(50% - 1px);
-                transform: translate(-50%, -50%) rotate(45deg);
+            .swiper-button-prev,
+            .swiper-button-next {
+                position: relative;
+                background: #000;
+                width: 20px;
+                height: 20px;
+                padding: 7px 9px;
+                border-radius: 16px;
+                border: 1px solid #000;
+                transition: 0.4s $ease-out;
+                &::after {
+                    display: none;
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 7px;
+                    height: 7px;
+                    border: solid #fff;
+                    border-width: 1px 1px 0 0;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: 0.4s $ease-out;
+                }
+                &:hover {
+                    background: #fff;
+                    &::before {
+                        border: solid #000;
+                        border-width: 1px 1px 0 0;
+                    }
+                }
+            }
+
+            .swiper-button-prev {
+                &::before {
+                    left: calc(50% + 2px);
+                    transform: translate(-50%, -50%) rotate(225deg);
+                }
+            }
+
+            .swiper-button-next {
+                &::before {
+                    left: calc(50% - 1px);
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
             }
         }
     }

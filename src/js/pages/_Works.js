@@ -216,10 +216,10 @@ export default class Works extends App {
         this.$slideFooter.removeClass("is-hide");
         this.otherSwiper = new Swiper(this.otherSlider.slider, this.otherOption);
         this.otherSwiper.slideTo(Math.floor(this.$slideList.children().length / 2), false, false)
-        $(this.otherSlider.buttons).css({
-          "right": `${$(this.otherSlider.slider).width() / 2 - 70}px`,
-          "left": "auto"
-        });
+        // $(this.otherSlider.buttons).css({
+        //   "right": `${$(this.otherSlider.slider).width() / 2 - 70}px`,
+        //   "left": "auto"
+        // });
       });
     }
   }

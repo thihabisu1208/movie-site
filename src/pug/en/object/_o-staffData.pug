@@ -3,20 +3,21 @@
   const data = htmlWebpackPlugin.options.data.staffData;
 
 each item in data
-    li.staffData_item.js-accordion.js-scrollAnim
-        .staffDataItem_btn.js-accordion_btn
+    li.staffData_item.js-scrollAnim
+        .staffDataItem_btn
             .staffDataItem_name
                 .staffDataItemName_img
                     img(src=`${path}assets/img/staff/img_staff-${item.id}.svg`, alt="")
-                .staffDataItemName_txt #{item.name_en}
+                .staffDataItemName_txt #{item.name}
             .staffDataItem_details
                 if item.role 
                     .staffDataItemDetails_role #{item.role}
                 .staffDataItemDetails_btn works
-        .staffDataItem_works.js-accordion_target
-            each work in item.works
-                .staffDataItemWorks_item
-                    .staffDataItemWorksItem_year #{work.year}
-                    .staffDataItemWorksItem_data !{work.ttl}
-                        if work.subTtl
-                            span !{work.subTtl}
+        .staffDataItem_outer
+            .staffDataItem_works
+                each work in item.works
+                    .staffDataItemWorks_item
+                        .staffDataItemWorksItem_year #{work.year}
+                        .staffDataItemWorksItem_data !{work.ttl}
+                            if work.subTtl
+                                span !{work.subTtl}
