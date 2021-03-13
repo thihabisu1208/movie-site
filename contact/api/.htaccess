@@ -1,0 +1,12 @@
+
+# <IfModule mod_headers.c>
+#     # for CORS(Cross Origin Resource Sharing)
+#     RewriteEngine On
+#     RewriteCond %{HTTP:Origin} (.+)
+#     RewriteRule . - [E=CORS_ORIGIN:%1]
+#     Header set Access-Control-Allow-Origin %{CORS_ORIGIN}e env=CORS_ORIGIN
+#     Header set Access-Control-Allow-Credentials true
+#     Header set Access-Control-Allow-Methods "GET, PUT, POST, DELETE, HEAD, OPTIONS"
+#     Header set Access-Control-Allow-Headers "X-Requested-With, Origin, X-Csrftoken, Content-Type, Accept"
+# </IfModule>
+
